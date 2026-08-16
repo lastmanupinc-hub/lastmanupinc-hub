@@ -74,7 +74,8 @@ candidates:
   - id: CAND-SCAN-11
     repos: [AXIS-Scalpel, medical-robot, Diamond-Grid, axis-launch-platform]
     size_note: "~2,195 files"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-11", result: "fully absent across all 4; ALL 31/31 repos now scanned, floor 9.2%"}
   - id: CAND-CONSOLIDATE-12
     repos: []
     size_note: >

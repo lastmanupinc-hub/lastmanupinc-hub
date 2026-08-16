@@ -451,7 +451,7 @@
     "observability": {
       "audited": 8,
       "label": "Observability",
-      "pct": 0.0,
+      "pct": 9.4,
       "slots": {
         "OBS_ARIZE_PHOENIX": {
           "evidence_count": 0,
@@ -478,8 +478,8 @@
           "vendor_in_use_count": 0
         },
         "OBS_PROMPTFOO": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "bench",
           "label": "Promptfoo",
           "vendor_in_use_count": 0
         },
@@ -624,8 +624,8 @@
     }
   },
   "counts": {
-    "absent": 83,
-    "bench": 2,
+    "absent": 82,
+    "bench": 3,
     "partial": 2,
     "peer": 2,
     "peer_plus": 0,
@@ -633,11 +633,11 @@
     "unaudited": 0
   },
   "coverage": {
-    "repos_scanned": 9,
+    "repos_scanned": 12,
     "repos_total": 31,
     "slots_audited": 89,
     "slots_total": 89
   },
-  "overall_pct": 4.8,
+  "overall_pct": 5.7,
   "schema": 1
 }

@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: CAND-SCAN-03   # no-fate-payment-engine, paid-docs — MCP_MCP_SDK strengthened (3 independent implementations, 2 repos), SEC_NEMO_GUARDRAILS newly partial (AgentPolicy tool-use rails), LLM_ANTHROPIC_CLAUDE vendor_in_use recorded (TF certify-or-refuse engine runs on real Claude API — dependence, never credited). Overall floor 4.8%, 9/31 repos. Swept a recurring \.well-known YAML-escape bug and a duplicate-key bug in this file's own change_log.
-    next_candidate_id: CAND-SCAN-04             # AXIS-ENGINE (+ AXIS-X-Y-Z via diff -rq mirror-verify), axis-seo — biggest batch (~91k files), grep-only depth per the huge-repo rule
-    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03]
+    last_completed_candidate_id: CAND-SCAN-04   # AXIS-ENGINE (91k files, grep-only depth) + AXIS-X-Y-Z (mirror-verified, not independently scanned) + axis-seo (full read, absent). OBS_PROMPTFOO newly bench: a real CI-gated LLM-judge harness (model_router.py declarative routing + judge_quorum.py cross-family quorum + fidelity_floor.py 8-oracle chokepoint, wired as numbered QGATE CI gates with self-tests). Verified NOT credited: ml_models.rs is a metadata-only registry (no inference), book-to-game pipeline stages are deterministic not agentic, and model_router's vendor model references are unwired scaffolding (referenced tools/ai/clients/ doesn't exist -- correctly NOT recorded as vendor_in_use). Overall floor 5.7%, 12/31 repos. ROOT-CAUSED a recurring escape-corruption bug: apply-script re.sub() calls that pass previously-read backslash-bearing text as a REPLACEMENT string get it silently re-interpreted (backreference syntax) and halved on every pass -- eliminated the landmine by rephrasing the one affected fragment without a literal backslash, and documented the gotcha + fix pattern in SONNET5_ECOSYSTEM_SCAN_STRATEGY.md for future sessions.
+    next_candidate_id: CAND-SCAN-05             # AXIS-mars, pmd-customizer-build, profitforge
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04]
 
   scan_phase:
     active: true
@@ -42,6 +42,44 @@ project_continuation:
 
   # Newest-first. {date, session_id, summary, files_changed, commit}
   change_log:
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-04 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02/03; approved via a plan-mode checkpoint mid-loop)"
+      summary: >-
+        Scanned AXIS-ENGINE (91,207 files, a real-time/XR rendering engine
+        matching A-eye's IRIS/RETINA/PUPIL whitepaper) with grep-only depth
+        per the huge-repo rule -- raw battery hit counts were in the
+        thousands per category, confirmed dominated by graphics-engine
+        vocabulary collisions (rendering pipeline, GPU memory/queue, ray
+        trace) rather than AI-ecosystem capability. Found and verified one
+        genuine AI subsystem: tools/ai/ + tools/oracles/, a CI-gated
+        LLM-judge harness for a book-to-game content pipeline -- declarative
+        model routing (model_router.py), cross-family 2-judge quorum voting
+        with tiebreak/escalation (judge_quorum.py), and an 8-oracle
+        fidelity-floor enforcement chokepoint (fidelity_floor.py), all wired
+        as numbered CI gates (QGATE_3/6/7) with embedded self-tests run via
+        run_all_gates.py. Graded OBS_PROMPTFOO bench. Verified and explicitly
+        did NOT credit: ml_models.rs (metadata-only ML registry, zero
+        predict/infer/train methods), axis_book_to_game.py's pipeline stages
+        (deterministic/procedural, not an autonomous agent), and
+        model_router.py's vendor model references (anthropic/openai/xai
+        pinned in a routing table, but the tools/ai/clients/<family>.py it
+        cites does not exist on disk -- unwired scaffolding, so correctly
+        NOT recorded as vendor_in_use, which would have overclaimed a
+        non-live dependence). AXIS-X-Y-Z reconfirmed byte-identical
+        (diff -rq, zero output) -- not independently scanned. axis-seo (20
+        files, full read) is AI-crawler-aware SEO tooling with none of the
+        89 target capabilities -- absent. ROOT-CAUSED a recurring YAML-escape
+        corruption bug that had resurfaced across CAND-SCAN-01 through -04:
+        apply-scripts were passing previously-read backslash-bearing text as
+        the REPLACEMENT argument to re.sub(), which silently re-interprets
+        backslash sequences as backreference syntax and halves the escaping
+        on every pass. Fixed by rephrasing the one affected matrix fragment
+        without a literal backslash (eliminating the landmine rather than
+        chasing it again) and documented the root cause + correct pattern
+        (lambda replacement) in SONNET5_ECOSYSTEM_SCAN_STRATEGY.md. Overall
+        floor rose 4.8% -> 5.7%, repos scanned 9 -> 12.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, SONNET5_ECOSYSTEM_SCAN_STRATEGY.md, evidence/AXIS-ENGINE.scan.yaml, evidence/AXIS-X-Y-Z.scan.yaml, evidence/axis-seo.scan.yaml]
+      commit: "(this commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-03 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02)"
       summary: >-
@@ -76,7 +114,7 @@ project_continuation:
         had been merged into one malformed list item by a prior edit).
         Overall floor rose 4.4% -> 4.8%, repos scanned 7 -> 9.
       files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/no-fate-payment-engine.scan.yaml, evidence/paid-docs.scan.yaml]
-      commit: "(this commit)"
+      commit: "(prior commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-02 (Sonnet 5, continued same conversation as Session 0)"
       summary: >-

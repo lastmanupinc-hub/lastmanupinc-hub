@@ -39,7 +39,8 @@ candidates:
       ~91,315 files — biggest batch; grep-only depth. AXIS-X-Y-Z covered here
       via `diff -rq /home/user/AXIS-ENGINE /home/user/AXIS-X-Y-Z` mirror check;
       record the diff result in evidence/AXIS-X-Y-Z.scan.yaml as a mirror note.
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-04", result: "OBS_PROMPTFOO newly bench (CI-gated LLM-judge harness); mirror re-verified zero-diff; axis-seo confirmed absent"}
   - id: CAND-SCAN-05
     repos: [AXIS-mars, pmd-customizer-build, profitforge]
     size_note: "~5,105 files"

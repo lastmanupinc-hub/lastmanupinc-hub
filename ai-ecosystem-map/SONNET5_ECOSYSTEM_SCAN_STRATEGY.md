@@ -110,6 +110,31 @@ honest than blindly optimistic. So we can build on truth."
 - Huge-repo rule (AXIS-ENGINE class): grep-only depth is acceptable; grade
   conservatively from what you verified, note the depth limit in the shard.
 
+## Known gotcha: `re.sub` replacement-string corruption (recurred CAND-SCAN-01→04)
+
+If your matrix-update script reads an existing string field (e.g. an old
+`search_expressions` entry containing a literal backslash, like a regex
+fragment) and passes that text as the **replacement** argument to
+`re.sub(pattern, replacement, body)`, Python's `re` module interprets
+backslash sequences in `replacement` as backreferences (`\1`, `\g<name>`,
+`\\`) — so `\\.` (two backslash chars + dot, the correct YAML double-quoted
+encoding of a literal `\.`) silently collapses to `\.` (one backslash) on
+every single pass. Run the same script pattern across a few sessions and the
+escaping degrades until PyYAML fails to parse it. This bit four sessions in a
+row before being traced to its root cause.
+
+**Fix:** never build a replacement string by concatenating previously-read
+file content and pass it as `re.sub`'s second argument directly. Either (a)
+use a lambda replacement — `re.sub(pattern, lambda m: new_text, body)` —
+which is never escape-interpreted, or (b) avoid the whole class by not
+putting literal backslashes in matrix prose at all (prefer rephrasing a
+regex-looking fragment in words, as this file's own batteries table does).
+`gov_lint.py` cannot catch this by construction (the corrupted-but-still-legal
+single-backslash form is what breaks the parse, so a broken file fails
+loudly at the next `yamlite.load` — check for that failure mode specifically
+if a session's rollup/lint step throws a raw `yaml.scanner.ScannerError`
+instead of a clean gov_lint failure).
+
 ## Consolidation session (CAND-CONSOLIDATE-12)
 
 No new scanning. Re-open the cited files for ≥12 sampled non-absent rows —

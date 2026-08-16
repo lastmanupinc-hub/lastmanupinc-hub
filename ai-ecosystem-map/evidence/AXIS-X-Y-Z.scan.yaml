@@ -1,0 +1,13 @@
+repo: AXIS-X-Y-Z
+scanned: "2026-08-16"
+session: CAND-SCAN-04
+purpose: "Byte-identical mirror of AXIS-ENGINE (both 91,207 files)."
+mirror_verification: >
+  `diff -rq /home/user/AXIS-ENGINE /home/user/AXIS-X-Y-Z --exclude=.git`
+  run 2026-08-16: zero output, exit code 0. Confirmed byte-identical.
+  Per SCAN_TREE.yaml's mirror-verify design, this repo was NOT independently
+  scanned -- all findings in evidence/AXIS-ENGINE.scan.yaml apply verbatim.
+files_read: 0
+findings: {}
+empty_batteries: {}
+vendor_hits: []

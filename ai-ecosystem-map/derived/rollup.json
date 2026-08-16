@@ -109,7 +109,7 @@
     "ai_security": {
       "audited": 8,
       "label": "AI Security",
-      "pct": 0.0,
+      "pct": 5.0,
       "slots": {
         "SEC_AZURE_CONTENT_SAFETY": {
           "evidence_count": 0,
@@ -136,8 +136,8 @@
           "vendor_in_use_count": 0
         },
         "SEC_NEMO_GUARDRAILS": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "partial",
           "label": "NVIDIA NeMo Guardrails",
           "vendor_in_use_count": 0
         },
@@ -283,7 +283,7 @@
           "evidence_count": 0,
           "grade": "absent",
           "label": "Anthropic Claude",
-          "vendor_in_use_count": 0
+          "vendor_in_use_count": 1
         },
         "LLM_COHERE": {
           "evidence_count": 0,
@@ -372,7 +372,7 @@
           "vendor_in_use_count": 0
         },
         "MCP_MCP_SDK": {
-          "evidence_count": 1,
+          "evidence_count": 3,
           "grade": "peer",
           "label": "MCP SDK",
           "vendor_in_use_count": 0
@@ -624,20 +624,20 @@
     }
   },
   "counts": {
-    "absent": 84,
+    "absent": 83,
     "bench": 2,
-    "partial": 1,
+    "partial": 2,
     "peer": 2,
     "peer_plus": 0,
     "scaffold": 0,
     "unaudited": 0
   },
   "coverage": {
-    "repos_scanned": 7,
+    "repos_scanned": 9,
     "repos_total": 31,
     "slots_audited": 89,
     "slots_total": 89
   },
-  "overall_pct": 4.4,
+  "overall_pct": 4.8,
   "schema": 1
 }

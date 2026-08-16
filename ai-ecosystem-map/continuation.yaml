@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: CAND-SCAN-02   # AXIS-Foundry, A-eye, axis-launch — first real evidence: MCP_MCP_SDK + MCP_MCP_REGISTRY graded peer (hand-rolled, tested, production-wired MCP server + registry manifest), MCP_FASTMCP + AGT_PYDANTIC_AI bench, AGE_LANGGRAPH partial (plan/execute/replan loop + real HITL review, no graph/checkpointing). Overall floor 4.4%, 7/31 repos. Also fixed a gov_lint.py G4 bug (paths must resolve via each evidence entry's own `repo` field, not flat against /home/user).
-    next_candidate_id: CAND-SCAN-03             # no-fate-payment-engine, paid-docs — AI-heaviest repo (PAI'D platform + Trust Fabric AI certify-or-refuse engine)
-    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02]
+    last_completed_candidate_id: CAND-SCAN-03   # no-fate-payment-engine, paid-docs — MCP_MCP_SDK strengthened (3 independent implementations, 2 repos), SEC_NEMO_GUARDRAILS newly partial (AgentPolicy tool-use rails), LLM_ANTHROPIC_CLAUDE vendor_in_use recorded (TF certify-or-refuse engine runs on real Claude API — dependence, never credited). Overall floor 4.8%, 9/31 repos. Swept a recurring \.well-known YAML-escape bug and a duplicate-key bug in this file's own change_log.
+    next_candidate_id: CAND-SCAN-04             # AXIS-ENGINE (+ AXIS-X-Y-Z via diff -rq mirror-verify), axis-seo — biggest batch (~91k files), grep-only depth per the huge-repo rule
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03]
 
   scan_phase:
     active: true
@@ -42,6 +42,41 @@ project_continuation:
 
   # Newest-first. {date, session_id, summary, files_changed, commit}
   change_log:
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-03 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02)"
+      summary: >-
+        Scanned no-fate-payment-engine (4997 files, AI-heaviest repo) and
+        paid-docs (16 files, docs-only). MCP_MCP_SDK strengthened with a
+        second independent hand-rolled MCP server (Go, dual HTTP+SSE
+        transport, go-backend/internal/agent/mcp.go) plus a third MCP
+        surface (paid-work-router-mcp TS package) — stays peer, now 3
+        implementations across 2 repos. SEC_NEMO_GUARDRAILS newly graded
+        partial: AgentPolicy is a tested, production-wired deny-by-default
+        tool-use rail system gating every AI-agent MCP tool call
+        (allow-list, spend caps, provider restrictions); missing_for_peer
+        notes it covers tool-call authorization only, not topic/jailbreak/
+        content-safety rails. LLM_ANTHROPIC_CLAUDE vendor_in_use recorded:
+        the TF certify-or-refuse engine's deep-audit (Opus) and
+        conversational (Sonnet) layers call the real Anthropic Messages
+        API — genuine AI usage, but dependence, never credited toward the
+        grade per doctrine (a stale "powered by OpenAI" docstring nearby
+        was checked and found unbacked by code, so NOT recorded).
+        TF certification/classification/scoring engines verified
+        deterministic (threshold/lookup-based, not LLM-driven) — correctly
+        left uncredited; radar_ml_pipeline.go verified real in-house ML but
+        for fraud-risk not language, off-target; embed_handler.go confirmed
+        a false positive (checkout-widget iframe, not text embeddings).
+        GOTCHA (recurring): the CAND-SCAN-01-era MCP search_expressions
+        text still had the single-backslash `\.well-known` YAML escape bug
+        in several rows despite an earlier fix — swept and fixed all
+        remaining occurrences this session; the mcp battery used by
+        scan-apply scripts since CAND-SCAN-02 no longer includes that
+        pattern, so it should not recur. Also fixed a duplicate-YAML-key
+        bug in this file's own change_log (SESSION-0/CAND-SCAN-02 entries
+        had been merged into one malformed list item by a prior edit).
+        Overall floor rose 4.4% -> 4.8%, repos scanned 7 -> 9.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/no-fate-payment-engine.scan.yaml, evidence/paid-docs.scan.yaml]
+      commit: "(this commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-02 (Sonnet 5, continued same conversation as Session 0)"
       summary: >-
@@ -65,7 +100,8 @@ project_continuation:
         field — fixed and reverified. Overall floor rose 0.0% -> 4.4%,
         7/31 repos scanned.
       files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, tools/gov_lint.py, evidence/AXIS-Foundry.scan.yaml, evidence/A-eye.scan.yaml, evidence/axis-launch.scan.yaml]
-      commit: "(this commit)"
+      commit: "(prior commit)"
+    - date: "2026-08-16"
       session_id: "SESSION-0 (Fable 5, plan-approved bootstrap + CAND-SCAN-01 pilot)"
       summary: >-
         SCAFFOLD: built the full control plane (targets taxonomy 89 slots,
@@ -82,4 +118,4 @@ project_continuation:
         NOTE: dedicated-repo creation blocked (token 403); control plane
         hosted in profile repo ai-ecosystem-map/ — migration is a plain copy.
       files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/lastmanupinc-hub.scan.yaml, evidence/.github.scan.yaml, evidence/Remedial-Action.scan.yaml, evidence/axis-launch-community.scan.yaml]
-      commit: "(this commit)"
+      commit: "(prior commit)"

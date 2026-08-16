@@ -1,0 +1,91 @@
+repo: no-fate-payment-engine
+scanned: "2026-08-16"
+session: CAND-SCAN-03
+purpose: >
+  PAI'D — multi-rail payment platform (Go/Echo + SvelteKit) with an embedded
+  Trust Fabric AI certify-or-refuse-for-sale subsystem. 4997 files; the
+  AI-heaviest repo per SCAN_TREE. Grep-only depth on the large trustfabric/
+  and go-backend/internal trees (huge-repo rule), targeted reads on the
+  most promising hits.
+files_read: 12
+findings:
+  mcp:
+    - files: ["go-backend/internal/agent/mcp.go:1-402", "go-backend/internal/agent/tools.go:1-338"]
+      note: >
+        A second, independent hand-rolled MCP implementation (Go, distinct
+        from AXIS-Foundry's Python one): JSON-RPC 2.0 MCPRequest/MCPResponse,
+        Dispatcher/RegisterTool/Dispatch, dual transport (Streamable HTTP +
+        legacy SSE), real payment-domain tools (get_quote, list_providers,
+        get_payment_intent, execute_payment). Tested (mcp_test.go). Strengthens
+        the existing MCP_MCP_SDK peer grade with independent supporting evidence.
+      suggests_grade: peer
+      slots: [MCP_MCP_SDK]
+    - files: ["paid-work-router-mcp/src/index.ts", "paid-work-router-mcp/src/paid-client.ts"]
+      note: "A third MCP surface — a standalone TS MCP router package with its own test file (paid-client.test.ts)."
+      suggests_grade: peer
+      slots: [MCP_MCP_SDK]
+  ai_security:
+    - files: ["go-backend/internal/agent/policy.go:1-244", "go-backend/internal/agent/mcp.go:310", "go-backend/internal/agent/mcp.go:333"]
+      note: >
+        AgentPolicy is a real, tested (policy_test.go), production-wired
+        (CheckTool called from mcp.go tool dispatch before every AI-agent
+        tool call) deny-by-default tool-use rail system for AI agents
+        (Claude/Grok/Cursor/custom): AllowedTools allow-list, per-key spend
+        caps (MaxAmountMinorCents), provider allow-lists. Matches NeMo
+        Guardrails' "tool-use rails" facet of its capability definition.
+      suggests_grade: partial
+      slots: [SEC_NEMO_GUARDRAILS]
+      missing_for_peer: >
+        Scoped only to payment-tool-call authorization (which tools an agent
+        may invoke, spend limits, provider restrictions) — no topic/jailbreak
+        rails or general conversational-content constraints, which NeMo
+        Guardrails also covers.
+  llm: []
+  agentic_ai: []
+  rag: []
+  embedding: []
+  observability: []
+  memory: []
+  ai_agent: []
+  automation: []
+  vector_database: []
+not_credited_adjacent_findings: >
+  go-backend/internal/trustfabric/{certification,classification,scoring}/engine.go
+  (the "certify-or-refuse" subsystem referenced in CLAUDE.md) are deterministic
+  threshold/rule-based scoring and jurisdiction-control-set-lookup engines
+  (DisciplineMinimums, HardFailThresholds, numeric score comparisons) — not
+  LLM-driven judgment, so not credited toward any AI Security or RAG slot.
+  go-backend/internal/trustfabric/taxonomy/ai.go IS a real Claude-driven deep
+  audit engine (AnalyzeWithAI via Claude Opus, CommunicateWithUser via Claude
+  Sonnet, Anthropic Messages API types with prompt caching) — this is genuine
+  AI usage, but it is VENDOR DEPENDENCE (calls the Anthropic API), not an
+  in-house peer LLM, so it is recorded under vendor_hits only, never credited
+  toward LLM_ANTHROPIC_CLAUDE. Its own header comment claims "No OpenAI" but
+  a stale docstring on AICommunication says "powered by OpenAI" — verified
+  the actual code only defines Anthropic Messages API types; the OpenAI
+  claim is not backed by code and is not recorded as vendor_in_use.
+  go-backend/internal/domain/engines/radar_ml_pipeline.go is a real in-house
+  ML model lifecycle registry (staging/canary/active, binary/regression/
+  ensemble/rule-based classifiers) for fraud detection — genuine AI/ML work,
+  but scores fraud risk, not text/language, so it doesn't match any LLM,
+  embedding, or RAG slot definition; not credited.
+  embed_handler.go serves an embeddable CHECKOUT WIDGET (iframe), a false
+  positive on the word "embed" — unrelated to text embeddings; not credited.
+empty_batteries:
+  llm: ["grep -rliE (code only) 'language.?model|inference|tokenizer|logits|transformer' go-backend paid-work-router-mcp packages — hits are ML-fraud-model plumbing (radar_ml_pipeline, network_token_clients) and a ruleset compiler, not language-model inference"]
+  rag: ["grep -rliE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — 637 files, dominated by payment-domain 'retrieval' (fetching records) and mesh-unrelated 'chunk' (streamed response chunks); no retrieval-augmented-generation pipeline found"]
+  embedding: ["grep -rliE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — 31 files; real hit embed_handler.go is a checkout-widget iframe embed, not text embeddings"]
+  observability: ["trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log — real hits are general infra observability (audit.go, tracing middleware) and TF discipline scorecard, not AI-call tracing"]
+  memory: ["memory|session.?state|persist|ledger|recall|knowledge.?graph — 1808 files; dominated by the platform's own hash-chained ledger (payments ledger, not AI memory) and HTTP session state"]
+  ai_agent: ["agent.?framework|tool_use|function.?call|agent.?runtime|autonomous — real hits ARE the go-backend/internal/agent package itself, but it's an MCP tool-dispatch + policy layer (credited under mcp/ai_security above), not a general-purpose reusable agent SDK/framework"]
+  agentic_ai: ["multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm — 572 files; trustfabric/orchestrator/engine.go is a certification pipeline orchestrator (deterministic stage sequencing), not multi-agent coordination"]
+  vector_database: ["vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index — 10 files; only real hit is carbon_dashboard_engine.go's unrelated math 'vector' usage"]
+  automation: ["workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry — 1500 files, dominated by the product's own dunning/retry, billing-cron, and TF pipeline terminology; no n8n/Zapier/Temporal-class external automation platform found"]
+vendor_hits:
+  - {vendor: anthropic_claude, files: ["go-backend/internal/trustfabric/taxonomy/ai.go:79-105"], note: "Claude Opus (deep recursive codebase audit, AnalyzeWithAI) + Claude Sonnet (user-facing conversational layer, CommunicateWithUser) via real Anthropic Messages API types with prompt caching — TF's AI-native certify-or-refuse engine runs on Claude, not an in-house model"}
+huge_repo_depth_note: >
+  4997 files; batteries + narrowed file-count triage used throughout
+  (huge-repo rule per SONNET5_ECOSYSTEM_SCAN_STRATEGY.md); did not
+  exhaustively read every trustfabric/ subpackage (39 subdirs, 227 files) —
+  certification/classification/scoring read at header-level only. Revisit at
+  CAND-CONSOLIDATE-12 if a fuller pass is warranted.

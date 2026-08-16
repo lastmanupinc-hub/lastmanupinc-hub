@@ -31,7 +31,8 @@ candidates:
   - id: CAND-SCAN-03
     repos: [no-fate-payment-engine, paid-docs]
     size_note: "~5,097 files; AI-heaviest repo (PAI'D platform + TF AI engine)"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-03", result: "MCP_MCP_SDK strengthened (3rd+4th evidence entries), SEC_NEMO_GUARDRAILS newly partial, 1 vendor_in_use recorded (Anthropic Claude)"}
   - id: CAND-SCAN-04
     repos: [AXIS-ENGINE, axis-seo]
     size_note: >

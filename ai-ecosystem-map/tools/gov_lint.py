@@ -17,11 +17,18 @@ Checks (G-numbered, modeled on AXIS-Foundry tools/gov_lint.py):
   G10 every peer_evidence scan_ref and every SCAN_TREE done-repo has an
       evidence/<repo>.scan.yaml on disk
   G11 derived/rollup.json (if present) matches recomputation
+  G12 no duplicate mapping keys in any governance YAML file (PyYAML's default
+      safe_load silently keeps the LAST value on a duplicate key — a bad
+      hand-edit that merges two list items, e.g. two change_log entries,
+      parses "successfully" while quietly dropping the first one's fields;
+      this is a strict re-parse that catches exactly that)
 """
 import json
 import os
 import re
 import sys
+
+import yaml as _pyyaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import yamlite
@@ -29,7 +36,30 @@ import rollup
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO_ROOT = "/home/user"
+GOVERNANCE_YAML_FILES = [
+    "AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml", "ECOSYSTEM_TARGETS.yaml",
+    "SCAN_TREE.yaml", "continuation.yaml", "begin.yaml",
+]
 ERRORS = []
+
+
+class _DupKeyLoader(_pyyaml.SafeLoader):
+    """SafeLoader that raises on a duplicate key within one mapping, instead
+    of silently keeping the last value like the stdlib default."""
+
+
+def _construct_mapping_no_dupes(loader, node, deep=False):
+    mapping = {}
+    for key_node, value_node in node.value:
+        key = loader.construct_object(key_node, deep=deep)
+        if key in mapping:
+            raise ValueError("duplicate key %r at line %d" % (key, key_node.start_mark.line + 1))
+        mapping[key] = loader.construct_object(value_node, deep=deep)
+    return mapping
+
+
+_DupKeyLoader.add_constructor(
+    _pyyaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, _construct_mapping_no_dupes)
 
 
 def err(gate, msg):
@@ -139,12 +169,25 @@ def main():
         if on_disk != json.loads(json.dumps(result)):
             err("G11", "derived/rollup.json stale — run tools/rollup.py --write")
 
+    # G12
+    for fname in GOVERNANCE_YAML_FILES:
+        path = os.path.join(ROOT, fname)
+        if not os.path.exists(path):
+            continue
+        try:
+            with open(path, encoding="utf-8") as f:
+                _pyyaml.load(f, Loader=_DupKeyLoader)
+        except ValueError as exc:
+            err("G12", "%s has a duplicate YAML key: %s" % (fname, exc))
+        except _pyyaml.YAMLError as exc:
+            err("G12", "%s failed strict re-parse: %s" % (fname, exc))
+
     if ERRORS:
         print("gov_lint: FAIL (%d)" % len(ERRORS))
         for e in ERRORS:
             print("  " + e)
         sys.exit(1)
-    print("gov_lint: PASS (G1-G11)")
+    print("gov_lint: PASS (G1-G12)")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,11 @@
 <title>AI Ecosystem Capability Map</title>
 <style>
 :root { color-scheme: light dark; }
+body { background:#f9f9f7; margin:0; }
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) body { background:#0d0d0d; }
+}
+:root[data-theme="dark"] body { background:#0d0d0d; }
 .map-root {
   --surface-1:#fcfcfb; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e;
   --muted:#898781; --grid:#e1e0d9; --border:rgba(11,11,11,0.10);

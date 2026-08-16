@@ -59,7 +59,8 @@ candidates:
   - id: CAND-SCAN-08
     repos: [AXIS-PAI, AXIS-chlover, no-fate-contract]
     size_note: "~2,650 files"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-08", result: "MCP_MCP_SDK strengthened (5th impl), 1 new vendor_in_use (2nd Anthropic Claude record)"}
   - id: CAND-SCAN-09
     repos: [guild-hall]
     size_note: "~1,823 files but 468 top-level entries — breadth alone fills a session"

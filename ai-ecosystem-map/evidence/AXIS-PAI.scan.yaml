@@ -1,0 +1,30 @@
+repo: AXIS-PAI
+scanned: "2026-08-16"
+session: CAND-SCAN-08
+purpose: >
+  An EARLIER snapshot of the "PAI'D" payment platform (CLAUDE.md stats
+  dated 2026-05-06, vs no-fate-payment-engine's 2026-06-18 -- fewer
+  routes/files, predates that repo's agent/MCP additions). 2,220 files,
+  many of them AXIS-Toolbox-generated hardening artifacts (.ai/,
+  .ai-output/, storyboard.md, collection-map.md, schema-recommendations.json
+  -- same generator output pattern seen in axis-toolbox-examples).
+files_read: 6
+findings: {}
+not_credited_adjacent_findings: >
+  No go-backend/internal/agent/ directory exists here (confirmed via find)
+  -- unlike no-fate-payment-engine, this snapshot predates the MCP/agent
+  feature. MCP-battery hits here are almost entirely AXIS-Toolbox-generated
+  config artifacts (server-manifest.yaml, connector-map.yaml, .ai-output/)
+  from a hardening pass, not implementation code -- not credited (same
+  judgment as axis-toolbox-examples, CAND-SCAN-07). go-backend/internal/
+  provider/{solana,crypto}.go are crypto PAYMENT rail providers, an
+  unrelated false-positive match on "jsonrpc" (Solana RPC, not MCP).
+  go-backend/internal/trustfabric/taxonomy/ai.go IS present and is the
+  same Claude-driven certify-or-refuse audit engine found in
+  no-fate-payment-engine (CAND-SCAN-03) -- recorded as an additional
+  vendor_in_use entry for LLM_ANTHROPIC_CLAUDE (a second, independent repo
+  confirming the same real dependence), never credited toward the grade.
+empty_batteries:
+  all_11: ["all 11 category batteries run against the 2,220-file tree; only vendor dependence found, no new capability evidence"]
+vendor_hits:
+  - {vendor: anthropic_claude, files: ["go-backend/internal/trustfabric/taxonomy/ai.go"], note: "same TF certify-or-refuse Claude Opus/Sonnet audit engine as no-fate-payment-engine (CAND-SCAN-03) -- confirms the dependence across a second repo snapshot"}

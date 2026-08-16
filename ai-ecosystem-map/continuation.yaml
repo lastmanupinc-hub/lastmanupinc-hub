@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: CAND-SCAN-07   # PMD-MASTER (2,752 files, production SaaS design studio advertising "16 AI subsystems"): checked the actual code of the most promising ones rather than trusting the README -- GenerationOrchestratorService has zero vendor-API calls (template-driven), BrandMemoryService's own docstring admits "simulated" identity extraction, AISERecommendationService's own docstring says it "Replaces Math.random() impact scores with deterministic scoring". A consistent, honest portfolio-wide pattern: "AI-powered" branding frequently means algorithmic/heuristic automation, not an actual model -- not credited. AXIS-NRPG (deterministic RPG engine, an unrelated "Iliad" game campaign despite the name) fully absent. axis-toolbox-examples (case-study reports of AXIS-odyssey's live MCP service run against other portfolio repos) has no new capability code -- corroborates but doesn't newly evidence the already-peer MCP grades. No grade upgrades; floor holds at 5.7%, repos scanned 18 -> 21 (two-thirds of the portfolio).
-    next_candidate_id: CAND-SCAN-08             # AXIS-PAI, AXIS-chlover, no-fate-contract
-    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05, CAND-SCAN-06, CAND-SCAN-07]
+    last_completed_candidate_id: CAND-SCAN-08   # AXIS-chlover contributed a FIFTH independent MCP implementation (packages/server, TypeScript, standalone library, no SDK dependency, tested) -- MCP_MCP_SDK stays peer, now backed by evidence across 4 repos + 3 languages. AXIS-PAI (an earlier PAI'D snapshot predating no-fate-payment-engine's agent/MCP additions) confirmed no agent/MCP code exists there yet, but the same TF Claude-audit engine does -- second LLM_ANTHROPIC_CLAUDE vendor_in_use record. no-fate-contract's real PolicyEnforcer governance/dispute-resolution engine is off-target (computational-claim disputes, not AI content safety) -- not credited. No new grade upgrades beyond the MCP evidence strengthening; floor holds at 5.7%, repos scanned 21 -> 24.
+    next_candidate_id: CAND-SCAN-09             # guild-hall
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05, CAND-SCAN-06, CAND-SCAN-07, CAND-SCAN-08]
 
   scan_phase:
     active: true
@@ -42,6 +42,38 @@ project_continuation:
 
   # Newest-first. {date, session_id, summary, files_changed, commit}
   change_log:
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-08 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..07)"
+      summary: >-
+        Scanned AXIS-PAI (2,220 files, an earlier PAI'D snapshot -- CLAUDE.md
+        dated 2026-05-06 vs no-fate-payment-engine's 2026-06-18 -- confirmed
+        no go-backend/internal/agent/ directory exists, so it predates that
+        repo's MCP/agent additions), AXIS-chlover (137 files, an MCP-focused
+        library), and no-fate-contract (193 files, "DBGO" governance/
+        dispute-resolution framework). AXIS-chlover contributed a FIFTH
+        independent hand-rolled MCP implementation (packages/server, TS,
+        packaged as a standalone library, verified no
+        @modelcontextprotocol/sdk dependency, tested with 3 test files) --
+        MCP_MCP_SDK stays peer, now backed by evidence across 4 repos and 3
+        languages. AXIS-PAI's MCP-battery hits were confirmed to be almost
+        entirely AXIS-Toolbox-generated hardening artifacts (server-manifest
+        .yaml, connector-map.yaml, .ai-output/), not implementation code --
+        not credited (same judgment as axis-toolbox-examples). It DOES
+        contain the same TF certify-or-refuse Claude Opus/Sonnet audit
+        engine found in no-fate-payment-engine -- recorded as a SECOND
+        LLM_ANTHROPIC_CLAUDE vendor_in_use entry, confirming the dependence
+        across a second repo snapshot, never credited toward the grade.
+        no-fate-contract's dbgo/enforcement/index.ts is a real, structured
+        PolicyEnforcer with hard-enforced governance policies and
+        cryptographic genesis-hash binding -- but it governs
+        computational-claim disputes between competing solvers, not
+        AI-generated content safety, so it's off-target for SEC_* and not
+        credited (consistent with several other governance/verification
+        frameworks found off-target this session). No new grade upgrades
+        beyond MCP strengthening; floor holds at 5.7%, repos scanned
+        21 -> 24.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/AXIS-PAI.scan.yaml, evidence/AXIS-chlover.scan.yaml, evidence/no-fate-contract.scan.yaml]
+      commit: "(this commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-07 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..06)"
       summary: >-
@@ -79,7 +111,7 @@ project_continuation:
         redundancy. No grade upgrades this batch; floor holds at 5.7%,
         repos scanned 18 -> 21 -- two-thirds of the portfolio covered.
       files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/PMD-MASTER.scan.yaml, evidence/AXIS-NRPG.scan.yaml, evidence/axis-toolbox-examples.scan.yaml]
-      commit: "(this commit)"
+      commit: "(prior commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-06 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..05)"
       summary: >-

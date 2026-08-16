@@ -27,6 +27,11 @@ project_continuation:
   scan_phase:
     active: true
     started: "2026-08-16"
+    artifact_url: "https://claude.ai/code/artifact/ee96e72a-d6b9-4f36-a974-04ce825b9986"
+    artifact_rule: >
+      After each session's re-render, republish derived/capability_map.html to
+      this same URL (pass it as `url` to the Artifact tool) so the picture
+      stays at one stable link.
     strategy_doc: SONNET5_ECOSYSTEM_SCAN_STRATEGY.md
     backlog_source: SCAN_TREE.yaml
     exit_criteria_source: SCAN_TREE.yaml#exit_criteria

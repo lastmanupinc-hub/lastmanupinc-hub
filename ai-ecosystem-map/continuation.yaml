@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: CAND-SCAN-04   # AXIS-ENGINE (91k files, grep-only depth) + AXIS-X-Y-Z (mirror-verified, not independently scanned) + axis-seo (full read, absent). OBS_PROMPTFOO newly bench: a real CI-gated LLM-judge harness (model_router.py declarative routing + judge_quorum.py cross-family quorum + fidelity_floor.py 8-oracle chokepoint, wired as numbered QGATE CI gates with self-tests). Verified NOT credited: ml_models.rs is a metadata-only registry (no inference), book-to-game pipeline stages are deterministic not agentic, and model_router's vendor model references are unwired scaffolding (referenced tools/ai/clients/ doesn't exist -- correctly NOT recorded as vendor_in_use). Overall floor 5.7%, 12/31 repos. ROOT-CAUSED a recurring escape-corruption bug: apply-script re.sub() calls that pass previously-read backslash-bearing text as a REPLACEMENT string get it silently re-interpreted (backreference syntax) and halved on every pass -- eliminated the landmine by rephrasing the one affected fragment without a literal backslash, and documented the gotcha + fix pattern in SONNET5_ECOSYSTEM_SCAN_STRATEGY.md for future sessions.
-    next_candidate_id: CAND-SCAN-05             # AXIS-mars, pmd-customizer-build, profitforge
-    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04]
+    last_completed_candidate_id: CAND-SCAN-05   # AXIS-mars (sibling game engine, not a mirror of AXIS-ENGINE -- checked and confirmed it does NOT replicate the tools/ai/judge-harness pattern), pmd-customizer-build (SaaS template customizer, real internal WorkflowEngine but not a general-purpose automation-platform peer), profitforge ("AI agents" that are pure CRUD+random-simulation records with zero MCP/LLM code -- cleanest confirmed-aspirational case scanned). No grade upgrades this batch -- three well-documented near-misses, floor holds at 5.7%, 15/31 repos. Fixed a SECOND recurring YAML-corruption bug (Python `\"` silently collapsing to a bare `"` inside a matrix-gen script, breaking a double-quoted scalar) and hardened tools/yamlite.py's load() to point future sessions at the strategy doc's gotchas section instead of a bare traceback.
+    next_candidate_id: CAND-SCAN-06             # AXIS-odyssey, AXIS-Gold, assetforge
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05]
 
   scan_phase:
     active: true
@@ -42,6 +42,39 @@ project_continuation:
 
   # Newest-first. {date, session_id, summary, files_changed, commit}
   change_log:
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-05 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02/03/04)"
+      summary: >-
+        Scanned AXIS-mars (4,898 files -- a SEPARATE, non-mirror game-engine
+        implementation from CAND-SCAN-04's AXIS-ENGINE: Rust core + native
+        C++ Vulkan/OpenXR runtime + Qt6 editor, shipping a Mars MMO), checked
+        specifically for a repeat of AXIS-ENGINE's tools/ai/judge-harness
+        subsystem -- NOT present here; a real DLSS-style neural-graphics
+        upscaling benchmark found (genuine ML, but computer-vision not
+        language/agent/RAG, off-target, not credited). pmd-customizer-build
+        (73 files, multi-tenant SaaS template customizer) has a real, tested
+        internal WorkflowEngine/JobLifecycleManager -- product-internal
+        automation, not a general-purpose external workflow-automation
+        platform peer to n8n/Temporal/Airflow, not credited. profitforge (34
+        files, full read, "AI agents that actually make people money") is
+        the cleanest confirmed-aspirational case scanned yet: its Agent type
+        is a plain CRUD record with a math/rand earnings simulator, zero
+        MCP or LLM code exists anywhere in the repo, and the README is
+        explicit this is pre-production ("simulated agents... clear path to
+        production: real Iliad agents") -- graded fully absent despite the
+        marketing framing, exactly per the peer-independence doctrine. No
+        grade upgrades this batch; floor holds at 5.7%. Fixed a SECOND
+        recurring YAML-corruption bug of the same family as CAND-SCAN-04's:
+        a matrix-gen script's Python `\"` escape silently collapsed to a
+        bare `"` when written into a double-quoted YAML scalar's content,
+        closing the scalar early and breaking the parse a line later.
+        Root-caused, fixed the one instance on disk, and hardened
+        tools/yamlite.py's load() to catch YAMLError and point future
+        sessions at the strategy doc's "Known gotcha" sections instead of a
+        bare traceback -- documented the new gotcha there too. Repos
+        scanned 12 -> 15.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, SONNET5_ECOSYSTEM_SCAN_STRATEGY.md, tools/yamlite.py, evidence/AXIS-mars.scan.yaml, evidence/pmd-customizer-build.scan.yaml, evidence/profitforge.scan.yaml]
+      commit: "(this commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-04 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02/03; approved via a plan-mode checkpoint mid-loop)"
       summary: >-
@@ -79,7 +112,7 @@ project_continuation:
         (lambda replacement) in SONNET5_ECOSYSTEM_SCAN_STRATEGY.md. Overall
         floor rose 4.8% -> 5.7%, repos scanned 9 -> 12.
       files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, SONNET5_ECOSYSTEM_SCAN_STRATEGY.md, evidence/AXIS-ENGINE.scan.yaml, evidence/AXIS-X-Y-Z.scan.yaml, evidence/axis-seo.scan.yaml]
-      commit: "(this commit)"
+      commit: "(prior commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-03 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02)"
       summary: >-

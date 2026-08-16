@@ -135,6 +135,27 @@ loudly at the next `yamlite.load` — check for that failure mode specifically
 if a session's rollup/lint step throws a raw `yaml.scanner.ScannerError`
 instead of a clean gov_lint failure).
 
+## Known gotcha #2: Python `\"` silently becomes a bare `"` (recurred CAND-SCAN-05)
+
+Same failure family, different Python foot-gun: if a matrix-generation
+script builds a YAML double-quoted scalar's *content* inside a Python
+`'''triple-quoted'''` (or any non-raw) string literal and writes `\"` meaning
+"a literal double-quote character inside this text", Python's string-literal
+parser consumes the backslash and the output already contains a bare `"` —
+there is no backslash left for YAML to see as an escape. The result is a
+YAML double-quoted scalar that closes early at that quote, and the parser
+then hits the leftover trailing text as a syntax error (a `ParserError:
+expected <block end>, but found <scalar>` a line or two later, NOT
+pointing directly at the bad quote).
+
+**Fix:** never build YAML double-quoted-scalar content that contains a
+literal `"` character via a Python string escape — use single quotes (`'`)
+for any nested quoting inside prose you're generating (as the matrix's own
+authoring convention already does elsewhere), or build the YAML with a
+real YAML/JSON serializer instead of string formatting. `tools/yamlite.py`'s
+`load()` now wraps parse failures with a pointer back to this section —
+read that message first before treating a broken matrix as a mystery.
+
 ## Consolidation session (CAND-CONSOLIDATE-12)
 
 No new scanning. Re-open the cited files for ≥12 sampled non-absent rows —

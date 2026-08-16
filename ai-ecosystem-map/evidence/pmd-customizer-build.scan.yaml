@@ -1,0 +1,23 @@
+repo: pmd-customizer-build
+scanned: "2026-08-16"
+session: CAND-SCAN-05
+purpose: >
+  Multi-tenant SaaS platform (WordPress/WooCommerce-adjacent: WpCronScheduler,
+  ActionSchedulerAdapter, TenantMapping) for price/mask/discount template
+  customization -- staged rollout (stage-04/05/16/17) with SEO, template,
+  workflow, job, and performance engines. 73 files.
+files_read: 8
+findings: {}
+not_credited_adjacent_findings: >
+  WorkflowEngine.ts (681 lines), WpCronScheduler.ts, JobLifecycleManager.ts
+  (541 lines) are a real, tested (unit + integration tests present) internal
+  job/workflow orchestration system -- but it is the product's OWN
+  operational automation (template audits, SEO checks, tenant jobs), not a
+  general-purpose external-facing workflow-automation platform comparable to
+  n8n/Temporal/Airflow (the AUT_* target definitions). Same judgment applied
+  as to AXIS-Foundry's/no-fate-payment-engine's internal pipeline code in
+  earlier sessions -- not credited.
+empty_batteries:
+  ai_agent: ["grep -rliE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' -- 0 hits"]
+  all_other_10: ["all remaining category batteries run against the full 73-file tree -- no LLM/agent/RAG/MCP/embedding/vector-DB/AI-security/AI-call-observability code found"]
+vendor_hits: []

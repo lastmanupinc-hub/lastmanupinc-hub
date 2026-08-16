@@ -44,7 +44,8 @@ candidates:
   - id: CAND-SCAN-05
     repos: [AXIS-mars, pmd-customizer-build, profitforge]
     size_note: "~5,105 files"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-05", result: "no grade upgrades; 3 well-documented near-misses (game-engine ML, internal SaaS automation, aspirational-only agent marketplace)"}
   - id: CAND-SCAN-06
     repos: [AXIS-odyssey, AXIS-Gold, assetforge]
     size_note: "~3,702 files"

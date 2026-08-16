@@ -1,0 +1,240 @@
+<title>AI Ecosystem Capability Map</title>
+<style>
+:root { color-scheme: light dark; }
+.map-root {
+  --surface-1:#fcfcfb; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e;
+  --muted:#898781; --grid:#e1e0d9; --border:rgba(11,11,11,0.10);
+  --good:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  --bench:#2a78d6; --hub:#4a3aa7;
+  --good-wash:rgba(12,163,12,0.12); --bench-wash:rgba(42,120,214,0.12);
+  --warn-wash:rgba(250,178,25,0.16); --serious-wash:rgba(236,131,90,0.14);
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page); color: var(--ink-1);
+  margin: 0 auto; max-width: 1180px; padding: 28px 24px 48px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .map-root {
+    color-scheme: dark;
+    --surface-1:#1a1a19; --page:#0d0d0d; --ink-1:#ffffff; --ink-2:#c3c2b7;
+    --muted:#898781; --grid:#2c2c2a; --border:rgba(255,255,255,0.10);
+    --bench:#3987e5; --hub:#9085e9;
+  }
+}
+:root[data-theme="dark"] .map-root {
+  color-scheme: dark;
+  --surface-1:#1a1a19; --page:#0d0d0d; --ink-1:#ffffff; --ink-2:#c3c2b7;
+  --muted:#898781; --grid:#2c2c2a; --border:rgba(255,255,255,0.10);
+  --bench:#3987e5; --hub:#9085e9;
+}
+.map-root h1 { font-size: 26px; margin: 0 0 4px; }
+.map-root .sub { color: var(--ink-2); margin: 0 0 20px; font-size: 14px; max-width: 72ch; }
+.tiles { display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 26px; }
+.tile { background: var(--surface-1); border:1px solid var(--border); border-radius:10px;
+        padding:12px 18px; min-width:150px; }
+.tile .v { font-size: 30px; font-weight:650; }
+.tile .l { font-size: 12px; color: var(--ink-2); margin-top:2px; }
+.cascade { position:relative; }
+.spine { position:absolute; left:34px; top:0; bottom:0; width:2px; background:var(--grid); }
+.crow { display:flex; align-items:flex-start; gap:14px; margin:0 0 18px; position:relative; }
+.bubble { flex:0 0 148px; margin-left: var(--indent, 0px); background:var(--surface-1);
+  border:2px solid var(--hub); border-radius:999px; padding:10px 6px; text-align:center; }
+.bubble .cname { font-weight:650; font-size:13px; }
+.bubble .cpct { font-size:19px; font-weight:700; }
+.bubble .cmeta { font-size:11px; color:var(--muted); }
+.chips { display:flex; flex-wrap:wrap; gap:6px; padding-top:4px; }
+.chip { display:inline-flex; align-items:center; gap:6px; border-radius:8px;
+  padding:5px 9px; font-size:12.5px; background:var(--surface-1);
+  border:1.5px solid var(--grid); color:var(--ink-1); }
+.chip .g { font-weight:700; font-size:11px; }
+.chip.peer      { background:var(--good); border-color:var(--good); color:#fff; }
+.chip.peer_plus { background:var(--good); border-color:var(--ink-1); color:#fff;
+                  box-shadow:0 0 0 2px var(--good); }
+.chip.bench     { background:var(--bench-wash); border-color:var(--bench); }
+.chip.bench .g  { color:var(--bench); }
+.chip.partial   { background:var(--warn-wash); border-color:var(--warning); }
+.chip.scaffold  { background:var(--serious-wash); border-color:var(--serious); }
+.chip.absent    { color:var(--ink-2); }
+.chip.absent .g { color:var(--critical); }
+.chip.unaudited { border-style:dashed; color:var(--muted);
+  background:repeating-linear-gradient(45deg, transparent 0 6px, var(--grid) 6px 8px); }
+.chip .dep { width:7px; height:7px; border-radius:50%; background:var(--warning);
+  display:inline-block; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 18px; margin:26px 0 8px;
+  font-size:12.5px; color:var(--ink-2); }
+.legend .chip { pointer-events:none; }
+.map-root table { border-collapse:collapse; width:100%; margin-top:18px;
+  background:var(--surface-1); font-size:13px; }
+.map-root th, .map-root td { border:1px solid var(--grid); padding:7px 10px; text-align:left; }
+.map-root th { color:var(--ink-2); font-weight:600; }
+.map-root td.n { text-align:right; font-variant-numeric: tabular-nums; }
+.foot { margin-top:22px; font-size:12px; color:var(--muted); }
+</style>
+<div class="map-root">
+<h1>AI Ecosystem Capability Map</h1>
+<p class="sub">The lastmanupinc-hub portfolio graded against the 89 targets of "The Modern AI Ecosystem — Tools" under the <b>peer-independence doctrine</b>: the ability to <i>never need</i> each vendor, not the ability to use it. Percentages are conservative floors — unaudited and absent both count 0, so numbers only rise as file evidence lands.</p>
+<div class="tiles">
+<div class="tile"><div class="v">0.0%</div><div class="l">overall capability floor</div></div>
+<div class="tile"><div class="v">0/89</div><div class="l">slots audited</div></div>
+<div class="tile"><div class="v">0/31</div><div class="l">repos scanned</div></div>
+</div>
+<div class="cascade"><div class="spine"></div>
+<div class="crow" style="--indent:0px">
+<div class="bubble"><div class="cname">LLM</div><div class="cpct">0.0%</div><div class="cmeta">0/9 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="LLM_OPENAI_GPT — unaudited">OpenAI GPT<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_ANTHROPIC_CLAUDE — unaudited">Anthropic Claude<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_GOOGLE_GEMINI — unaudited">Google Gemini<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_META_LLAMA — unaudited">Meta Llama<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_MISTRAL_AI — unaudited">Mistral AI<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_COHERE — unaudited">Cohere<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_HUGGING_FACE — unaudited">Hugging Face<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_OLLAMA — unaudited">Ollama<span class="g">?</span></span>
+<span class="chip unaudited" title="LLM_VLLM — unaudited">vLLM<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:6px">
+<div class="bubble"><div class="cname">Agentic AI</div><div class="cpct">0.0%</div><div class="cmeta">0/8 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="AGE_LANGGRAPH — unaudited">LangGraph<span class="g">?</span></span>
+<span class="chip unaudited" title="AGE_CREWAI — unaudited">CrewAI<span class="g">?</span></span>
+<span class="chip unaudited" title="AGE_MICROSOFT_AUTOGEN — unaudited">Microsoft AutoGen<span class="g">?</span></span>
+<span class="chip unaudited" title="AGE_MS_AGENT_FRAMEWORK — unaudited">Microsoft Agent Framework<span class="g">?</span></span>
+<span class="chip unaudited" title="AGE_LLAMAINDEX_WORKFLOWS — unaudited">LlamaIndex Workflows<span class="g">?</span></span>
+<span class="chip unaudited" title="AGE_AWS_STRANDS_AGENTS — unaudited">AWS Strands Agents<span class="g">?</span></span>
+<span class="chip unaudited" title="AGE_CAMEL — unaudited">CAMEL<span class="g">?</span></span>
+<span class="chip unaudited" title="AGE_AGNO — unaudited">Agno<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:11px">
+<div class="bubble"><div class="cname">RAG</div><div class="cpct">0.0%</div><div class="cmeta">0/8 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="RAG_LANGCHAIN — unaudited">LangChain<span class="g">?</span></span>
+<span class="chip unaudited" title="RAG_LLAMAINDEX — unaudited">LlamaIndex<span class="g">?</span></span>
+<span class="chip unaudited" title="RAG_HAYSTACK — unaudited">Haystack<span class="g">?</span></span>
+<span class="chip unaudited" title="RAG_DSPY — unaudited">DSPy<span class="g">?</span></span>
+<span class="chip unaudited" title="RAG_RAGFLOW — unaudited">RAGFlow<span class="g">?</span></span>
+<span class="chip unaudited" title="RAG_GRAPHRAG — unaudited">GraphRAG<span class="g">?</span></span>
+<span class="chip unaudited" title="RAG_UNSTRUCTURED — unaudited">Unstructured<span class="g">?</span></span>
+<span class="chip unaudited" title="RAG_EMBEDCHAIN — unaudited">EmbedChain<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:17px">
+<div class="bubble"><div class="cname">Embedding</div><div class="cpct">0.0%</div><div class="cmeta">0/7 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="EMB_OPENAI_EMBEDDINGS — unaudited">OpenAI Embeddings<span class="g">?</span></span>
+<span class="chip unaudited" title="EMB_COHERE_EMBED — unaudited">Cohere Embed<span class="g">?</span></span>
+<span class="chip unaudited" title="EMB_VOYAGE_AI — unaudited">Voyage AI<span class="g">?</span></span>
+<span class="chip unaudited" title="EMB_SENTENCE_TRANSFORMERS — unaudited">Sentence Transformers<span class="g">?</span></span>
+<span class="chip unaudited" title="EMB_BGE — unaudited">BGE<span class="g">?</span></span>
+<span class="chip unaudited" title="EMB_VERTEX_EMBEDDINGS — unaudited">Google Vertex AI Embeddings<span class="g">?</span></span>
+<span class="chip unaudited" title="EMB_AZURE_OPENAI_EMBEDDINGS — unaudited">Azure OpenAI Embeddings<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:22px">
+<div class="bubble"><div class="cname">MCP</div><div class="cpct">0.0%</div><div class="cmeta">0/8 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="MCP_MCP_SDK — unaudited">MCP SDK<span class="g">?</span></span>
+<span class="chip unaudited" title="MCP_FASTMCP — unaudited">FastMCP<span class="g">?</span></span>
+<span class="chip unaudited" title="MCP_MCP_REGISTRY — unaudited">MCP Registry<span class="g">?</span></span>
+<span class="chip unaudited" title="MCP_GITHUB_MCP_SERVER — unaudited">GitHub MCP Server<span class="g">?</span></span>
+<span class="chip unaudited" title="MCP_SLACK_MCP_SERVER — unaudited">Slack MCP Server<span class="g">?</span></span>
+<span class="chip unaudited" title="MCP_POSTGRES_MCP_SERVER — unaudited">PostgreSQL MCP Server<span class="g">?</span></span>
+<span class="chip unaudited" title="MCP_GDRIVE_MCP_SERVER — unaudited">Google Drive MCP Server<span class="g">?</span></span>
+<span class="chip unaudited" title="MCP_FILESYSTEM_MCP_SERVER — unaudited">Filesystem MCP Server<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:28px">
+<div class="bubble"><div class="cname">AI Security</div><div class="cpct">0.0%</div><div class="cmeta">0/8 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="SEC_NEMO_GUARDRAILS — unaudited">NVIDIA NeMo Guardrails<span class="g">?</span></span>
+<span class="chip unaudited" title="SEC_GUARDRAILS_AI — unaudited">Guardrails AI<span class="g">?</span></span>
+<span class="chip unaudited" title="SEC_PRESIDIO — unaudited">Microsoft Presidio<span class="g">?</span></span>
+<span class="chip unaudited" title="SEC_LAKERA_GUARD — unaudited">Lakera Guard<span class="g">?</span></span>
+<span class="chip unaudited" title="SEC_PROMPT_SECURITY — unaudited">Prompt Security<span class="g">?</span></span>
+<span class="chip unaudited" title="SEC_PROTECT_AI — unaudited">Protect AI<span class="g">?</span></span>
+<span class="chip unaudited" title="SEC_AZURE_CONTENT_SAFETY — unaudited">Azure AI Content Safety<span class="g">?</span></span>
+<span class="chip unaudited" title="SEC_BEDROCK_GUARDRAILS — unaudited">AWS Bedrock Guardrails<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:34px">
+<div class="bubble"><div class="cname">Observability</div><div class="cpct">0.0%</div><div class="cmeta">0/8 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="OBS_LANGSMITH — unaudited">LangSmith<span class="g">?</span></span>
+<span class="chip unaudited" title="OBS_LANGFUSE — unaudited">Langfuse<span class="g">?</span></span>
+<span class="chip unaudited" title="OBS_ARIZE_PHOENIX — unaudited">Arize Phoenix<span class="g">?</span></span>
+<span class="chip unaudited" title="OBS_WANDB_WEAVE — unaudited">W&amp;B Weave<span class="g">?</span></span>
+<span class="chip unaudited" title="OBS_TRULENS — unaudited">TruLens<span class="g">?</span></span>
+<span class="chip unaudited" title="OBS_RAGAS — unaudited">Ragas<span class="g">?</span></span>
+<span class="chip unaudited" title="OBS_PROMPTFOO — unaudited">Promptfoo<span class="g">?</span></span>
+<span class="chip unaudited" title="OBS_HELICONE — unaudited">Helicone<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:39px">
+<div class="bubble"><div class="cname">Memory</div><div class="cpct">0.0%</div><div class="cmeta">0/8 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="MEM_MEM0 — unaudited">Mem0<span class="g">?</span></span>
+<span class="chip unaudited" title="MEM_ZEP — unaudited">Zep<span class="g">?</span></span>
+<span class="chip unaudited" title="MEM_LETTA — unaudited">Letta<span class="g">?</span></span>
+<span class="chip unaudited" title="MEM_LANGGRAPH_MEMORY — unaudited">LangGraph Memory<span class="g">?</span></span>
+<span class="chip unaudited" title="MEM_REDIS_MEMORY — unaudited">Redis<span class="g">?</span></span>
+<span class="chip unaudited" title="MEM_POSTGRES_MEMORY — unaudited">PostgreSQL<span class="g">?</span></span>
+<span class="chip unaudited" title="MEM_NEO4J — unaudited">Neo4j<span class="g">?</span></span>
+<span class="chip unaudited" title="MEM_CHROMA_MEMORY — unaudited">Chroma<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:45px">
+<div class="bubble"><div class="cname">AI Agent</div><div class="cpct">0.0%</div><div class="cmeta">0/7 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="AGT_OPENAI_AGENTS_SDK — unaudited">OpenAI Agents SDK<span class="g">?</span></span>
+<span class="chip unaudited" title="AGT_LANGCHAIN_AGENTS — unaudited">LangChain Agents<span class="g">?</span></span>
+<span class="chip unaudited" title="AGT_PYDANTIC_AI — unaudited">PydanticAI<span class="g">?</span></span>
+<span class="chip unaudited" title="AGT_SEMANTIC_KERNEL — unaudited">Semantic Kernel<span class="g">?</span></span>
+<span class="chip unaudited" title="AGT_GOOGLE_ADK — unaudited">Google ADK<span class="g">?</span></span>
+<span class="chip unaudited" title="AGT_BEDROCK_AGENTS — unaudited">AWS Bedrock Agents<span class="g">?</span></span>
+<span class="chip unaudited" title="AGT_AZURE_FOUNDRY_AGENT — unaudited">Azure AI Foundry Agent Service<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:50px">
+<div class="bubble"><div class="cname">Automation</div><div class="cpct">0.0%</div><div class="cmeta">0/9 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="AUT_N8N — unaudited">n8n<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_ZAPIER — unaudited">Zapier<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_MAKE — unaudited">Make<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_POWER_AUTOMATE — unaudited">MS Power Automate<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_TEMPORAL — unaudited">Temporal<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_AIRFLOW — unaudited">Apache Airflow<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_PREFECT — unaudited">Prefect<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_KESTRA — unaudited">Kestra<span class="g">?</span></span>
+<span class="chip unaudited" title="AUT_PIPEDREAM — unaudited">Pipedream<span class="g">?</span></span>
+</div></div>
+<div class="crow" style="--indent:56px">
+<div class="bubble"><div class="cname">Vector Database</div><div class="cpct">0.0%</div><div class="cmeta">0/9 audited</div></div>
+<div class="chips">
+<span class="chip unaudited" title="VDB_PINECONE — unaudited">Pinecone<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_WEAVIATE — unaudited">Weaviate<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_QDRANT — unaudited">Qdrant<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_MILVUS — unaudited">Milvus<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_CHROMA — unaudited">Chroma<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_PGVECTOR — unaudited">pgvector<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_ELASTICSEARCH — unaudited">Elasticsearch<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_REDIS_VECTOR — unaudited">Redis<span class="g">?</span></span>
+<span class="chip unaudited" title="VDB_MONGODB_ATLAS_VECTOR — unaudited">MongoDB Atlas Vector Search<span class="g">?</span></span>
+</div></div>
+</div>
+<div class="legend">
+<span><span class="chip peer">peer<span class="g">✓</span></span> Full in-house peer — vendor never needed (evidence-backed)</span>
+<span><span class="chip peer_plus">peer+plus<span class="g">✓+</span></span> Exceeds the vendor on at least one axis</span>
+<span><span class="chip bench">bench<span class="g">●</span></span> Working in-house implementation, equivalence not yet proven</span>
+<span><span class="chip partial">partial<span class="g">◐</span></span> Real code covers part of the capability</span>
+<span><span class="chip scaffold">scaffold<span class="g">○</span></span> Hints/stubs/design only — no working implementation read</span>
+<span><span class="chip absent">absent<span class="g">✕</span></span> Searched, not found (search expressions recorded)</span>
+<span><span class="chip unaudited">unaudited<span class="g">?</span></span> Not yet scanned — counts as 0 until evidence lands</span>
+<span><span class="chip"><span class="dep"></span>dot</span> vendor in use today (dependence marker)</span>
+</div>
+<table><thead><tr><th>Category</th><th>Floor %</th><th>Audited</th><th>peer</th><th>peer_plus</th><th>bench</th><th>partial</th><th>scaffold</th><th>absent</th><th>unaudited</th></tr></thead><tbody>
+<tr><td>LLM</td><td class='n'>0.0</td><td class='n'>0/9</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>9</td></tr>
+<tr><td>Agentic AI</td><td class='n'>0.0</td><td class='n'>0/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td></tr>
+<tr><td>RAG</td><td class='n'>0.0</td><td class='n'>0/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td></tr>
+<tr><td>Embedding</td><td class='n'>0.0</td><td class='n'>0/7</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>7</td></tr>
+<tr><td>MCP</td><td class='n'>0.0</td><td class='n'>0/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td></tr>
+<tr><td>AI Security</td><td class='n'>0.0</td><td class='n'>0/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td></tr>
+<tr><td>Observability</td><td class='n'>0.0</td><td class='n'>0/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td></tr>
+<tr><td>Memory</td><td class='n'>0.0</td><td class='n'>0/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td></tr>
+<tr><td>AI Agent</td><td class='n'>0.0</td><td class='n'>0/7</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>7</td></tr>
+<tr><td>Automation</td><td class='n'>0.0</td><td class='n'>0/9</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>9</td></tr>
+<tr><td>Vector Database</td><td class='n'>0.0</td><td class='n'>0/9</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>9</td></tr>
+</tbody></table>
+<p class="foot">Generated by tools/build_capability_map.py from AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml (last_updated 2026-08-16) via derived/rollup.json. Doctrine + taxonomy: ECOSYSTEM_TARGETS.yaml. Regenerate: <code>python3 tools/rollup.py --write &amp;&amp; python3 tools/build_capability_map.py</code></p>
+</div>

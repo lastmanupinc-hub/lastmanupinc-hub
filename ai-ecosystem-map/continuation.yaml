@@ -1,0 +1,39 @@
+###############################################################################
+# continuation.yaml — live state ledger for the AI Ecosystem Capability Map
+# Updated at the END of every session. automated_loop_state is the resume
+# pointer every new session reads first (via begin.yaml).
+###############################################################################
+project_continuation:
+  version: v1
+  role: live_state_ledger_and_post_session_truth
+
+  reference_policy:
+    before_session_read: [begin.yaml, continuation.yaml, SCAN_TREE.yaml]
+    after_session:
+      - update_automated_loop_state   # set next_candidate_id before ending ANY session
+      - append_change_log_entry
+      - matrix_change_log_also_updated_if_rows_touched
+    recursive_self_triggering_forbidden: true
+
+  automated_loop_state:
+    mode: continuous_candidate_completion
+    policy_source: begin.yaml#autonomous_loop_bootstrap
+    backlog_source: SCAN_TREE.yaml
+    last_updated: "2026-08-16"
+    last_completed_candidate_id: null   # set by Session 0 after the pilot scan
+    next_candidate_id: CAND-SCAN-01     # pilot batch: lastmanupinc-hub, .github, Remedial-Action, axis-launch-community
+    completed_candidate_ids: []
+
+  scan_phase:
+    active: true
+    started: "2026-08-16"
+    strategy_doc: SONNET5_ECOSYSTEM_SCAN_STRATEGY.md
+    backlog_source: SCAN_TREE.yaml
+    exit_criteria_source: SCAN_TREE.yaml#exit_criteria
+    note: >
+      Repo-major loop: 11 scan batches + 1 consolidation. Every session
+      executes exactly one candidate, commits once per the ritual, and
+      advances next_candidate_id before ending.
+
+  # Newest-first. {date, session_id, summary, files_changed, commit}
+  change_log: []

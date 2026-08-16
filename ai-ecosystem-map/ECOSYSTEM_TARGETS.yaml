@@ -1,0 +1,692 @@
+###############################################################################
+# ECOSYSTEM_TARGETS.yaml — canonical AI-ecosystem target taxonomy
+#
+# Source: "The Modern AI Ecosystem — Tools" infographic (LinkedIn, captured
+# 2026-08-16): 11 categories, 89 vendor tool slots.
+#
+# This file is IMMUTABLE REFERENCE DATA for the scan loop. Scan sessions grade
+# the portfolio against each slot's capability_definition (the FUNCTION the
+# vendor provides), never against the brand name.
+#
+# SCORING DOCTRINE — PEER-INDEPENDENCE (owner directive 2026-08-16, verbatim):
+#   "We are checking to see if what we built in house is aligned with these as
+#    peers. Not our ability to use them, our ability to never need them. A
+#    score of 0% peer is not only acceptable but it's expected. Initial
+#    discovery is more important that we are honest than blindly optimistic.
+#    So we can build on truth."
+#
+# Consequences:
+#   - Using a vendor tool is evidence of DEPENDENCE, recorded in the matrix's
+#     vendor_in_use field. It NEVER raises a grade.
+#   - Honest absent is the expected default until file evidence proves more.
+#   - not_peer_evidence lists per slot are binding guardrails for graders.
+###############################################################################
+meta:
+  schema_version: 1
+  created: "2026-08-16"
+  source: "LinkedIn infographic 'The Modern AI Ecosystem — Tools' (11 categories, 89 tools)"
+  category_count: 11
+  slot_count: 89
+  row_id_prefixes:
+    llm: LLM
+    agentic_ai: AGE
+    rag: RAG
+    embedding: EMB
+    mcp: MCP
+    ai_security: SEC
+    observability: OBS
+    memory: MEM
+    ai_agent: AGT
+    automation: AUT
+    vector_database: VDB
+
+categories:
+
+  llm:
+    label: "LLM"
+    slots:
+      openai_gpt:
+        label: "OpenAI GPT"
+        capability_definition: >
+          Frontier general-purpose LLM served via API: instruction following,
+          long-context reasoning, tool use, chat completion.
+        peer_bar: "An in-house trained/hosted model + serving path making external frontier-LLM APIs unnecessary."
+        not_peer_evidence: ["calling the OpenAI API", "prompt templates", "wrapper clients"]
+      anthropic_claude:
+        label: "Anthropic Claude"
+        capability_definition: >
+          Frontier LLM with strong long-context + agentic tool use, served via API.
+        peer_bar: "Same bar as openai_gpt: own model, own serving."
+        not_peer_evidence: ["calling the Anthropic API", "CLAUDE.md files", "agent prompts"]
+      google_gemini:
+        label: "Google Gemini"
+        capability_definition: >
+          Frontier multimodal LLM (text+image+audio in, long context) via API.
+        peer_bar: "In-house multimodal model + serving."
+        not_peer_evidence: ["calling the Gemini API"]
+      meta_llama:
+        label: "Meta Llama"
+        capability_definition: >
+          Open-weight LLM family you can download, fine-tune, and self-host.
+        peer_bar: "Own trained open-weight-class model, or a full fine-tune + self-host pipeline of comparable capability built in-house."
+        not_peer_evidence: ["merely downloading/running Llama weights (that is using the vendor's model)"]
+      mistral_ai:
+        label: "Mistral AI"
+        capability_definition: >
+          Efficient mid-size open/hosted LLMs (dense + MoE) with strong
+          cost/perf, API + weights.
+        peer_bar: "In-house efficient mid-size model line."
+        not_peer_evidence: ["calling Mistral API", "running Mistral weights"]
+      cohere:
+        label: "Cohere"
+        capability_definition: >
+          Enterprise-focused LLM API line (command/generate + retrieval-tuned models).
+        peer_bar: "In-house enterprise LLM serving with retrieval-tuned variants."
+        not_peer_evidence: ["calling Cohere API"]
+      hugging_face:
+        label: "Hugging Face"
+        capability_definition: >
+          Model hub + inference/hosting ecosystem: distribution, versioning,
+          discovery of models/datasets, hosted inference endpoints.
+        peer_bar: "In-house model registry + artifact distribution + inference hosting for own models."
+        not_peer_evidence: ["downloading models from HF", "transformers imports"]
+      ollama:
+        label: "Ollama"
+        capability_definition: >
+          Local LLM runtime: pull-and-run model management on developer
+          machines, local API server, quantized execution.
+        peer_bar: "In-house local model runtime/loader with model management and a local serving API."
+        not_peer_evidence: ["docs telling users to install Ollama"]
+      vllm:
+        label: "vLLM"
+        capability_definition: >
+          High-throughput GPU inference server: paged attention/KV-cache
+          management, batching, OpenAI-compatible serving of open models.
+        peer_bar: "In-house high-throughput inference server with batching + KV management."
+        not_peer_evidence: ["deploying vLLM", "renting endpoints that run vLLM"]
+
+  agentic_ai:
+    label: "Agentic AI"
+    slots:
+      langgraph:
+        label: "LangGraph"
+        capability_definition: >
+          Graph-based agent orchestration: nodes/edges over LLM steps,
+          stateful cycles, checkpointing, human-in-the-loop interrupts.
+        peer_bar: "In-house stateful agent-graph orchestrator with resumable checkpoints."
+        not_peer_evidence: ["import langgraph"]
+      crewai:
+        label: "CrewAI"
+        capability_definition: >
+          Role-based multi-agent teams: agents with roles/goals/tools
+          collaborating on tasks with delegation.
+        peer_bar: "In-house multi-agent role/delegation framework."
+        not_peer_evidence: ["import crewai"]
+      microsoft_autogen:
+        label: "Microsoft AutoGen"
+        capability_definition: >
+          Conversational multi-agent framework: agents messaging each other,
+          group chat patterns, code-execution agents.
+        peer_bar: "In-house agent-to-agent conversation/coordination runtime."
+        not_peer_evidence: ["import autogen"]
+      ms_agent_framework:
+        label: "Microsoft Agent Framework"
+        capability_definition: >
+          Unified enterprise agent framework (AutoGen+Semantic Kernel line):
+          typed workflows, state, telemetry, deployment path.
+        peer_bar: "In-house typed, observable, deployable agent workflow framework."
+        not_peer_evidence: ["SDK usage"]
+      llamaindex_workflows:
+        label: "LlamaIndex Workflows"
+        capability_definition: >
+          Event-driven async workflow engine for LLM steps: steps subscribe to
+          events, emit events, with retries and streaming.
+        peer_bar: "In-house event-driven LLM workflow engine."
+        not_peer_evidence: ["import llama_index"]
+      aws_strands_agents:
+        label: "AWS Strands Agents"
+        capability_definition: >
+          Model-driven agent SDK: minimal loop where the model plans tool use
+          directly, with AWS-native deployment.
+        peer_bar: "In-house model-driven tool-loop agent SDK."
+        not_peer_evidence: ["SDK usage"]
+      camel:
+        label: "CAMEL"
+        capability_definition: >
+          Research framework for communicative multi-agent societies:
+          role-playing agents, task decomposition via dialogue, data generation.
+        peer_bar: "In-house multi-agent society/simulation framework."
+        not_peer_evidence: ["import camel"]
+      agno:
+        label: "Agno"
+        capability_definition: >
+          Lightweight full-stack agent framework: agents + teams + workflows
+          with built-in memory, knowledge, and a runtime UI.
+        peer_bar: "In-house batteries-included agent runtime (memory+knowledge+UI)."
+        not_peer_evidence: ["import agno"]
+
+  rag:
+    label: "RAG"
+    slots:
+      langchain:
+        label: "LangChain"
+        capability_definition: >
+          General LLM application framework: chains/runnables composing
+          prompts, models, retrievers, parsers; large integration surface.
+        peer_bar: "In-house composition framework for LLM pipeline steps."
+        not_peer_evidence: ["import langchain"]
+      llamaindex:
+        label: "LlamaIndex"
+        capability_definition: >
+          Data framework for LLMs: ingestion, indexing (vector/keyword/graph),
+          query engines over private data.
+        peer_bar: "In-house ingest→index→query engine over own data."
+        not_peer_evidence: ["import llama_index"]
+      haystack:
+        label: "Haystack"
+        capability_definition: >
+          Production RAG pipeline framework: composable pipeline DAGs of
+          retrievers, rankers, readers, generators.
+        peer_bar: "In-house composable retrieval-pipeline framework."
+        not_peer_evidence: ["import haystack"]
+      dspy:
+        label: "DSPy"
+        capability_definition: >
+          Programmatic prompt optimization: declarative LLM programs whose
+          prompts/weights are compiled and optimized against metrics.
+        peer_bar: "In-house prompt/program optimizer driven by eval metrics."
+        not_peer_evidence: ["import dspy"]
+      ragflow:
+        label: "RAGFlow"
+        capability_definition: >
+          End-to-end RAG product: deep document understanding (layout/OCR),
+          chunk templating, citation-grounded answers, served UI.
+        peer_bar: "In-house document-understanding RAG service with citations."
+        not_peer_evidence: ["deploying RAGFlow"]
+      graphrag:
+        label: "GraphRAG"
+        capability_definition: >
+          Knowledge-graph RAG: entity/relation extraction into a graph +
+          community summaries, graph-aware retrieval for global questions.
+        peer_bar: "In-house KG construction + graph-aware retrieval."
+        not_peer_evidence: ["import graphrag"]
+      unstructured:
+        label: "Unstructured"
+        capability_definition: >
+          Document ETL for LLMs: parsing PDF/HTML/Office into clean,
+          typed elements ready for chunking/indexing.
+        peer_bar: "In-house multi-format document parser producing typed elements."
+        not_peer_evidence: ["import unstructured"]
+      embedchain:
+        label: "EmbedChain"
+        capability_definition: >
+          Minimal add-data-then-ask RAG bots: one-call ingestion of sources
+          into embeddings + retrieval-answering.
+        peer_bar: "In-house minimal RAG-bot bootstrap path."
+        not_peer_evidence: ["import embedchain"]
+
+  embedding:
+    label: "Embedding"
+    slots:
+      openai_embeddings:
+        label: "OpenAI Embeddings"
+        capability_definition: >
+          Hosted text-embedding API producing dense semantic vectors.
+        peer_bar: "In-house embedding model + serving (trained or self-hosted-own)."
+        not_peer_evidence: ["calling the embeddings API"]
+      cohere_embed:
+        label: "Cohere Embed"
+        capability_definition: >
+          Hosted embeddings tuned for search/classification incl. multilingual + compression-aware variants.
+        peer_bar: "In-house search-tuned embedding serving."
+        not_peer_evidence: ["calling Cohere API"]
+      voyage_ai:
+        label: "Voyage AI"
+        capability_definition: >
+          Domain-tuned retrieval embeddings + rerankers (code/law/finance) via API.
+        peer_bar: "In-house domain-tuned embeddings/rerankers."
+        not_peer_evidence: ["calling Voyage API"]
+      sentence_transformers:
+        label: "Sentence Transformers"
+        capability_definition: >
+          Open library for local embedding inference and fine-tuning of
+          sentence/passage encoders.
+        peer_bar: "In-house local embedding inference + fine-tune path."
+        not_peer_evidence: ["import sentence_transformers"]
+      bge:
+        label: "BGE"
+        capability_definition: >
+          Open-weight state-of-the-art embedding model family (BAAI), incl.
+          rerankers, self-hostable.
+        peer_bar: "Own trained embedding model of comparable retrieval quality."
+        not_peer_evidence: ["running BGE weights"]
+      vertex_embeddings:
+        label: "Google Vertex AI Embeddings"
+        capability_definition: >
+          Cloud-managed embedding endpoints (text/multimodal) with MLOps integration.
+        peer_bar: "In-house managed embedding endpoint infrastructure."
+        not_peer_evidence: ["calling Vertex API"]
+      azure_openai_embeddings:
+        label: "Azure OpenAI Embeddings"
+        capability_definition: >
+          Enterprise-hosted embedding API with compliance/network isolation guarantees.
+        peer_bar: "In-house embedding serving meeting enterprise isolation requirements."
+        not_peer_evidence: ["calling Azure API"]
+
+  mcp:
+    label: "MCP"
+    slots:
+      mcp_sdk:
+        label: "MCP SDK"
+        capability_definition: >
+          Implementation of the Model Context Protocol: JSON-RPC lifecycle,
+          tools/resources/prompts primitives, stdio+HTTP transports.
+        peer_bar: "In-house MCP protocol implementation (server and/or client) written from the spec, not a thin wrapper."
+        not_peer_evidence: ["pip install mcp / npm @modelcontextprotocol/sdk as sole implementation"]
+      fastmcp:
+        label: "FastMCP"
+        capability_definition: >
+          Ergonomic MCP server framework: decorators to expose functions as
+          tools, auth, composition, deployment.
+        peer_bar: "In-house ergonomic framework for authoring MCP servers."
+        not_peer_evidence: ["import fastmcp"]
+      mcp_registry:
+        label: "MCP Registry"
+        capability_definition: >
+          Discovery/registry layer for MCP servers: manifest publication,
+          search, install metadata (server.json / well-known endpoints).
+        peer_bar: "In-house registry/manifest publication + discovery endpoint for own MCP servers."
+        not_peer_evidence: ["being listed in someone else's registry only"]
+      github_mcp_server:
+        label: "GitHub MCP Server"
+        capability_definition: >
+          MCP server exposing a code-forge domain (repos/PRs/issues/CI) as tools.
+        peer_bar: "In-house MCP server exposing own forge/codebase domain."
+        not_peer_evidence: ["using the GitHub MCP server"]
+      slack_mcp_server:
+        label: "Slack MCP Server"
+        capability_definition: >
+          MCP server exposing team-messaging operations (channels, messages, search) as tools.
+        peer_bar: "In-house MCP server over own messaging/notification domain."
+        not_peer_evidence: ["using a Slack MCP server"]
+      postgres_mcp_server:
+        label: "PostgreSQL MCP Server"
+        capability_definition: >
+          MCP server exposing relational-database querying/schema inspection as tools.
+        peer_bar: "In-house MCP server over own database domain."
+        not_peer_evidence: ["using a Postgres MCP server"]
+      gdrive_mcp_server:
+        label: "Google Drive MCP Server"
+        capability_definition: >
+          MCP server exposing cloud file storage/search as tools.
+        peer_bar: "In-house MCP server over own document/asset storage."
+        not_peer_evidence: ["using a Drive MCP server"]
+      filesystem_mcp_server:
+        label: "Filesystem MCP Server"
+        capability_definition: >
+          MCP server exposing sandboxed local file operations as tools.
+        peer_bar: "In-house MCP server exposing controlled file operations."
+        not_peer_evidence: ["using the reference filesystem server"]
+
+  ai_security:
+    label: "AI Security"
+    slots:
+      nemo_guardrails:
+        label: "NVIDIA NeMo Guardrails"
+        capability_definition: >
+          Programmable conversation rails: declarative flows constraining LLM
+          dialogue (topic, jailbreak, tool-use rails).
+        peer_bar: "In-house declarative conversation/tool-use constraint engine."
+        not_peer_evidence: ["import nemoguardrails"]
+      guardrails_ai:
+        label: "Guardrails AI"
+        capability_definition: >
+          Structured output validation: schema/validator specs applied to LLM
+          output with re-ask/repair loops.
+        peer_bar: "In-house LLM output validation + repair-loop framework."
+        not_peer_evidence: ["import guardrails"]
+      presidio:
+        label: "Microsoft Presidio"
+        capability_definition: >
+          PII detection + redaction/anonymization pipeline over text and images.
+        peer_bar: "In-house PII detection/redaction engine."
+        not_peer_evidence: ["import presidio"]
+      lakera_guard:
+        label: "Lakera Guard"
+        capability_definition: >
+          Hosted prompt-injection/jailbreak/content firewall screening LLM inputs and outputs.
+        peer_bar: "In-house prompt-injection and content screening layer."
+        not_peer_evidence: ["calling Lakera API"]
+      prompt_security:
+        label: "Prompt Security"
+        capability_definition: >
+          Enterprise GenAI security gateway: shadow-AI discovery, data-leak
+          prevention, policy enforcement across AI usage.
+        peer_bar: "In-house AI-usage policy gateway with leak prevention."
+        not_peer_evidence: ["deploying the vendor gateway"]
+      protect_ai:
+        label: "Protect AI"
+        capability_definition: >
+          ML supply-chain security: model artifact scanning, MLSecOps
+          posture, vulnerability management for models.
+        peer_bar: "In-house model-artifact scanning/attestation pipeline."
+        not_peer_evidence: ["running vendor scanners"]
+      azure_content_safety:
+        label: "Azure AI Content Safety"
+        capability_definition: >
+          Hosted harm-category classification (hate/violence/sexual/self-harm)
+          + jailbreak detection APIs.
+        peer_bar: "In-house harm-category classification service."
+        not_peer_evidence: ["calling Azure API"]
+      bedrock_guardrails:
+        label: "AWS Bedrock Guardrails"
+        capability_definition: >
+          Managed guardrail layer applied at inference: denied topics, word
+          filters, PII handling, contextual grounding checks.
+        peer_bar: "In-house inference-time guardrail layer with grounding checks."
+        not_peer_evidence: ["configuring Bedrock"]
+
+  observability:
+    label: "Observability"
+    slots:
+      langsmith:
+        label: "LangSmith"
+        capability_definition: >
+          LLM app tracing + eval platform: nested run traces, datasets,
+          regression evals, prompt playground.
+        peer_bar: "In-house LLM run tracing + dataset eval platform."
+        not_peer_evidence: ["LANGSMITH_API_KEY usage"]
+      langfuse:
+        label: "Langfuse"
+        capability_definition: >
+          Open-source LLM engineering platform: traces, generations, scores,
+          prompt management, cost tracking.
+        peer_bar: "In-house trace/score/cost ledger for LLM calls."
+        not_peer_evidence: ["import langfuse"]
+      arize_phoenix:
+        label: "Arize Phoenix"
+        capability_definition: >
+          Open-source ML/LLM observability: OTEL-based tracing, embedding
+          drift analysis, eval visualization.
+        peer_bar: "In-house telemetry + drift analysis for AI runs."
+        not_peer_evidence: ["import phoenix"]
+      wandb_weave:
+        label: "W&B Weave"
+        capability_definition: >
+          Experiment/LLM-call tracking with versioned objects, evals, and
+          dashboards for AI applications.
+        peer_bar: "In-house experiment tracking + versioned eval dashboards."
+        not_peer_evidence: ["import weave/wandb"]
+      trulens:
+        label: "TruLens"
+        capability_definition: >
+          Feedback-function evaluation of LLM apps: groundedness, relevance,
+          custom feedback scores attached to traces.
+        peer_bar: "In-house feedback-function eval harness."
+        not_peer_evidence: ["import trulens"]
+      ragas:
+        label: "Ragas"
+        capability_definition: >
+          RAG-specific eval metrics: faithfulness, answer relevancy, context
+          precision/recall, testset generation.
+        peer_bar: "In-house RAG quality metric suite."
+        not_peer_evidence: ["import ragas"]
+      promptfoo:
+        label: "Promptfoo"
+        capability_definition: >
+          Prompt/model test harness: declarative test matrices, assertions,
+          red-team probes, CI integration.
+        peer_bar: "In-house prompt regression test harness wired into CI."
+        not_peer_evidence: ["npx promptfoo"]
+      helicone:
+        label: "Helicone"
+        capability_definition: >
+          LLM API gateway/proxy for logging, caching, rate limiting, cost
+          attribution across providers.
+        peer_bar: "In-house LLM gateway with logging/caching/cost attribution."
+        not_peer_evidence: ["routing through Helicone"]
+
+  memory:
+    label: "Memory"
+    slots:
+      mem0:
+        label: "Mem0"
+        capability_definition: >
+          Self-improving agent memory layer: extract/consolidate user + agent
+          memories from conversations, retrieve by relevance.
+        peer_bar: "In-house conversational memory extraction + consolidation engine."
+        not_peer_evidence: ["import mem0"]
+      zep:
+        label: "Zep"
+        capability_definition: >
+          Temporal knowledge-graph memory for agents: session summaries,
+          entity graphs, time-aware retrieval.
+        peer_bar: "In-house temporal graph memory for agents."
+        not_peer_evidence: ["Zep server deployment"]
+      letta:
+        label: "Letta"
+        capability_definition: >
+          Stateful agents with self-editing memory (MemGPT line): core/archival
+          memory tiers managed by the agent itself.
+        peer_bar: "In-house tiered self-editing agent memory runtime."
+        not_peer_evidence: ["import letta"]
+      langgraph_memory:
+        label: "LangGraph Memory"
+        capability_definition: >
+          Thread + cross-thread persistent state for agent graphs:
+          checkpoints, stores, memory schemas.
+        peer_bar: "In-house persistent agent-state checkpoint/store layer."
+        not_peer_evidence: ["langgraph checkpointer usage"]
+      redis_memory:
+        label: "Redis"
+        capability_definition: >
+          In-memory KV/data-structure store used for fast session state,
+          caches, queues (as agent short-term memory backend).
+        peer_bar: "In-house fast KV/session-state store engine (not: running Redis)."
+        not_peer_evidence: ["redis client usage", "docker run redis"]
+      postgres_memory:
+        label: "PostgreSQL"
+        capability_definition: >
+          Durable relational store used as long-term structured memory/ledger
+          backend for AI systems.
+        peer_bar: "In-house durable structured storage engine (not: running Postgres)."
+        not_peer_evidence: ["gorm/psql usage"]
+      neo4j:
+        label: "Neo4j"
+        capability_definition: >
+          Native graph database for entity-relationship memory: Cypher
+          queries, graph algorithms.
+        peer_bar: "In-house graph store + query capability."
+        not_peer_evidence: ["neo4j driver usage"]
+      chroma_memory:
+        label: "Chroma"
+        capability_definition: >
+          Embedded vector store used as semantic memory backend for agents.
+        peer_bar: "In-house embeddable vector store (see VDB_CHROMA; graded on memory-backend use)."
+        not_peer_evidence: ["import chromadb"]
+
+  ai_agent:
+    label: "AI Agent"
+    slots:
+      openai_agents_sdk:
+        label: "OpenAI Agents SDK"
+        capability_definition: >
+          Provider agent SDK: agent loop, handoffs, guardrails, sessions,
+          tracing bound to provider models.
+        peer_bar: "In-house agent SDK (loop+handoffs+guardrails+sessions) over own/any models."
+        not_peer_evidence: ["import openai_agents"]
+      langchain_agents:
+        label: "LangChain Agents"
+        capability_definition: >
+          Tool-calling agent executors: ReAct/function-calling loops with
+          tool registries and callbacks.
+        peer_bar: "In-house tool-calling agent executor."
+        not_peer_evidence: ["import langchain.agents"]
+      pydantic_ai:
+        label: "PydanticAI"
+        capability_definition: >
+          Type-safe agent framework: typed dependencies, structured outputs
+          validated by schemas, model-agnostic.
+        peer_bar: "In-house type-safe agent framework with validated structured outputs."
+        not_peer_evidence: ["import pydantic_ai"]
+      semantic_kernel:
+        label: "Semantic Kernel"
+        capability_definition: >
+          Enterprise AI orchestration SDK: plugins/skills, planners, memories,
+          multi-language (C#/Python/Java).
+        peer_bar: "In-house plugin/planner orchestration SDK."
+        not_peer_evidence: ["import semantic_kernel"]
+      google_adk:
+        label: "Google ADK"
+        capability_definition: >
+          Agent Development Kit: hierarchical multi-agent composition, typed
+          tools, eval + deployment to managed runtime.
+        peer_bar: "In-house hierarchical agent kit with eval + deploy path."
+        not_peer_evidence: ["import google.adk"]
+      bedrock_agents:
+        label: "AWS Bedrock Agents"
+        capability_definition: >
+          Managed cloud agents: hosted orchestration, action groups (API
+          tools), knowledge-base wiring, session management.
+        peer_bar: "In-house managed agent-hosting runtime."
+        not_peer_evidence: ["Bedrock console/config"]
+      azure_foundry_agent:
+        label: "Azure AI Foundry Agent Service"
+        capability_definition: >
+          Managed agent service: hosted threads/runs, tool servers,
+          enterprise identity + content-safety integration.
+        peer_bar: "In-house hosted agent-run service with identity integration."
+        not_peer_evidence: ["Azure SDK usage"]
+
+  automation:
+    label: "Automation"
+    slots:
+      n8n:
+        label: "n8n"
+        capability_definition: >
+          Visual workflow automation: node-based editor, hundreds of app
+          connectors, self-hostable, AI nodes.
+        peer_bar: "In-house visual/declarative workflow automation with connector surface."
+        not_peer_evidence: ["running n8n"]
+      zapier:
+        label: "Zapier"
+        capability_definition: >
+          Hosted trigger→action automation across thousands of SaaS apps.
+        peer_bar: "In-house trigger→action automation across own service surface."
+        not_peer_evidence: ["Zapier webhooks"]
+      make:
+        label: "Make"
+        capability_definition: >
+          Visual scenario builder: multi-step branching automations with
+          data transformation between apps.
+        peer_bar: "In-house branching scenario automation builder."
+        not_peer_evidence: ["Make scenarios"]
+      power_automate:
+        label: "MS Power Automate"
+        capability_definition: >
+          Enterprise workflow automation: cloud flows, approvals, RPA desktop
+          flows, Office-graph integration.
+        peer_bar: "In-house enterprise flow/approval automation."
+        not_peer_evidence: ["Power Automate flows"]
+      temporal:
+        label: "Temporal"
+        capability_definition: >
+          Durable execution engine: code-first workflows that survive crashes,
+          with retries, timers, signals, exactly-once activities.
+        peer_bar: "In-house durable/resumable workflow execution engine."
+        not_peer_evidence: ["temporal SDK usage"]
+      airflow:
+        label: "Apache Airflow"
+        capability_definition: >
+          Scheduled DAG orchestration: Python-defined DAGs, backfills,
+          operators, monitoring UI.
+        peer_bar: "In-house scheduled DAG orchestrator."
+        not_peer_evidence: ["airflow DAG files"]
+      prefect:
+        label: "Prefect"
+        capability_definition: >
+          Dynamic Pythonic dataflow orchestration: flows/tasks, dynamic
+          runtime graphs, deployments, observability.
+        peer_bar: "In-house dynamic dataflow orchestrator."
+        not_peer_evidence: ["import prefect"]
+      kestra:
+        label: "Kestra"
+        capability_definition: >
+          Declarative YAML-first orchestration: event-driven flows, plugin
+          ecosystem, UI-managed.
+        peer_bar: "In-house declarative event-driven orchestration."
+        not_peer_evidence: ["kestra flows"]
+      pipedream:
+        label: "Pipedream"
+        capability_definition: >
+          Developer-centric integration platform: code-level steps + managed
+          connectors/auth for thousands of APIs.
+        peer_bar: "In-house code-step integration platform with managed connector auth."
+        not_peer_evidence: ["pipedream workflows"]
+
+  vector_database:
+    label: "Vector Database"
+    slots:
+      pinecone:
+        label: "Pinecone"
+        capability_definition: >
+          Managed serverless vector database: ANN indexing at scale,
+          namespaces, metadata filtering, hybrid search.
+        peer_bar: "In-house scalable ANN vector index service."
+        not_peer_evidence: ["pinecone client usage"]
+      weaviate:
+        label: "Weaviate"
+        capability_definition: >
+          Open-source vector database with hybrid (BM25+vector) search,
+          modules for vectorization, GraphQL API.
+        peer_bar: "In-house hybrid lexical+vector search engine."
+        not_peer_evidence: ["weaviate deployment"]
+      qdrant:
+        label: "Qdrant"
+        capability_definition: >
+          Open-source vector search engine: HNSW, payload filtering,
+          quantization, distributed mode.
+        peer_bar: "In-house HNSW/ANN search engine with filtering."
+        not_peer_evidence: ["qdrant client usage"]
+      milvus:
+        label: "Milvus"
+        capability_definition: >
+          Cloud-native vector database for billion-scale similarity search,
+          multiple index types, GPU acceleration.
+        peer_bar: "In-house billion-scale vector index infrastructure."
+        not_peer_evidence: ["milvus deployment"]
+      chroma:
+        label: "Chroma"
+        capability_definition: >
+          Embedded developer-first vector store: local persistence,
+          collections, simple API.
+        peer_bar: "In-house embeddable vector store with persistence."
+        not_peer_evidence: ["import chromadb"]
+      pgvector:
+        label: "pgvector"
+        capability_definition: >
+          Vector similarity inside a relational DB: vector column type,
+          ivfflat/hnsw indexes, SQL-composable KNN.
+        peer_bar: "In-house vector-in-relational capability (own index code, not the extension)."
+        not_peer_evidence: ["CREATE EXTENSION vector"]
+      elasticsearch:
+        label: "Elasticsearch"
+        capability_definition: >
+          Distributed search/analytics engine with dense-vector KNN alongside
+          full-text search and aggregations.
+        peer_bar: "In-house distributed full-text + vector search engine."
+        not_peer_evidence: ["ES client usage"]
+      redis_vector:
+        label: "Redis"
+        capability_definition: >
+          Vector search inside an in-memory store (RediSearch): low-latency
+          KNN with filters over live data.
+        peer_bar: "In-house low-latency in-memory vector search."
+        not_peer_evidence: ["redis vector client usage"]
+      mongodb_atlas_vector:
+        label: "MongoDB Atlas Vector Search"
+        capability_definition: >
+          Vector search integrated into a managed document database:
+          $vectorSearch aggregation alongside operational data.
+        peer_bar: "In-house document-store-integrated vector search."
+        not_peer_evidence: ["Atlas cluster usage"]

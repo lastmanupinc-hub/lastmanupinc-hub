@@ -1,0 +1,74 @@
+###############################################################################
+# SCAN_TREE.yaml — batch backlog for the repo-major scan loop
+# One candidate per session. All 31 repos covered exactly once.
+# AXIS-X-Y-Z is folded into CAND-SCAN-04 as a `diff -rq` mirror-verify of
+# AXIS-ENGINE (byte-identical mirrors, verified 2026-08-16).
+###############################################################################
+meta:
+  created: "2026-08-16"
+  repos_total: 31
+  candidate_count: 12
+  repo_root: /home/user
+
+exit_criteria:
+  - "every SCAN candidate status == done"
+  - "zero matrix rows graded unaudited"
+  - "every scanned repo appears in evidence/<repo>.scan.yaml (or a recorded mirror-verify note)"
+  - "CAND-CONSOLIDATE-12 spot-check complete: >=12 non-absent rows re-verified, ALL peer/peer_plus rows mandatorily included"
+  - "final rollup + render committed; artifact republished"
+
+candidates:
+  - id: CAND-SCAN-01
+    repos: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    size_note: "tiny pilot (~111 files) — proves the loop end-to-end"
+    status: pending
+  - id: CAND-SCAN-02
+    repos: [AXIS-Foundry, A-eye, axis-launch]
+    size_note: "~1,974 files; governance-rich anchor (sovereign engine, MCP server, x402)"
+    status: pending
+  - id: CAND-SCAN-03
+    repos: [no-fate-payment-engine, paid-docs]
+    size_note: "~5,097 files; AI-heaviest repo (PAI'D platform + TF AI engine)"
+    status: pending
+  - id: CAND-SCAN-04
+    repos: [AXIS-ENGINE, axis-seo]
+    size_note: >
+      ~91,315 files — biggest batch; grep-only depth. AXIS-X-Y-Z covered here
+      via `diff -rq /home/user/AXIS-ENGINE /home/user/AXIS-X-Y-Z` mirror check;
+      record the diff result in evidence/AXIS-X-Y-Z.scan.yaml as a mirror note.
+    status: pending
+  - id: CAND-SCAN-05
+    repos: [AXIS-mars, pmd-customizer-build, profitforge]
+    size_note: "~5,105 files"
+    status: pending
+  - id: CAND-SCAN-06
+    repos: [AXIS-odyssey, AXIS-Gold, assetforge]
+    size_note: "~3,702 files"
+    status: pending
+  - id: CAND-SCAN-07
+    repos: [PMD-MASTER, AXIS-NRPG, axis-toolbox-examples]
+    size_note: "~3,236 files"
+    status: pending
+  - id: CAND-SCAN-08
+    repos: [AXIS-PAI, AXIS-chlover, no-fate-contract]
+    size_note: "~2,650 files"
+    status: pending
+  - id: CAND-SCAN-09
+    repos: [guild-hall]
+    size_note: "~1,823 files but 468 top-level entries — breadth alone fills a session"
+    status: pending
+  - id: CAND-SCAN-10
+    repos: [trust-fabric, AXIS-iliad]
+    size_note: "~2,609 files; includes ecosystem.registry.yaml canonical home"
+    status: pending
+  - id: CAND-SCAN-11
+    repos: [AXIS-Scalpel, medical-robot, Diamond-Grid, axis-launch-platform]
+    size_note: "~2,195 files"
+    status: pending
+  - id: CAND-CONSOLIDATE-12
+    repos: []
+    size_note: >
+      Verification pass, no new scanning: re-open cited files for >=12 sampled
+      non-absent rows (ALL peer/peer_plus rows mandatory), demote anything
+      unsupported, final rollup + render, republish artifact, close the loop.
+    status: pending

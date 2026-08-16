@@ -54,7 +54,8 @@ candidates:
   - id: CAND-SCAN-07
     repos: [PMD-MASTER, AXIS-NRPG, axis-toolbox-examples]
     size_note: "~3,236 files"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-07", result: "no grade changes; PMD-MASTER's '16 AI subsystems' verified deterministic/template-driven, not real ML"}
   - id: CAND-SCAN-08
     repos: [AXIS-PAI, AXIS-chlover, no-fate-contract]
     size_note: "~2,650 files"

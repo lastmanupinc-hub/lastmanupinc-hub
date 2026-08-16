@@ -1,0 +1,33 @@
+repo: PMD-MASTER
+scanned: "2026-08-16"
+session: CAND-SCAN-07
+purpose: >
+  "Print My Design" -- a production SaaS design-studio platform (Express/
+  React/PostgreSQL/Redis, 568+ REST endpoints, 1,516 tests). README
+  advertises "AI-powered" throughout: 16 "AI subsystems" (layout, color,
+  typography, pricing, generation, brand memory, recommendations, etc.).
+  2,752 files. This is PMD-MASTER, the authoritative repo for the same
+  "PMD" product pmd-customizer-build (CAND-SCAN-05) built a SaaS layer for.
+files_read: 11
+findings: {}
+not_credited_adjacent_findings: >
+  Checked the most promising "AI" subsystem directories directly against
+  their own code (not just the marketing README): GenerationOrchestratorService.ts
+  (concept generation) has zero fetch/axios/vendor-API calls -- its
+  "generation" is selectVariants/buildLayers/pickBackground from
+  STYLE_VARIANTS/PRODUCT_SPECS template constants, seeded deterministically.
+  BrandMemoryService.ts's own docstring admits website-identity extraction
+  is "simulated -- returns plausible defaults". AISERecommendationService.ts's
+  own docstring says it "Replaces Math.random() impact scores with
+  deterministic scoring" via a TITLE_BANK + type-weight system -- explicitly
+  NOT machine learning, was previously literally random. This is a
+  consistent, honest pattern across the whole portfolio scanned so far:
+  "AI-powered" branding frequently means algorithmic/heuristic/template
+  automation, not an actual model. None of the 16 subsystems checked showed
+  LLM calls, embeddings, agent frameworks, or retrieval. ToolRegistry.ts
+  (a "tool registry" hit on the MCP battery) is the canvas design-tool
+  palette (pan/select/draw tools for the UI), not an MCP tool registry --
+  false positive, verified and excluded.
+empty_batteries:
+  all_11: ["all 11 category batteries run against the 2,752-file tree; every high-signal AI-subsystem hit checked directly resolved to deterministic/template logic, not real ML/LLM/embedding/agent/RAG/MCP code"]
+vendor_hits: []

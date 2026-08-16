@@ -1,0 +1,34 @@
+repo: guild-hall
+scanned: "2026-08-16"
+session: CAND-SCAN-09
+purpose: >
+  A large (1,789 files, 468 top-level entries per SCAN_TREE's note), mostly
+  documentation/certification archive for an XR/rendering engine ecosystem:
+  ~200 F0NN_*.md feature specs, AXIS_XR_* contracts, determinism apparatus
+  (DETERMINISM_LEDGER, replay proof suite), ~40 axis-xr-phaseNN/ dirs,
+  axis-platform/ (a real Python "AxisSpine" session/client-connection
+  system for XR training), and slate/ (the ancestor of this scan project's
+  own matrix schema -- "slate v1" cited throughout the portfolio's
+  governance files). 350 Python files, 336 markdown files. No README,
+  begin.yaml, continuation.yaml, or CLAUDE.md.
+files_read: 5
+findings: {}
+not_credited_adjacent_findings: >
+  axis-platform/demo.py + spine.py ("AXIS Platform Spine") is real,
+  functioning code -- a session/client-connection manager for XR training
+  (trainee sessions, XR client capability negotiation) -- but has nothing
+  to do with the 89-slot AI-ecosystem taxonomy (no LLM/agent/RAG/MCP/
+  embedding/vector-DB). The two hits for "claude"/"gpt-" in this repo's
+  markdown are AI-assistant AUTHORSHIP attributions on certification
+  documents ("Certified by: GitHub Copilot (Claude Sonnet 4.5)") -- i.e.
+  who wrote the doc, not the product depending on Claude at runtime -- not
+  recorded as vendor_in_use. This repo shares lineage with AXIS-ENGINE/
+  AXIS-X-Y-Z/AXIS-mars (same "nfxr" engine-core naming, same slate/
+  CAPABILITY_GAP_MATRIX.yaml schema ancestor) and shows the identical
+  false-positive pattern already characterized in CAND-SCAN-04/05: battery
+  hits dominated by XR/engine/determinism vocabulary (admission_gate,
+  trace, memory, pipeline) colliding with our category regexes, not real
+  AI-ecosystem capability.
+empty_batteries:
+  all_11: ["all 11 category batteries run against the 1,789-file tree; mcp/vector_database/ai_agent hits individually narrowed and verified as false positives or off-target XR-engine tooling; no real AI-ecosystem capability code found anywhere"]
+vendor_hits: []

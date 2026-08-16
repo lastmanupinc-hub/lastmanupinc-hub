@@ -633,7 +633,7 @@
     "unaudited": 0
   },
   "coverage": {
-    "repos_scanned": 24,
+    "repos_scanned": 25,
     "repos_total": 31,
     "slots_audited": 89,
     "slots_total": 89

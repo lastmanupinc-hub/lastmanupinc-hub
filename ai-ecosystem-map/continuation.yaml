@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: CAND-SCAN-08   # AXIS-chlover contributed a FIFTH independent MCP implementation (packages/server, TypeScript, standalone library, no SDK dependency, tested) -- MCP_MCP_SDK stays peer, now backed by evidence across 4 repos + 3 languages. AXIS-PAI (an earlier PAI'D snapshot predating no-fate-payment-engine's agent/MCP additions) confirmed no agent/MCP code exists there yet, but the same TF Claude-audit engine does -- second LLM_ANTHROPIC_CLAUDE vendor_in_use record. no-fate-contract's real PolicyEnforcer governance/dispute-resolution engine is off-target (computational-claim disputes, not AI content safety) -- not credited. No new grade upgrades beyond the MCP evidence strengthening; floor holds at 5.7%, repos scanned 21 -> 24.
-    next_candidate_id: CAND-SCAN-09             # guild-hall
-    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05, CAND-SCAN-06, CAND-SCAN-07, CAND-SCAN-08]
+    last_completed_candidate_id: CAND-SCAN-09   # guild-hall (1,789 files, 468 top-level entries): a documentation/certification archive for the XR-engine ecosystem shared with AXIS-ENGINE/AXIS-X-Y-Z/AXIS-mars (same nfxr engine-core, same slate/ matrix-schema ancestor). All small-count battery hits individually narrowed and verified as false positives or off-target XR/determinism tooling; axis-platform/spine.py is real functioning code but unrelated to the 89-slot taxonomy; two claude/gpt- hits confirmed to be document-authorship attributions, not runtime vendor dependence. Fully absent, no grade changes. Floor holds at 5.7%, repos scanned 24 -> 25.
+    next_candidate_id: CAND-SCAN-10             # trust-fabric, AXIS-iliad
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05, CAND-SCAN-06, CAND-SCAN-07, CAND-SCAN-08, CAND-SCAN-09]
 
   scan_phase:
     active: true
@@ -42,6 +42,30 @@ project_continuation:
 
   # Newest-first. {date, session_id, summary, files_changed, commit}
   change_log:
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-09 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..08; running to loop completion per operator directive)"
+      summary: >-
+        Scanned guild-hall (1,789 files, 468 top-level entries -- the
+        largest entry-count in the portfolio). Confirmed it is a
+        documentation/certification archive for the same XR-engine
+        ecosystem as AXIS-ENGINE/AXIS-X-Y-Z/AXIS-mars (shared "nfxr"
+        engine-core naming, and this repo's slate/ directory is the
+        literal schema ancestor of this scan project's own
+        AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml -- "slate v1"). All 11
+        category batteries run; the small-count hits (mcp:7, ai_agent:16,
+        vector_database:2) individually narrowed and verified -- all false
+        positives (JSON substring matches, unrelated .cpp files) or
+        off-target XR/CI/determinism tooling (trace_ci_logic.py,
+        warp_ci_gates.py, gate7_*.py). axis-platform/spine.py ("AXIS
+        Platform Spine") is real, functioning code -- a session/client-
+        connection manager for XR training -- but unrelated to any of the
+        89 slots. Two claude/gpt- hits confirmed to be document-authorship
+        attributions ("Certified by: GitHub Copilot (Claude Sonnet 4.5)"),
+        not the product depending on a vendor at runtime -- not recorded
+        as vendor_in_use. Fully absent, no grade changes. Floor holds at
+        5.7%, repos scanned 24 -> 25.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/guild-hall.scan.yaml]
+      commit: "(this commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-08 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..07)"
       summary: >-
@@ -73,7 +97,7 @@ project_continuation:
         beyond MCP strengthening; floor holds at 5.7%, repos scanned
         21 -> 24.
       files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/AXIS-PAI.scan.yaml, evidence/AXIS-chlover.scan.yaml, evidence/no-fate-contract.scan.yaml]
-      commit: "(this commit)"
+      commit: "(prior commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-07 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..06)"
       summary: >-

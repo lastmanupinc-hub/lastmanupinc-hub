@@ -64,7 +64,8 @@ candidates:
   - id: CAND-SCAN-09
     repos: [guild-hall]
     size_note: "~1,823 files but 468 top-level entries — breadth alone fills a session"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-09", result: "fully absent; shares XR-engine lineage with AXIS-ENGINE/AXIS-X-Y-Z/AXIS-mars, no grade changes"}
   - id: CAND-SCAN-10
     repos: [trust-fabric, AXIS-iliad]
     size_note: "~2,609 files; includes ecosystem.registry.yaml canonical home"

@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: CAND-SCAN-09   # guild-hall (1,789 files, 468 top-level entries): a documentation/certification archive for the XR-engine ecosystem shared with AXIS-ENGINE/AXIS-X-Y-Z/AXIS-mars (same nfxr engine-core, same slate/ matrix-schema ancestor). All small-count battery hits individually narrowed and verified as false positives or off-target XR/determinism tooling; axis-platform/spine.py is real functioning code but unrelated to the 89-slot taxonomy; two claude/gpt- hits confirmed to be document-authorship attributions, not runtime vendor dependence. Fully absent, no grade changes. Floor holds at 5.7%, repos scanned 24 -> 25.
-    next_candidate_id: CAND-SCAN-10             # trust-fabric, AXIS-iliad
-    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05, CAND-SCAN-06, CAND-SCAN-07, CAND-SCAN-08, CAND-SCAN-09]
+    last_completed_candidate_id: CAND-SCAN-10   # THE STRONGEST RESULT OF THE SCAN. AXIS-iliad (canonical home of ecosystem.registry.yaml): LLM_OLLAMA -> peer (iliad_llm_inference, a real sovereign in-process LLM completion engine via node-llama-cpp + quantized GGUF, no upstream call when configured, 3 production call sites, tested, honest about determinism limits); VDB_PGVECTOR -> peer (iliad_vector_database, real Postgres-backed vector store, cosine + transparent pgvector/HNSW upgrade path, production-wired, tested); EMB_SENTENCE_TRANSFORMERS -> bench (sovereign local embedding backend, DEFAULT not fallback, OpenAI recorded separately as vendor_in_use); RAG_HAYSTACK -> partial (real recency-decay + reciprocal-rank-fusion + semantic-dedup retrieval-ranking pipeline). MCP_MCP_SDK strengthened with a 6th implementation. trust-fabric's executionlane engine is real but a thin in-memory dispatch/audit bookkeeping layer around external agents (Claude Opus, Anthropic VS Code) -- not credited toward AGE/AUT, but yielded a 3rd Anthropic vendor_in_use signal. Overall floor jumped 5.7% -> 9.2% -- the largest single-batch increase of the scan. Repos scanned 25 -> 27.
+    next_candidate_id: CAND-SCAN-11             # AXIS-Scalpel, medical-robot, Diamond-Grid, axis-launch-platform
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05, CAND-SCAN-06, CAND-SCAN-07, CAND-SCAN-08, CAND-SCAN-09, CAND-SCAN-10]
 
   scan_phase:
     active: true
@@ -42,6 +42,58 @@ project_continuation:
 
   # Newest-first. {date, session_id, summary, files_changed, commit}
   change_log:
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-10 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..09; running to loop completion per operator directive)"
+      summary: >-
+        THE STRONGEST RESULT OF THE SCAN. Scanned trust-fabric (1,342
+        files, the standalone TF certification service) and AXIS-iliad
+        (1,200 files, the CANONICAL home of ecosystem.registry.yaml and
+        the production version of the artifact-generator product also
+        seen as an earlier snapshot in AXIS-odyssey). AXIS-iliad has THREE
+        genuinely sovereign, in-process, self-hosted AI capabilities, all
+        production-wired and tested: (1) iliad_llm_inference
+        (llm-inference.ts) -- real LLM completion via node-llama-cpp + a
+        quantized Llama-3.2-1B GGUF, zero upstream API calls when
+        configured, full completion API incl. JSON-schema-constrained
+        decoding, honest disclosure that seed doesn't guarantee
+        byte-identical output, graceful not-configured fallback (never
+        silent fabrication), 3 distinct production call sites
+        (design-judge.ts, architecture-drift-webhook.ts,
+        mcp-tool-impls.ts) plus a dedicated test file -- graded
+        LLM_OLLAMA peer; (2) iliad_vector_database (vector-db.ts) -- a
+        real Postgres-backed vector store, per-namespace isolation,
+        cosine similarity with a transparent pgvector/HNSW ANN upgrade
+        path, production-wired at 2 call sites, tested -- graded
+        VDB_PGVECTOR peer; (3) iliad_embeddings (embeddings.ts +
+        local-embeddings.ts) -- sovereign local embedding inference
+        (bge-small/nomic-embed GGUF), explicitly the DEFAULT backend
+        (OpenAI is a labeled "legacy" fallback, recorded separately as
+        vendor_in_use on EMB_OPENAI_EMBEDDINGS, never credited), 4 test
+        files -- graded EMB_SENTENCE_TRANSFORMERS bench (missing a
+        fine-tune path for full peer parity). vector-engineer.ts adds a
+        real retrieval-ranking pipeline (recency decay + reciprocal rank
+        fusion + semantic dedup) -- graded RAG_HAYSTACK partial (retriever
+        +ranker only, no reader/generator stage). AXIS-iliad's own
+        mcp-server.ts (908 lines, distinct from AXIS-odyssey's, no SDK
+        dependency) is a sixth independent MCP implementation, appended
+        as additional MCP_MCP_SDK evidence -- this repo's own
+        ecosystem.registry.yaml names it the canonical source of the
+        already-credited live production endpoint. trust-fabric's
+        executionlane/engine.go is real code -- an in-memory job-dispatch
+        state machine tracking work sent to 3 "doctrine execution
+        engines" (anthropic_vscode_operator, tf_opus_patch_worker,
+        external_coding_engine) with delta-audit and stamp-eligibility
+        logic -- but Dispatch() only advances in-memory map state (zero
+        DB persistence, no durability guarantee) and makes no direct
+        model API call itself, so NOT credited toward AGE_LANGGRAPH (no
+        real orchestration graph) or AUT_TEMPORAL (no crash-survival);
+        its "tf_opus_patch_worker" engine-type name is a real signal of
+        Claude Opus dependence in TF's production doctrine, recorded as
+        a third LLM_ANTHROPIC_CLAUDE vendor_in_use entry. Overall floor
+        jumped 5.7% -> 9.2% -- the largest single-batch increase in the
+        entire scan. Repos scanned 25 -> 27.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/trust-fabric.scan.yaml, evidence/AXIS-iliad.scan.yaml]
+      commit: "(this commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-09 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..08; running to loop completion per operator directive)"
       summary: >-
@@ -65,7 +117,7 @@ project_continuation:
         as vendor_in_use. Fully absent, no grade changes. Floor holds at
         5.7%, repos scanned 24 -> 25.
       files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/guild-hall.scan.yaml]
-      commit: "(this commit)"
+      commit: "(prior commit)"
     - date: "2026-08-16"
       session_id: "CAND-SCAN-08 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..07)"
       summary: >-

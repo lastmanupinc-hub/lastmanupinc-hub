@@ -227,7 +227,7 @@
     "embedding": {
       "audited": 7,
       "label": "Embedding",
-      "pct": 0.0,
+      "pct": 10.7,
       "slots": {
         "EMB_AZURE_OPENAI_EMBEDDINGS": {
           "evidence_count": 0,
@@ -251,11 +251,11 @@
           "evidence_count": 0,
           "grade": "absent",
           "label": "OpenAI Embeddings",
-          "vendor_in_use_count": 0
+          "vendor_in_use_count": 1
         },
         "EMB_SENTENCE_TRANSFORMERS": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "bench",
           "label": "Sentence Transformers",
           "vendor_in_use_count": 0
         },
@@ -277,13 +277,13 @@
     "llm": {
       "audited": 9,
       "label": "LLM",
-      "pct": 0.0,
+      "pct": 11.1,
       "slots": {
         "LLM_ANTHROPIC_CLAUDE": {
           "evidence_count": 0,
           "grade": "absent",
           "label": "Anthropic Claude",
-          "vendor_in_use_count": 2
+          "vendor_in_use_count": 3
         },
         "LLM_COHERE": {
           "evidence_count": 0,
@@ -316,8 +316,8 @@
           "vendor_in_use_count": 0
         },
         "LLM_OLLAMA": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "peer",
           "label": "Ollama",
           "vendor_in_use_count": 0
         },
@@ -372,7 +372,7 @@
           "vendor_in_use_count": 0
         },
         "MCP_MCP_SDK": {
-          "evidence_count": 5,
+          "evidence_count": 6,
           "grade": "peer",
           "label": "MCP SDK",
           "vendor_in_use_count": 0
@@ -507,7 +507,7 @@
     "rag": {
       "audited": 8,
       "label": "RAG",
-      "pct": 0.0,
+      "pct": 5.0,
       "slots": {
         "RAG_DSPY": {
           "evidence_count": 0,
@@ -528,8 +528,8 @@
           "vendor_in_use_count": 0
         },
         "RAG_HAYSTACK": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "partial",
           "label": "Haystack",
           "vendor_in_use_count": 0
         },
@@ -563,7 +563,7 @@
     "vector_database": {
       "audited": 9,
       "label": "Vector Database",
-      "pct": 0.0,
+      "pct": 11.1,
       "slots": {
         "VDB_CHROMA": {
           "evidence_count": 0,
@@ -590,8 +590,8 @@
           "vendor_in_use_count": 0
         },
         "VDB_PGVECTOR": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "peer",
           "label": "pgvector",
           "vendor_in_use_count": 0
         },
@@ -624,20 +624,20 @@
     }
   },
   "counts": {
-    "absent": 82,
-    "bench": 3,
-    "partial": 2,
-    "peer": 2,
+    "absent": 78,
+    "bench": 4,
+    "partial": 3,
+    "peer": 4,
     "peer_plus": 0,
     "scaffold": 0,
     "unaudited": 0
   },
   "coverage": {
-    "repos_scanned": 25,
+    "repos_scanned": 27,
     "repos_total": 31,
     "slots_audited": 89,
     "slots_total": 89
   },
-  "overall_pct": 5.7,
+  "overall_pct": 9.2,
   "schema": 1
 }

@@ -69,7 +69,8 @@ candidates:
   - id: CAND-SCAN-10
     repos: [trust-fabric, AXIS-iliad]
     size_note: "~2,609 files; includes ecosystem.registry.yaml canonical home"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-10", result: "4 grade upgrades (LLM_OLLAMA peer, VDB_PGVECTOR peer, EMB_SENTENCE_TRANSFORMERS bench, RAG_HAYSTACK partial) + MCP_MCP_SDK strengthened; floor 5.7% -> 9.2%, the largest jump in the scan"}
   - id: CAND-SCAN-11
     repos: [AXIS-Scalpel, medical-robot, Diamond-Grid, axis-launch-platform]
     size_note: "~2,195 files"

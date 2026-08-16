@@ -1,0 +1,101 @@
+repo: AXIS-iliad
+scanned: "2026-08-16"
+session: CAND-SCAN-10
+purpose: >
+  "Axis' Iliad" -- the CANONICAL home of ecosystem.registry.yaml
+  ("Canonical home: axis-iliad repo") and the production version of the
+  codebase-artifact-generator product also seen as an earlier snapshot in
+  AXIS-odyssey (CAND-SCAN-06) -- same live MCP endpoint
+  (axis-api-6c7z.onrender.com/mcp). 1,200 files. The single strongest
+  peer-independence result found in this entire scan.
+files_read: 14
+findings:
+  llm:
+    - files: ["apps/api/src/llm-inference.ts:1-261", "apps/api/src/design-judge.ts:1-30,48", "apps/api/src/architecture-drift-webhook.ts:18,124", "apps/api/src/llm-inference.test.ts"]
+      note: >
+        "iliad_llm_inference — AXIS-hosted LLM completion": a real,
+        in-process, self-hosted LLM inference engine (node-llama-cpp +
+        Llama-3.2-1B-Instruct GGUF, quantized, no upstream API call when
+        configured). Full completion API (prompt/system/max_tokens/
+        temperature/top_k/top_p/seed/stop), JSON-schema grammar-constrained
+        structured decoding, honest disclosure that seed doesn't guarantee
+        byte-identical output (GGML threading caveat stated in the doc
+        comment, not glossed over), graceful `_not_configured` fallback (no
+        crash, no silent fabrication) when the model file is absent.
+        THREE distinct production call sites (design-judge.ts,
+        architecture-drift-webhook.ts, mcp-tool-impls.ts — wired into the
+        live MCP tool surface), plus a dedicated test file.
+      suggests_grade: peer
+      slots: [LLM_OLLAMA]
+  embedding:
+    - files: ["apps/api/src/embeddings.ts:1-184", "apps/api/src/local-embeddings.ts:1-183"]
+      note: >
+        "iliad_embeddings — AXIS-owned in-process embedding backend":
+        sovereign local embedding inference (node-llama-cpp + a
+        bge-small-en-v1.5 or nomic-embed-text GGUF), explicitly the
+        DEFAULT backend ("On the local path NO upstream HTTP call is ever
+        made" -- the doc comment's own words) -- OpenAI is an optional,
+        explicitly-labeled "legacy" fallback behind
+        AXIS_EMBEDDING_BACKEND=openai. Real error surfacing (a
+        generative-only model fails loudly at createEmbeddingContext(),
+        never returns silent garbage vectors). Four test files
+        (embeddings.test.ts, local-embeddings.test.ts,
+        mcp-embeddings.test.ts, embeddings-engineer.test.ts). Production-
+        wired via mcp-tool-impls.ts.
+      suggests_grade: bench
+      slots: [EMB_SENTENCE_TRANSFORMERS]
+      missing_for_peer: "No fine-tune path evidenced -- inference-only, matching Sentence Transformers' 'local inference' half but not its 'fine-tune path' half of the peer bar."
+  vector_database:
+    - files: ["apps/api/src/vector-db.ts:1-399", "apps/api/src/vector-db.test.ts", "apps/api/src/mcp-tool-impls.ts:6-7,566,647"]
+      note: >
+        "iliad_vector_database — Postgres-backed vector store" (self-
+        described "AXIS-owned vector capability"): a real vector store on
+        the existing @axis/snapshots Postgres DB (no new infra dependency)
+        -- per-namespace-isolated vectors, JS cosine similarity fallback
+        (sub-ms at <=10k vectors/namespace), transparent upgrade path to a
+        real pgvector HNSW ANN index (1536-dim partial index) when the
+        extension is available, exact-match metadata filtering, MAX_VECTOR_DIM
+        bound. Production-wired: upsertVectors/queryVectors called from
+        mcp-tool-impls.ts at 2 distinct call sites. Tested
+        (vector-db.test.ts).
+      suggests_grade: peer
+      slots: [VDB_PGVECTOR]
+  rag:
+    - files: ["apps/api/src/vector-engineer.ts:1-138"]
+      note: >
+        "E4 Managed Memory: engineer-tier retrieval post-processing" --
+        real, pure-function (deterministic, no clock, no randomness)
+        retrieval-ranking pipeline layered on vector-db.ts: applyRecencyDecay
+        (exponential half-life down-weighting), reciprocalRankFusion (RRF
+        hybrid dense+sparse fusion -- a genuine, non-trivial RAG technique),
+        semanticDedup (near-duplicate collapse at upsert). This is a real
+        retriever+ranker stage.
+      suggests_grade: partial
+      slots: [RAG_HAYSTACK]
+      missing_for_peer: "Retriever+ranker stages only -- no reader or generator pipeline stages evidenced, so it covers part of Haystack's full composable-DAG capability, not the whole thing."
+  mcp:
+    - files: ["apps/api/src/mcp-server.ts:1-908"]
+      note: >
+        A sixth independent hand-rolled MCP implementation in this
+        portfolio (908 lines, distinct file from AXIS-odyssey's 2641-line
+        version despite the shared architecture -- confirmed via diff, not
+        identical). No @modelcontextprotocol/sdk import. Same live
+        production endpoint (axis-api-6c7z.onrender.com/mcp) already
+        credited from AXIS-odyssey -- this repo's ecosystem.registry.yaml
+        names itself the canonical source of that endpoint.
+      suggests_grade: peer
+      slots: [MCP_MCP_SDK]
+  agentic_ai: []
+  ai_security: []
+  observability: []
+  memory: []
+  ai_agent: []
+  automation: []
+not_credited_adjacent_findings: >
+  embeddings.ts's "openai" backend option (text-embedding-3-small/large)
+  is real but explicitly labeled a "legacy" fallback behind an env var,
+  never the default -- recorded as vendor_in_use on EMB_OPENAI_EMBEDDINGS,
+  not credited toward a grade (consuming OpenAI is dependence; the
+  DEFAULT/credited capability is the sovereign local path above).
+vendor_hits:
+  - {vendor: openai_embeddings, files: ["apps/api/src/embeddings.ts (AXIS_EMBEDDING_BACKEND=openai path)"], note: "explicitly-labeled legacy fallback, not the default backend"}

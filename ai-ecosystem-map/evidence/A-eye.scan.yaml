@@ -1,0 +1,12 @@
+repo: A-eye
+scanned: "2026-08-16"
+session: CAND-SCAN-02
+purpose: >
+  Real-time rendering IP-strategy repo: perceptual-rendering-architecture
+  whitepaper (IRIS/RETINA/PUPIL subsystems) + IP publication guide.
+  Graphics research, unrelated to the AI-ecosystem taxonomy.
+files_read: 3
+findings: {}
+empty_batteries:
+  all_11: ["all 11 category batteries: 0 relevant hits — whitepaper.md and AXIS_IP_STRATEGY.md read in full; content is real-time/offline rendering perceptual-attention architecture, not AI/LLM/agent/RAG/MCP related"]
+vendor_hits: []

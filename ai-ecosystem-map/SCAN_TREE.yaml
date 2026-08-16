@@ -26,7 +26,8 @@ candidates:
   - id: CAND-SCAN-02
     repos: [AXIS-Foundry, A-eye, axis-launch]
     size_note: "~1,974 files; governance-rich anchor (sovereign engine, MCP server, x402)"
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-02", result: "5 rows upgraded (2 peer, 2 bench, 1 partial); first non-zero capability floor"}
   - id: CAND-SCAN-03
     repos: [no-fate-payment-engine, paid-docs]
     size_note: "~5,097 files; AI-heaviest repo (PAI'D platform + TF AI engine)"

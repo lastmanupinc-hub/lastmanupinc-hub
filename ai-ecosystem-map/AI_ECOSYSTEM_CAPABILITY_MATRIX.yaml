@@ -47,8 +47,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -59,8 +59,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -71,8 +71,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -83,8 +83,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -95,8 +95,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -107,8 +107,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -119,8 +119,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -131,8 +131,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -143,8 +143,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -152,12 +152,13 @@ rows:
     category: agentic_ai
     slot: langgraph
     slot_label: "LangGraph"
-    grade: absent
-    peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
+    grade: partial
+    peer_evidence:
+      - {repo: AXIS-Foundry, files: ["engine/axis_foundry/ai/ai_agent.py:748-782", "engine/axis_foundry/ai/human_in_loop.py:1-45"], note: "Stateful plan->execute->evaluate->replan loop + real HITL review workflow wired into api_server.py (3 call sites) — 2 of LangGraph's 4 defining features", scan_ref: evidence/AXIS-Foundry.scan.yaml}
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
     search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
-    missing_for_peer: null
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
+    missing_for_peer: "No node/edge graph structure (fixed linear action list) and no persistent/resumable checkpointing across process restarts — plan and review state are in-memory/per-request only."
     last_updated: "2026-08-16"
 
   AGE_CREWAI:
@@ -167,8 +168,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -179,8 +180,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -191,8 +192,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -203,8 +204,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -215,8 +216,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -227,8 +228,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -239,8 +240,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -251,8 +252,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -263,8 +264,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -275,8 +276,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -287,8 +288,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -299,8 +300,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -311,8 +312,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -323,8 +324,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -335,8 +336,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -347,8 +348,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -359,8 +360,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -371,8 +372,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -383,8 +384,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -395,8 +396,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -407,8 +408,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -419,8 +420,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -428,11 +429,12 @@ rows:
     category: mcp
     slot: mcp_sdk
     slot_label: "MCP SDK"
-    grade: absent
-    peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
+    grade: peer
+    peer_evidence:
+      - {repo: AXIS-Foundry, files: ["engine/axis_foundry/mcp_server.py:1601-1740"], note: "Hand-rolled JSON-RPC 2.0 MCP server (initialize/tools-list/tools-call/shutdown), no SDK import, tested (tests/test_mcp_server.py)", scan_ref: evidence/AXIS-Foundry.scan.yaml}
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
     search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -440,11 +442,12 @@ rows:
     category: mcp
     slot: fastmcp
     slot_label: "FastMCP"
-    grade: absent
-    peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
+    grade: bench
+    peer_evidence:
+      - {repo: AXIS-Foundry, files: ["engine/axis_foundry/mcp_server.py:154-217"], note: "ToolDef/ToolParam ergonomic declarative tool registration with JSON-schema generation; dataclass-based, not decorator-based; no generic auth/composition layer", scan_ref: evidence/AXIS-Foundry.scan.yaml}
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
     search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -452,11 +455,12 @@ rows:
     category: mcp
     slot: mcp_registry
     slot_label: "MCP Registry"
-    grade: absent
-    peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
+    grade: peer
+    peer_evidence:
+      - {repo: AXIS-Foundry, files: ["engine/axis_foundry/mcp_server.py:1463-1481", "server.json", "tools/gen_mcp_server_json.py"], note: "build_registry_manifest() -> checked-in server.json + /.well-known/mcp.json route + drift-guard test; published to registry.modelcontextprotocol.io", scan_ref: evidence/AXIS-Foundry.scan.yaml}
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
     search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -467,8 +471,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -479,8 +483,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -491,8 +495,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -503,8 +507,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -515,8 +519,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -527,8 +531,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -539,8 +543,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -551,8 +555,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -563,8 +567,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -575,8 +579,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -587,8 +591,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -599,8 +603,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -611,8 +615,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -623,8 +627,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -635,8 +639,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -647,8 +651,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -659,8 +663,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -671,8 +675,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -683,8 +687,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -695,8 +699,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -707,8 +711,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -719,8 +723,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -731,8 +735,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -743,8 +747,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -755,8 +759,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -767,8 +771,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -779,8 +783,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -791,8 +795,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -803,8 +807,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -815,8 +819,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -827,8 +831,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -836,11 +840,12 @@ rows:
     category: ai_agent
     slot: pydantic_ai
     slot_label: "PydanticAI"
-    grade: absent
-    peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
+    grade: bench
+    peer_evidence:
+      - {repo: AXIS-Foundry, files: ["engine/axis_foundry/ai/ai_agent.py:1-810"], note: "Typed frozen-dataclass action I/O schemas + validate_action_input; model-agnostic; production callers cli.py:4217, api_server.py:9901; tests/test_ai_agent.py + test_agent_destubbing.py", scan_ref: evidence/AXIS-Foundry.scan.yaml}
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
     search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -851,8 +856,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -863,8 +868,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -875,8 +880,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -887,8 +892,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -899,8 +904,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -911,8 +916,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -923,8 +928,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -935,8 +940,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -947,8 +952,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -959,8 +964,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -971,8 +976,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -983,8 +988,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -995,8 +1000,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1007,8 +1012,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1019,8 +1024,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1031,8 +1036,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1043,8 +1048,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1055,8 +1060,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1067,8 +1072,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1079,8 +1084,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1091,8 +1096,8 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
@@ -1103,13 +1108,23 @@ rows:
     grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
-    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml", "CAND-SCAN-02 (AXIS-Foundry/A-eye/axis-launch): grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — no capability match (see evidence/AXIS-Foundry.scan.yaml empty_batteries/not_credited_adjacent_findings for what was found and why it did not qualify)"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community, AXIS-Foundry, A-eye, axis-launch]
     missing_for_peer: null
     last_updated: "2026-08-16"
 
 # Newest-first. Every grade change lands here with rows_touched.
 change_log:
+  - date: "2026-08-16"
+    title: "CAND-SCAN-02: scanned AXIS-Foundry, A-eye, axis-launch -- first real peer evidence surfaced"
+    changes:
+      - "AXIS-Foundry (1860 files, AI-native 3D foundry) yielded genuine peer-independence evidence: hand-rolled MCP protocol server + registry manifest (no SDK import, tested, production-wired) graded peer for MCP_MCP_SDK and MCP_MCP_REGISTRY"
+      - "MCP_FASTMCP graded bench (dataclass-based ergonomic tool registration, not decorator-based)"
+      - "AGT_PYDANTIC_AI graded bench (typed action-schema agent framework, model-agnostic, production-called from cli.py + api_server.py, tested)"
+      - "AGE_LANGGRAPH graded partial (stateful plan/execute/replan loop + real human-in-the-loop review workflow, but no graph structure or cross-process checkpointing -- missing_for_peer recorded)"
+      - "A-eye (rendering-architecture IP doc) and axis-launch (submission intake, no code) contributed no capability evidence -- confirmed absent, repos_scanned appended"
+      - "All other AXIS-Foundry categories (LLM, RAG, Embedding, AI Security, Observability, Memory, Automation, Vector DB) verified absent for real capability code -- vendor dependence on xAI Grok / TRELLIS.2-Modal / RunPod recorded as vendor_in_use (never counted toward grade); adjacent-but-not-matching systems (security_config.py, audit_trail.py, refusal_policy.yaml, ai_quality_eval.py) documented in the evidence shard for future re-examination rather than credited under uncertainty"
+    rows_touched: [MCP_MCP_SDK, MCP_MCP_REGISTRY, MCP_FASTMCP, AGT_PYDANTIC_AI, AGE_LANGGRAPH, PLUS_84_REPOS_SCANNED_APPENDED]
   - date: "2026-08-16"
     title: "CAND-SCAN-01 (pilot): scanned lastmanupinc-hub, .github, Remedial-Action, axis-launch-community — all 89 rows unaudited -> absent for this coverage"
     changes:
@@ -1123,18 +1138,18 @@ change_log:
 parity_100_criteria:
   audit_method: "python3 tools/rollup.py --check"
   last_run: "2026-08-16"
-  current_counts: {peer: 0, peer_plus: 0, bench: 0, partial: 0, scaffold: 0, absent: 89, unaudited: 0}
+  current_counts: {peer: 2, peer_plus: 0, bench: 2, partial: 1, scaffold: 0, absent: 84, unaudited: 0}
   current_percentages:
-    agentic_ai: 0.0
-    ai_agent: 0.0
+    agentic_ai: 5.0
+    ai_agent: 10.7
     ai_security: 0.0
     automation: 0.0
     embedding: 0.0
     llm: 0.0
-    mcp: 0.0
+    mcp: 34.4
     memory: 0.0
     observability: 0.0
     rag: 0.0
     vector_database: 0.0
-  overall_percentage: 0.0
-  coverage: {repos_scanned: 4, repos_total: 31, slots_audited: 89, slots_total: 89}
+  overall_percentage: 4.4
+  coverage: {repos_scanned: 7, repos_total: 31, slots_audited: 89, slots_total: 89}

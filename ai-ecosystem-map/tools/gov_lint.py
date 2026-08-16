@@ -72,13 +72,19 @@ def main():
             continue
         if g in above_absent:
             ev = r.get("peer_evidence") or []
-            files = [f for e in ev for f in (e.get("files") or [])]
-            if not files:
+            if not any(e.get("files") for e in ev):
                 err("G4", "%s graded %s with no peer_evidence files" % (rid, g))
-            for f in files:
-                path = os.path.join(REPO_ROOT, re.sub(r":\d+(-\d+)?$", "", f))
-                if not os.path.exists(path):
-                    err("G4", "%s cites missing path %s" % (rid, f))
+            for e in ev:
+                # Files are relative to the evidence entry's own `repo` field
+                # (each row can cite evidence from multiple repos), e.g.
+                # {repo: AXIS-Foundry, files: ["engine/foo.py:12-34"]} ->
+                # /home/user/AXIS-Foundry/engine/foo.py
+                repo = e.get("repo")
+                for f in (e.get("files") or []):
+                    clean = re.sub(r":\d+(-\d+)?$", "", f)
+                    path = os.path.join(REPO_ROOT, repo, clean) if repo else os.path.join(REPO_ROOT, clean)
+                    if not os.path.exists(path):
+                        err("G4", "%s cites missing path %s (repo=%s)" % (rid, f, repo))
         if g == "absent" and not (r.get("search_expressions") or []):
             err("G5", "%s absent without search_expressions" % rid)
         if g == "partial" and not r.get("missing_for_peer"):

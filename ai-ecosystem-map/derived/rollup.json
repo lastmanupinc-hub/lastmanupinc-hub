@@ -3,7 +3,7 @@
     "agentic_ai": {
       "audited": 8,
       "label": "Agentic AI",
-      "pct": 0.0,
+      "pct": 5.0,
       "slots": {
         "AGE_AGNO": {
           "evidence_count": 0,
@@ -30,8 +30,8 @@
           "vendor_in_use_count": 0
         },
         "AGE_LANGGRAPH": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "partial",
           "label": "LangGraph",
           "vendor_in_use_count": 0
         },
@@ -59,7 +59,7 @@
     "ai_agent": {
       "audited": 7,
       "label": "AI Agent",
-      "pct": 0.0,
+      "pct": 10.7,
       "slots": {
         "AGT_AZURE_FOUNDRY_AGENT": {
           "evidence_count": 0,
@@ -92,8 +92,8 @@
           "vendor_in_use_count": 0
         },
         "AGT_PYDANTIC_AI": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "bench",
           "label": "PydanticAI",
           "vendor_in_use_count": 0
         },
@@ -339,11 +339,11 @@
     "mcp": {
       "audited": 8,
       "label": "MCP",
-      "pct": 0.0,
+      "pct": 34.4,
       "slots": {
         "MCP_FASTMCP": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "bench",
           "label": "FastMCP",
           "vendor_in_use_count": 0
         },
@@ -366,14 +366,14 @@
           "vendor_in_use_count": 0
         },
         "MCP_MCP_REGISTRY": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "peer",
           "label": "MCP Registry",
           "vendor_in_use_count": 0
         },
         "MCP_MCP_SDK": {
-          "evidence_count": 0,
-          "grade": "absent",
+          "evidence_count": 1,
+          "grade": "peer",
           "label": "MCP SDK",
           "vendor_in_use_count": 0
         },
@@ -624,20 +624,20 @@
     }
   },
   "counts": {
-    "absent": 89,
-    "bench": 0,
-    "partial": 0,
-    "peer": 0,
+    "absent": 84,
+    "bench": 2,
+    "partial": 1,
+    "peer": 2,
     "peer_plus": 0,
     "scaffold": 0,
     "unaudited": 0
   },
   "coverage": {
-    "repos_scanned": 4,
+    "repos_scanned": 7,
     "repos_total": 31,
     "slots_audited": 89,
     "slots_total": 89
   },
-  "overall_pct": 0.0,
+  "overall_pct": 4.4,
   "schema": 1
 }

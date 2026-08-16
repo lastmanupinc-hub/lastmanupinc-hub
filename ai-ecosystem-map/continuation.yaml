@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: CAND-SCAN-01   # pilot batch (Session 0): 4 doc-only/empty repos, 0 capability hits, all 89 rows unaudited -> absent for this coverage; loop mechanics proven end-to-end (batteries -> shards -> matrix -> rollup -> lint -> render)
-    next_candidate_id: CAND-SCAN-02             # AXIS-Foundry, A-eye, axis-launch — governance-rich anchor; expect first real evidence (sovereign engine, in-house MCP server, x402 gateway)
-    completed_candidate_ids: [CAND-SCAN-01]
+    last_completed_candidate_id: CAND-SCAN-02   # AXIS-Foundry, A-eye, axis-launch — first real evidence: MCP_MCP_SDK + MCP_MCP_REGISTRY graded peer (hand-rolled, tested, production-wired MCP server + registry manifest), MCP_FASTMCP + AGT_PYDANTIC_AI bench, AGE_LANGGRAPH partial (plan/execute/replan loop + real HITL review, no graph/checkpointing). Overall floor 4.4%, 7/31 repos. Also fixed a gov_lint.py G4 bug (paths must resolve via each evidence entry's own `repo` field, not flat against /home/user).
+    next_candidate_id: CAND-SCAN-03             # no-fate-payment-engine, paid-docs — AI-heaviest repo (PAI'D platform + Trust Fabric AI certify-or-refuse engine)
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02]
 
   scan_phase:
     active: true
@@ -43,6 +43,29 @@ project_continuation:
   # Newest-first. {date, session_id, summary, files_changed, commit}
   change_log:
     - date: "2026-08-16"
+      session_id: "CAND-SCAN-02 (Sonnet 5, continued same conversation as Session 0)"
+      summary: >-
+        Scanned AXIS-Foundry (1860 files), A-eye (3 files), axis-launch (3
+        files). AXIS-Foundry surfaced the first real peer evidence: a
+        hand-rolled JSON-RPC 2.0 MCP server (no SDK import, tested,
+        production-wired via api_server.py + cli.py) graded peer for
+        MCP_MCP_SDK; its registry-manifest builder (server.json + drift-guard
+        test + /.well-known/mcp.json) graded peer for MCP_MCP_REGISTRY;
+        dataclass-based tool registration graded bench for MCP_FASTMCP; the
+        typed-action-schema AvatarAgent graded bench for AGT_PYDANTIC_AI;
+        the plan/execute/replan loop + real human-in-the-loop review
+        workflow graded partial for AGE_LANGGRAPH (missing: graph structure,
+        cross-process checkpointing). A-eye (rendering-IP whitepaper) and
+        axis-launch (submission intake) contributed no evidence. All other
+        AXIS-Foundry categories verified absent on real code (not just
+        grep noise) — xAI Grok / TRELLIS.2-Modal / RunPod recorded as
+        vendor_in_use, never credited toward grade. GOTCHA: gov_lint.py G4
+        was checking evidence file paths against /home/user/<path> instead
+        of /home/user/<repo>/<path>, using each evidence entry's own `repo`
+        field — fixed and reverified. Overall floor rose 0.0% -> 4.4%,
+        7/31 repos scanned.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, tools/gov_lint.py, evidence/AXIS-Foundry.scan.yaml, evidence/A-eye.scan.yaml, evidence/axis-launch.scan.yaml]
+      commit: "(this commit)"
       session_id: "SESSION-0 (Fable 5, plan-approved bootstrap + CAND-SCAN-01 pilot)"
       summary: >-
         SCAFFOLD: built the full control plane (targets taxonomy 89 slots,

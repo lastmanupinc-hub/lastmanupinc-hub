@@ -1,0 +1,103 @@
+repo: AXIS-Foundry
+scanned: "2026-08-16"
+session: CAND-SCAN-02
+purpose: >
+  AI-native 3D asset foundry (avatar/prop/vehicle/etc. generation, rigging,
+  validation, export). Python 3.11+ sovereign engine (stdlib-only runtime),
+  1860 files. First batch to surface real peer-independence evidence.
+files_read: 9
+findings:
+  mcp:
+    - files: ["engine/axis_foundry/mcp_server.py:1601-1740 (McpServer class)", "engine/axis_foundry/mcp_server.py:154-217 (ToolDef/ToolParam)"]
+      note: >
+        Hand-rolled JSON-RPC 2.0 MCP protocol server: initialize/tools-list/
+        tools-call/shutdown dispatch, protocol-version negotiation, stdio
+        transport, notification handling (2026-07-21 spec-compliance fixes
+        documented in comments with live-repro'd bug history). No `import
+        mcp` SDK — genuinely built from the spec. Tested: tests/test_mcp_server.py,
+        tests/test_mcp_post_process.py, tests/test_tools_mcp_submission.py.
+      suggests_grade: peer
+      slots: [MCP_MCP_SDK]
+    - files: ["engine/axis_foundry/mcp_server.py:1463-1481 (build_registry_manifest)", "server.json", "tools/gen_mcp_server_json.py"]
+      note: >
+        In-house registry-manifest publication: build_registry_manifest() is
+        the single source consumed by the checked-in server.json, the
+        GET /.well-known/mcp.json route (api_server.py:6450), and a
+        drift-guard test. Actually published to registry.modelcontextprotocol.io
+        per MCP_REGISTRY_RUNBOOK.md.
+      suggests_grade: peer
+      slots: [MCP_MCP_REGISTRY]
+    - files: ["engine/axis_foundry/mcp_server.py:154-217"]
+      note: >
+        ToolDef/ToolParam dataclasses give declarative tool registration with
+        JSON-schema generation, annotations, examples, x402 pricing metadata —
+        ergonomic but attribute/dataclass-based, not decorator-based like
+        FastMCP; no generic auth/composition layer.
+      suggests_grade: bench
+      slots: [MCP_FASTMCP]
+  ai_agent:
+    - files: ["engine/axis_foundry/ai/ai_agent.py:1-810 (full read)"]
+      note: >
+        Real, model-agnostic agent framework: typed frozen-dataclass action
+        input/output schemas (ParseGoalInput/Output, GenerateBodyInput/Output,
+        etc.), ACTION_SCHEMAS registry, validate_action_input, pluggable
+        decide/execute callables, AvatarAgent with plan_actions/execute_plan/
+        replan_if_needed/run. Production-called from cli.py:4217 and
+        api_server.py:9901. Tested: tests/test_ai_agent.py,
+        tests/test_agent_destubbing.py (name implies a prior stub was wired
+        for real).
+      suggests_grade: bench
+      slots: [AGT_PYDANTIC_AI]
+  agentic_ai:
+    - files: ["engine/axis_foundry/ai/ai_agent.py:748-782 (replan_if_needed, run)", "engine/axis_foundry/ai/human_in_loop.py:1-45"]
+      note: >
+        AvatarAgent.run() is a real plan->execute->evaluate->replan loop
+        (stateful cycles) with iteration cap. human_in_loop.py's
+        ReviewSession/create_review_session/submit_decision is a genuine
+        human-in-the-loop review workflow, wired into api_server.py at 3
+        call sites (lines 2688, 8943, 10156) — covers 2 of LangGraph's 4
+        defining features (stateful cycles + HITL interrupts).
+      suggests_grade: partial
+      slots: [AGE_LANGGRAPH]
+      missing_for_peer: >
+        No node/edge graph structure (fixed linear action list, not a general
+        graph engine) and no persistent/resumable checkpointing across
+        process restarts — plan + review state are in-memory/per-request.
+  llm: []
+  rag: []
+  embedding: []
+  ai_security: []
+  observability: []
+  memory: []
+  ai_agent_sdk_general: []
+  automation: []
+  vector_database: []
+not_credited_adjacent_findings: >
+  security_config.py (649 lines) and audit_trail.py (634 lines) are real,
+  production-grade infra security / tamper-evident audit logging — but they
+  govern deployment secrets, headers, and general app events, not AI/LLM
+  content safety or AI-call tracing, so they do NOT match any SEC_* or OBS_*
+  slot definition (those slots are specifically about guardrails on
+  generative content, or tracing/eval of AI calls). refusal_policy.yaml
+  gates 3D-mesh export quality (game_ready/dcc_editable/print_ready tiers),
+  not LLM-output moderation — also not credited. ai_quality_eval.py scores
+  generated 3D assets (QualityDimension/DimensionScore), which is
+  eval-harness-*shaped* but scores mesh geometry, not LLM/agent call
+  traces — left uncredited under the doctrine's "grade down when uncertain"
+  rule; worth re-examining at CAND-CONSOLIDATE-12 if the OBS category stays
+  thin. vector_database: 0 files matched any battery (3D pipeline has no
+  RAG/semantic-search surface).
+empty_batteries:
+  llm: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' — hits are mesh 'sampling' (Poisson-disk mesh sampling) and pipeline 'completion' status, not LLM inference"]
+  rag: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' — hits are mesh 'chunk' (LOD/streaming chunks) and export 'grounding' (physics), not retrieval-augmented generation"]
+  embedding: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' — hits are ProviderCapability.EMBEDDING enum member (unused stub value) and mesh-normal cosine/similarity math, not a text-embedding capability"]
+  ai_security: ["grep -rliE 'guardrail|prompt.?injection|content.?safety|admission.?gate' — 0 real-code files (only YAML dashboards citing the word 'guardrail' from other subsystems)"]
+  observability: ["grep -rliE 'eval.?harness|telemetry|audit.?log|prompt.?log' — real hits (audit_trail.py, run_history.py) are general infra/perf logging, not AI-call tracing; see not_credited_adjacent_findings"]
+  memory: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' — hits are GPU memory management and billing ledger, not AI conversational/agent memory"]
+  automation: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' — 7679 raw hits, dominated by the product's own internal mesh-processing 'pipeline' terminology; no n8n/Zapier/Temporal-class external workflow-automation platform found"]
+  vector_database: ["grep -rliE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' — 0 files"]
+vendor_hits:
+  - {vendor: xai_grok, files: ["engine/axis_foundry/generation/xai_backend.py"], note: "the image model for text/image-to-3D per CLAUDE.md rule — external API dependency"}
+  - {vendor: trellis2_modal, files: ["engine/axis_foundry/generation/trellis2_backend.py", "render.yaml"], note: "TRELLIS.2 hosted on Modal — default hosted-SaaS GPU transport"}
+  - {vendor: runpod, files: ["engine/axis_foundry/generation/runpod_backend.py", ".github/workflows/build-runpod-image.yml"], note: "serverless GPU transport alternative"}
+  - {vendor: flux2_deprecated, files: ["engine/axis_foundry/generation/flux2_backend.py"], note: "de-routed per owner order 2026-08-04, file remains but unreachable — historical, not live dependence"}

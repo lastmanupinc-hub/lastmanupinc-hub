@@ -1,0 +1,20 @@
+repo: AXIS-Gold
+scanned: "2026-08-16"
+session: CAND-SCAN-06
+purpose: >
+  "textaxis-process" -- a deterministic narrative-to-executable truth-tracking
+  framework: narrative claims -> deterministic surrogate slice execution ->
+  witness sets + golden-slice comparison -> truth/parity report. 44 files,
+  full read of README + core/*.py structure.
+files_read: 9
+findings: {}
+not_credited_adjacent_findings: >
+  "Narrative parsing" (the closest thing to NLP in this repo) is confirmed
+  plain regex tokenization (`re.findall(r"[A-Za-z0-9_]+", narrative_text)`
+  in vertical_slice.py) -- not LLM-based semantic parsing. This is a
+  deterministic-replay/golden-testing framework, off-target for the 89
+  AI-ecosystem slots entirely (no LLM, agent, RAG, MCP, embedding, or
+  vector-DB surface of any kind).
+empty_batteries:
+  all_11: ["all 11 category batteries: 0 real-code hits -- pure deterministic verification/replay tooling"]
+vendor_hits: []

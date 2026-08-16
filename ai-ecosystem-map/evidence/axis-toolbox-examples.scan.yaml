@@ -1,0 +1,25 @@
+repo: axis-toolbox-examples
+scanned: "2026-08-16"
+session: CAND-SCAN-07
+purpose: >
+  Case-study repo (README + LICENSE + 5 generated readiness-score.md files)
+  showcasing AXIS Toolbox's (= AXIS-odyssey, CAND-SCAN-06) live
+  `prepare_for_agentic_purchasing` MCP tool run against OTHER repos in this
+  same portfolio (no-fate-payment-engine, no-fate-contract, pmd-customizer,
+  Diamond Clarity). 45 files, all read/skimmed (5 markdown reports).
+files_read: 7
+findings: {}
+not_credited_adjacent_findings: >
+  This repo contains no new capability CODE -- it is generated OUTPUT
+  artifacts (case-study reports) from AXIS-odyssey's MCP service, not an
+  implementation. It corroborates (does not newly evidence) the MCP_MCP_SDK
+  / MCP_MCP_REGISTRY peer grade already established from AXIS-odyssey's own
+  source: the README documents real production calls to
+  https://axis-api-6c7z.onrender.com/mcp against real snapshot IDs, and
+  references a live MCP Registry listing
+  (io.github.lastmanupinc-hub/axis-toolbox) and a Smithery listing -- not
+  re-cited as new peer_evidence (would be redundant with AXIS-odyssey's own
+  code-level evidence) but noted here for the audit trail.
+empty_batteries:
+  all_11: ["all 11 category batteries: 0 hits beyond the already-credited MCP context above -- no new implementation code in this repo"]
+vendor_hits: []

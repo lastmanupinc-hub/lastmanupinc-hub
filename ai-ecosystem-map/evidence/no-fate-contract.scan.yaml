@@ -1,0 +1,26 @@
+repo: no-fate-contract
+scanned: "2026-08-16"
+session: CAND-SCAN-08
+purpose: >
+  "DBGO" (Deterministic Business Governance Object) -- a constitutional
+  governance and dispute-resolution framework: competing-solver policy
+  enforcement, certificate-IR types, cryptographic genesis-hash binding,
+  regulatory/tax adapters. 193 files.
+files_read: 6
+findings: {}
+not_credited_adjacent_findings: >
+  dbgo/enforcement/index.ts (396 lines) is a real, structured
+  PolicyEnforcer class with hard-enforced governance policies
+  (COMPETING_SOLVERS / DISPUTE_RESOLUTION / CONTROLLED_SUPERSESSION /
+  DECENTRALIZED_OPERATIONS) and cryptographic genesis-hash binding -- a
+  genuine deterministic rules/dispute-adjudication engine. But this
+  governs COMPUTATIONAL-CLAIM disputes between competing solvers (a
+  legal/procedural framework), not AI-generated CONTENT safety
+  (guardrails/PII/prompt-injection/content-safety are specifically about
+  LLM output moderation per the SEC_* target definitions) -- off-target,
+  not credited, same judgment as several other governance/verification
+  frameworks found this session (AXIS-Gold's golden-slice witness system,
+  AXIS-Foundry's refusal_policy.yaml for mesh export quality).
+empty_batteries:
+  all_11: ["all 11 category batteries: 0 hits mapping to the 89-slot taxonomy -- confirmed off-target legal/governance domain"]
+vendor_hits: []

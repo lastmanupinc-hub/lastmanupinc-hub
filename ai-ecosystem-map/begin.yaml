@@ -1,0 +1,60 @@
+###############################################################################
+# begin.yaml — session gate + bootstrap for the AI Ecosystem Capability Map
+# Read this file FIRST at every session start, then follow required_read_order.
+###############################################################################
+project_begin:
+  version: v1
+  role: session_gate_and_loop_bootstrap
+
+  project_identity:
+    name: "AI Ecosystem Capability Map"
+    category: cross_repo_capability_audit
+    core_promise: >
+      Honest, evidence-backed grading of the lastmanupinc-hub portfolio
+      against the 89 AI-ecosystem vendor targets, rendered as a regenerable
+      radial capability picture.
+    boundary: >
+      READ-ONLY scanner of the 31 lastmanupinc-hub repos cloned at /home/user.
+      NEVER commits to, edits, opens PRs on, or otherwise mutates a scanned
+      repo. Only this control plane (the ai-ecosystem-map/ directory) mutates.
+      Verify `git status` is clean in every scanned repo before ending a session.
+    intended_permanent_home: >
+      A dedicated repo lastmanupinc-hub/ai-ecosystem-map. Currently hosted in
+      the lastmanupinc-hub profile repo under ai-ecosystem-map/ because the
+      session token could not create repositories (2026-08-16). Migration is a
+      plain copy of this directory — no path outside it is load-bearing.
+
+  rulebook:
+    files:
+      begin_yaml: "this file — bootstrap + doctrine pointers"
+      continuation_yaml: "live state ledger; automated_loop_state is the resume pointer"
+      ecosystem_targets_yaml: "IMMUTABLE target taxonomy: 89 slots + peer-independence doctrine"
+      ai_ecosystem_capability_matrix_yaml: "CANONICAL LEDGER — single source of grade truth"
+      scan_tree_yaml: "batch backlog: CAND-SCAN-01..11 + CAND-CONSOLIDATE-12 + exit_criteria"
+      sonnet5_ecosystem_scan_strategy_md: "the per-session execution ritual"
+    invariant: >
+      No file may claim a grade the matrix contradicts. parity_100_criteria
+      numbers are written only by tools/rollup.py.
+
+  required_read_order:
+    - read_this_file_first
+    - then_read_continuation_yaml_automated_loop_state
+    - then_read_scan_tree_yaml_for_the_next_candidate_block
+    - then_read_sonnet5_ecosystem_scan_strategy_md_and_execute_the_ritual
+
+  scoring_doctrine_pointer: ECOSYSTEM_TARGETS.yaml#meta (peer-independence, owner verbatim)
+
+  autonomous_loop_bootstrap:
+    resume_pointer: continuation.yaml#automated_loop_state
+    execution_mode: continuous_candidate_completion
+    strategy_doc: SONNET5_ECOSYSTEM_SCAN_STRATEGY.md
+    backlog_source: SCAN_TREE.yaml
+    default_on_session_start: >
+      Read continuation.yaml#automated_loop_state.next_candidate_id and execute
+      it immediately per the strategy doc. Do not present options. Do not ask
+      the operator to choose. The loop is the permission.
+    stop_conditions:
+      - "SCAN_TREE.yaml#exit_criteria all met (loop complete)"
+      - "gov_lint failure that cannot be fixed within the session"
+      - "a scanned repo's working tree was mutated (STOP, restore, report)"
+      - "operator interrupt"

@@ -1,0 +1,15 @@
+repo: axis-seo
+scanned: "2026-08-16"
+session: CAND-SCAN-04
+purpose: >
+  SEO toolkit (20 files, full read): crawler-visibility auditing (audit.ts,
+  checks raw-HTML-only rendering the way OAI-SearchBot/Claude-SearchBot/
+  PerplexityBot see a page), JSON-LD schema generation (schema.ts), a vite
+  plugin, and EcosystemFooter/SeoHead components. AI-crawler-*aware* (built
+  to be readable BY AI search bots) but does not itself implement any of the
+  89 target capabilities.
+files_read: 11
+findings: {}
+empty_batteries:
+  all_11: ["all 11 category batteries: 0 hits -- pure SEO/HTML-audit tooling, no LLM/agent/RAG/MCP/vector-DB code"]
+vendor_hits: []

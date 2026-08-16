@@ -1,0 +1,26 @@
+repo: profitforge
+scanned: "2026-08-16"
+session: CAND-SCAN-05
+purpose: >
+  "AI agents that actually make people money" -- an early-stage SvelteKit +
+  Go prototype for a consumer marketplace of autonomous income-generating
+  agents, explicitly designed to integrate with PAID (payouts) and "Iliad
+  MCP" (agent orchestration) once built out. 34 files, full read.
+files_read: 14
+findings: {}
+not_credited_adjacent_findings: >
+  backend/internal/domain/agent.go + agent_service.go: "Agent" is a plain
+  CRUD data record (name/type/earnings/status/progress) with a SimulateDay()
+  method using math/rand to fabricate daily-earnings growth -- there is no
+  tool-calling, no LLM decision-making, no MCP client, no real task
+  execution. The README is explicit this is intentional: "Fully working
+  interactive prototype... simulated agents + local persistence... Clear
+  path to production: Go backend, real Iliad agents, PAID payouts." The only
+  MCP/LLM-adjacent text anywhere in the repo is a marketing <meta
+  description> tag ("Powered by PAID payouts and Iliad MCP") -- zero lines
+  of MCP or LLM code exist. This is the cleanest confirmed-aspirational
+  (not-yet-built) case scanned so far -- correctly graded fully absent
+  rather than credited for stated intent.
+empty_batteries:
+  all_11: ["all 11 category batteries + dependence battery run against the full 34-file tree -- only hit was the marketing meta-description text noted above"]
+vendor_hits: []

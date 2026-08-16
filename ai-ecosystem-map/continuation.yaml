@@ -1,0 +1,447 @@
+###############################################################################
+# continuation.yaml — live state ledger for the AI Ecosystem Capability Map
+# Updated at the END of every session. automated_loop_state is the resume
+# pointer every new session reads first (via begin.yaml).
+###############################################################################
+project_continuation:
+  version: v1
+  role: live_state_ledger_and_post_session_truth
+
+  reference_policy:
+    before_session_read: [begin.yaml, continuation.yaml, SCAN_TREE.yaml]
+    after_session:
+      - update_automated_loop_state   # set next_candidate_id before ending ANY session
+      - append_change_log_entry
+      - matrix_change_log_also_updated_if_rows_touched
+    recursive_self_triggering_forbidden: true
+
+  automated_loop_state:
+    mode: continuous_candidate_completion
+    policy_source: begin.yaml#autonomous_loop_bootstrap
+    backlog_source: SCAN_TREE.yaml
+    last_updated: "2026-08-16"
+    last_completed_candidate_id: CAND-CONSOLIDATE-12   # LOOP CLOSED. All 11 non-absent rows (4 peer, 4 bench, 3 partial; 30 distinct file citations) re-opened and re-verified fresh -- ZERO demotions, every grade holds. All 4 peer rows (LLM_OLLAMA, MCP_MCP_SDK, MCP_MCP_REGISTRY, VDB_PGVECTOR) line-by-line re-read, not just path-checked. Final state: 89/89 slots audited, 31/31 repos scanned, overall floor 9.2%. SCAN_TREE.yaml exit_criteria fully met.
+    next_candidate_id: null   # LOOP COMPLETE -- no further candidates. Re-scans (portfolio changes, new repos, deeper category sweeps) would need a new SCAN_TREE.yaml phase.
+    completed_candidate_ids: [CAND-SCAN-01, CAND-SCAN-02, CAND-SCAN-03, CAND-SCAN-04, CAND-SCAN-05, CAND-SCAN-06, CAND-SCAN-07, CAND-SCAN-08, CAND-SCAN-09, CAND-SCAN-10, CAND-SCAN-11, CAND-CONSOLIDATE-12]
+
+  scan_phase:
+    active: false   # CLOSED 2026-08-16 — see closed_note below
+    started: "2026-08-16"
+    closed: "2026-08-16"
+    closed_note: >
+      All 12 SCAN_TREE candidates done (11 scan batches + CAND-CONSOLIDATE-12
+      verification). All 31 portfolio repos scanned exactly once. All 89
+      target slots audited. Verification pass re-opened every non-absent
+      row's cited files fresh and found zero demotions. Final honest floor:
+      9.2% overall (4 peer, 4 bench, 3 partial, 78 absent). Reopening this
+      phase (new repos, portfolio changes, deeper category sweeps) requires
+      a new SCAN_TREE.yaml candidate list — do not resume mid-loop against
+      this closed one.
+    artifact_url: "https://claude.ai/code/artifact/ee96e72a-d6b9-4f36-a974-04ce825b9986"
+    artifact_rule: >
+      After each session's re-render, republish derived/capability_map.html to
+      this same URL (pass it as `url` to the Artifact tool) so the picture
+      stays at one stable link.
+    strategy_doc: SONNET5_ECOSYSTEM_SCAN_STRATEGY.md
+    backlog_source: SCAN_TREE.yaml
+    exit_criteria_source: SCAN_TREE.yaml#exit_criteria
+    note: >
+      Repo-major loop: 11 scan batches + 1 consolidation. Every session
+      executes exactly one candidate, commits once per the ritual, and
+      advances next_candidate_id before ending. COMPLETE as of
+      CAND-CONSOLIDATE-12.
+
+  # Newest-first. {date, session_id, summary, files_changed, commit}
+  change_log:
+    - date: "2026-08-16"
+      session_id: "CAND-CONSOLIDATE-12 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..11; loop closed per operator directive to run to completion)"
+      summary: >-
+        LOOP CLOSED. Verification pass, no new scanning: enumerated all 11
+        non-absent rows (4 peer: LLM_OLLAMA, MCP_MCP_SDK, MCP_MCP_REGISTRY,
+        VDB_PGVECTOR; 4 bench: EMB_SENTENCE_TRANSFORMERS, MCP_FASTMCP,
+        OBS_PROMPTFOO, AGT_PYDANTIC_AI; 3 partial: AGE_LANGGRAPH,
+        RAG_HAYSTACK, SEC_NEMO_GUARDRAILS -- this is the full non-absent
+        population, exceeding the >=12-citation floor once counted per file:
+        30 distinct citations). Confirmed all 30 cited paths exist on disk.
+        Freshly re-read (not just path-checked) the highest-stakes claims:
+        LLM_OLLAMA's isLlmConfigured()/_not_configured gate, VDB_PGVECTOR's
+        cosineSimilarity()/pgvectorReady/HNSW SQL, MCP_MCP_SDK's
+        NewDispatcher/Dispatch in no-fate-payment-engine, MCP_MCP_REGISTRY's
+        server.json schema match, OBS_PROMPTFOO's QGATE_3/6/7 wiring in
+        run_all_gates.py, and SEC_NEMO_GUARDRAILS's deny-by-default
+        CheckTool -- every claim held exactly as recorded. ZERO demotions.
+        Final rollup.py --write + gov_lint.py (PASS, G1-G12) +
+        build_capability_map.py (byte-deterministic across 2 runs).
+        SCAN_TREE.yaml exit_criteria: all 5 conditions met
+        (12/12 candidates done, 0/89 unaudited, evidence shards exist for
+        every scanned repo, consolidation complete, final render committed
+        + artifact republished). scan_phase.active set to false.
+        next_candidate_id set to null. FINAL STATE: 89/89 slots audited,
+        31/31 repos scanned, overall capability floor 9.2% (4 peer grades,
+        4 bench, 3 partial, 78 absent -- an honest, evidence-backed number
+        that only rises with future file evidence, per the peer-independence
+        doctrine).
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html]
+      commit: "(this commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-11 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..10; running to loop completion per operator directive)"
+      summary: >-
+        FINAL SCAN BATCH -- ALL 31/31 REPOS NOW SCANNED. Scanned
+        AXIS-Scalpel + medical-robot (647 + 631 files, medical/surgical-
+        robotics determinism-certification frameworks sharing "slate"
+        lineage with AXIS-ENGINE/AXIS-X-Y-Z/AXIS-mars/guild-hall --
+        confirmed via diff -rq NOT byte-identical mirrors, genuine
+        divergence in ledger.py/provenance.py/pce_authorization.py, both
+        independently scanned). Their Gate9 PCE (Perceptual Competence
+        Envelope) authorization engines are real, careful engineering but
+        govern XR/robotics perceptual-accuracy certification, off-target
+        for the 89-slot taxonomy. Diamond-Grid (405 files, multi-"Facet"
+        compliance-gate system) -- checked "AI Facet"/diamond_ai_dock.py
+        (832 lines) specifically given the name: "Diamond AI Dock (DAD-AI)
+        -- Deterministic AI Deployment Admissibility Boundary System" is
+        real but governs the legal/regulatory ADMISSIBILITY of AI
+        deployments as a compliance concept, not AI content safety --
+        off-target, same judgment as no-fate-contract's PolicyEnforcer.
+        axis-launch-platform (380 files) -- checked mcp/ directory
+        specifically given the name: mcp-surface-package.md is explicitly
+        headed "Auto-generated by AXIS Odyssey Domain Orchestrator", a
+        planning/recommendation table of tools for a detected SaaS domain,
+        not an implementation -- no real MCP server exists in this repo.
+        All 11 category batteries run against all 4 repos; every
+        small-count hit individually narrowed and verified as false
+        positive or off-target. Fully absent across all 4, no grade
+        changes. Floor holds at 9.2%, repos scanned 27 -> 31 (complete).
+        Next: CAND-CONSOLIDATE-12, the verification/closing session.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/AXIS-Scalpel.scan.yaml, evidence/medical-robot.scan.yaml, evidence/Diamond-Grid.scan.yaml, evidence/axis-launch-platform.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-10 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..09; running to loop completion per operator directive)"
+      summary: >-
+        THE STRONGEST RESULT OF THE SCAN. Scanned trust-fabric (1,342
+        files, the standalone TF certification service) and AXIS-iliad
+        (1,200 files, the CANONICAL home of ecosystem.registry.yaml and
+        the production version of the artifact-generator product also
+        seen as an earlier snapshot in AXIS-odyssey). AXIS-iliad has THREE
+        genuinely sovereign, in-process, self-hosted AI capabilities, all
+        production-wired and tested: (1) iliad_llm_inference
+        (llm-inference.ts) -- real LLM completion via node-llama-cpp + a
+        quantized Llama-3.2-1B GGUF, zero upstream API calls when
+        configured, full completion API incl. JSON-schema-constrained
+        decoding, honest disclosure that seed doesn't guarantee
+        byte-identical output, graceful not-configured fallback (never
+        silent fabrication), 3 distinct production call sites
+        (design-judge.ts, architecture-drift-webhook.ts,
+        mcp-tool-impls.ts) plus a dedicated test file -- graded
+        LLM_OLLAMA peer; (2) iliad_vector_database (vector-db.ts) -- a
+        real Postgres-backed vector store, per-namespace isolation,
+        cosine similarity with a transparent pgvector/HNSW ANN upgrade
+        path, production-wired at 2 call sites, tested -- graded
+        VDB_PGVECTOR peer; (3) iliad_embeddings (embeddings.ts +
+        local-embeddings.ts) -- sovereign local embedding inference
+        (bge-small/nomic-embed GGUF), explicitly the DEFAULT backend
+        (OpenAI is a labeled "legacy" fallback, recorded separately as
+        vendor_in_use on EMB_OPENAI_EMBEDDINGS, never credited), 4 test
+        files -- graded EMB_SENTENCE_TRANSFORMERS bench (missing a
+        fine-tune path for full peer parity). vector-engineer.ts adds a
+        real retrieval-ranking pipeline (recency decay + reciprocal rank
+        fusion + semantic dedup) -- graded RAG_HAYSTACK partial (retriever
+        +ranker only, no reader/generator stage). AXIS-iliad's own
+        mcp-server.ts (908 lines, distinct from AXIS-odyssey's, no SDK
+        dependency) is a sixth independent MCP implementation, appended
+        as additional MCP_MCP_SDK evidence -- this repo's own
+        ecosystem.registry.yaml names it the canonical source of the
+        already-credited live production endpoint. trust-fabric's
+        executionlane/engine.go is real code -- an in-memory job-dispatch
+        state machine tracking work sent to 3 "doctrine execution
+        engines" (anthropic_vscode_operator, tf_opus_patch_worker,
+        external_coding_engine) with delta-audit and stamp-eligibility
+        logic -- but Dispatch() only advances in-memory map state (zero
+        DB persistence, no durability guarantee) and makes no direct
+        model API call itself, so NOT credited toward AGE_LANGGRAPH (no
+        real orchestration graph) or AUT_TEMPORAL (no crash-survival);
+        its "tf_opus_patch_worker" engine-type name is a real signal of
+        Claude Opus dependence in TF's production doctrine, recorded as
+        a third LLM_ANTHROPIC_CLAUDE vendor_in_use entry. Overall floor
+        jumped 5.7% -> 9.2% -- the largest single-batch increase in the
+        entire scan. Repos scanned 25 -> 27.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/trust-fabric.scan.yaml, evidence/AXIS-iliad.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-09 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..08; running to loop completion per operator directive)"
+      summary: >-
+        Scanned guild-hall (1,789 files, 468 top-level entries -- the
+        largest entry-count in the portfolio). Confirmed it is a
+        documentation/certification archive for the same XR-engine
+        ecosystem as AXIS-ENGINE/AXIS-X-Y-Z/AXIS-mars (shared "nfxr"
+        engine-core naming, and this repo's slate/ directory is the
+        literal schema ancestor of this scan project's own
+        AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml -- "slate v1"). All 11
+        category batteries run; the small-count hits (mcp:7, ai_agent:16,
+        vector_database:2) individually narrowed and verified -- all false
+        positives (JSON substring matches, unrelated .cpp files) or
+        off-target XR/CI/determinism tooling (trace_ci_logic.py,
+        warp_ci_gates.py, gate7_*.py). axis-platform/spine.py ("AXIS
+        Platform Spine") is real, functioning code -- a session/client-
+        connection manager for XR training -- but unrelated to any of the
+        89 slots. Two claude/gpt- hits confirmed to be document-authorship
+        attributions ("Certified by: GitHub Copilot (Claude Sonnet 4.5)"),
+        not the product depending on a vendor at runtime -- not recorded
+        as vendor_in_use. Fully absent, no grade changes. Floor holds at
+        5.7%, repos scanned 24 -> 25.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/guild-hall.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-08 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..07)"
+      summary: >-
+        Scanned AXIS-PAI (2,220 files, an earlier PAI'D snapshot -- CLAUDE.md
+        dated 2026-05-06 vs no-fate-payment-engine's 2026-06-18 -- confirmed
+        no go-backend/internal/agent/ directory exists, so it predates that
+        repo's MCP/agent additions), AXIS-chlover (137 files, an MCP-focused
+        library), and no-fate-contract (193 files, "DBGO" governance/
+        dispute-resolution framework). AXIS-chlover contributed a FIFTH
+        independent hand-rolled MCP implementation (packages/server, TS,
+        packaged as a standalone library, verified no
+        @modelcontextprotocol/sdk dependency, tested with 3 test files) --
+        MCP_MCP_SDK stays peer, now backed by evidence across 4 repos and 3
+        languages. AXIS-PAI's MCP-battery hits were confirmed to be almost
+        entirely AXIS-Toolbox-generated hardening artifacts (server-manifest
+        .yaml, connector-map.yaml, .ai-output/), not implementation code --
+        not credited (same judgment as axis-toolbox-examples). It DOES
+        contain the same TF certify-or-refuse Claude Opus/Sonnet audit
+        engine found in no-fate-payment-engine -- recorded as a SECOND
+        LLM_ANTHROPIC_CLAUDE vendor_in_use entry, confirming the dependence
+        across a second repo snapshot, never credited toward the grade.
+        no-fate-contract's dbgo/enforcement/index.ts is a real, structured
+        PolicyEnforcer with hard-enforced governance policies and
+        cryptographic genesis-hash binding -- but it governs
+        computational-claim disputes between competing solvers, not
+        AI-generated content safety, so it's off-target for SEC_* and not
+        credited (consistent with several other governance/verification
+        frameworks found off-target this session). No new grade upgrades
+        beyond MCP strengthening; floor holds at 5.7%, repos scanned
+        21 -> 24.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/AXIS-PAI.scan.yaml, evidence/AXIS-chlover.scan.yaml, evidence/no-fate-contract.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-07 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..06)"
+      summary: >-
+        Scanned PMD-MASTER (2,752 files, "Print My Design" -- a production
+        SaaS design studio whose README advertises "16 AI subsystems":
+        layout, color, typography, pricing, generation, brand memory,
+        recommendations). Rather than trust the marketing copy, checked the
+        actual code of the most promising subsystems directly:
+        GenerationOrchestratorService.ts has zero fetch/axios/vendor-API
+        calls -- its "generation" is selectVariants/buildLayers/
+        pickBackground from template constants, deterministically seeded.
+        BrandMemoryService.ts's own docstring admits website-identity
+        extraction is "simulated -- returns plausible defaults".
+        AISERecommendationService.ts's own docstring says it "Replaces
+        Math.random() impact scores with deterministic scoring" via a
+        title-bank + type-weight system -- explicitly not machine learning,
+        was previously literally random. This confirms a consistent, honest
+        pattern seen across the whole portfolio: "AI-powered" branding
+        frequently means algorithmic/heuristic/template automation, not an
+        actual model -- none of the 16 subsystems checked showed real LLM
+        calls, embeddings, agent frameworks, or retrieval. A "tool registry"
+        MCP-battery hit (ToolRegistry.ts) was verified to be the canvas
+        design-tool palette (pan/select/draw), not an MCP registry -- false
+        positive, excluded. AXIS-NRPG (193 files, a deterministic RPG
+        engine bundling an unrelated "Iliad" game campaign -- same name,
+        no connection to AXIS-iliad the artifact generator) is fully
+        absent, zero LLM/vendor references anywhere in src/.
+        axis-toolbox-examples (45 files, case-study reports of
+        AXIS-odyssey's live MCP service run against other portfolio repos:
+        no-fate-payment-engine, no-fate-contract, PMD customizer, Diamond
+        Clarity) contains no new capability code -- corroborates but does
+        not newly evidence the already-peer MCP_MCP_SDK/MCP_MCP_REGISTRY
+        grades (real production snapshot IDs, live MCP Registry + Smithery
+        listings documented), not re-cited as new evidence to avoid
+        redundancy. No grade upgrades this batch; floor holds at 5.7%,
+        repos scanned 18 -> 21 -- two-thirds of the portfolio covered.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/PMD-MASTER.scan.yaml, evidence/AXIS-NRPG.scan.yaml, evidence/axis-toolbox-examples.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-06 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02..05)"
+      summary: >-
+        Scanned AXIS-odyssey (3,429 files -- the "Axis Toolbox" codebase-
+        artifact generator, source of the "Generated by Axis Skills" footer
+        already seen on several portfolio CLAUDE.md files this session).
+        Found a fourth independent hand-rolled MCP implementation
+        (apps/api/src/mcp-server.ts, 2641 lines, TypeScript) -- production-
+        wired to a LIVE hosted endpoint (axis-api-6c7z.onrender.com/mcp)
+        that other repos in this portfolio reference as a real running
+        service, not just local code. MCP_MCP_SDK and MCP_MCP_REGISTRY stay
+        peer, now backed by evidence across 3 repos and 3 languages
+        (Python/Go/TypeScript). Verified and explicitly did NOT credit:
+        the "144 deterministic generators" make zero real LLM API calls
+        anywhere in the repo (grepped for api.anthropic.com/api.openai.com/
+        generativelanguage.googleapis.com -- zero hits), confirming they
+        are template/structural per the product's own "deterministic"
+        branding -- their OUTPUT text mentions vendor names (producing
+        CLAUDE.md files that say "Claude Code"), which is generated content,
+        not a live dependence, so not recorded as vendor_in_use; its
+        search_and_discover_tools MCP tool is confirmed lexical substring/
+        token matching, not semantic search (not RAG/Embedding-credited).
+        AXIS-Gold (deterministic narrative-to-executable truth-tracking
+        framework) is fully absent -- its "narrative parsing" is plain
+        regex tokenization, not NLP. assetforge (self-hosted 3D/image asset
+        generation via Hugging Face Spaces: TRELLIS/FLUX/SDXL/SD3.5) is
+        off-target for all 89 slots (computer-vision, not language/agent
+        ecosystem) but yielded the first genuinely-LIVE LLM_HUGGING_FACE
+        vendor_in_use record -- real HF Space consumption, correctly not
+        credited as peer since consuming a model hub isn't providing one.
+        Fixed a gov_lint.py G4 regression: the path-line-ref regex didn't
+        handle a comma-separated citation like ":238,244-245" (a format
+        this session's own evidence introduced) -- generalized the pattern.
+        No grade upgrades; overall floor holds at 5.7%, repos scanned
+        15 -> 18.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, tools/gov_lint.py, evidence/AXIS-odyssey.scan.yaml, evidence/AXIS-Gold.scan.yaml, evidence/assetforge.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-05 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02/03/04)"
+      summary: >-
+        Scanned AXIS-mars (4,898 files -- a SEPARATE, non-mirror game-engine
+        implementation from CAND-SCAN-04's AXIS-ENGINE: Rust core + native
+        C++ Vulkan/OpenXR runtime + Qt6 editor, shipping a Mars MMO), checked
+        specifically for a repeat of AXIS-ENGINE's tools/ai/judge-harness
+        subsystem -- NOT present here; a real DLSS-style neural-graphics
+        upscaling benchmark found (genuine ML, but computer-vision not
+        language/agent/RAG, off-target, not credited). pmd-customizer-build
+        (73 files, multi-tenant SaaS template customizer) has a real, tested
+        internal WorkflowEngine/JobLifecycleManager -- product-internal
+        automation, not a general-purpose external workflow-automation
+        platform peer to n8n/Temporal/Airflow, not credited. profitforge (34
+        files, full read, "AI agents that actually make people money") is
+        the cleanest confirmed-aspirational case scanned yet: its Agent type
+        is a plain CRUD record with a math/rand earnings simulator, zero
+        MCP or LLM code exists anywhere in the repo, and the README is
+        explicit this is pre-production ("simulated agents... clear path to
+        production: real Iliad agents") -- graded fully absent despite the
+        marketing framing, exactly per the peer-independence doctrine. No
+        grade upgrades this batch; floor holds at 5.7%. Fixed a SECOND
+        recurring YAML-corruption bug of the same family as CAND-SCAN-04's:
+        a matrix-gen script's Python `\"` escape silently collapsed to a
+        bare `"` when written into a double-quoted YAML scalar's content,
+        closing the scalar early and breaking the parse a line later.
+        Root-caused, fixed the one instance on disk, and hardened
+        tools/yamlite.py's load() to catch YAMLError and point future
+        sessions at the strategy doc's "Known gotcha" sections instead of a
+        bare traceback -- documented the new gotcha there too. Repos
+        scanned 12 -> 15.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, SONNET5_ECOSYSTEM_SCAN_STRATEGY.md, tools/yamlite.py, evidence/AXIS-mars.scan.yaml, evidence/pmd-customizer-build.scan.yaml, evidence/profitforge.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-04 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02/03; approved via a plan-mode checkpoint mid-loop)"
+      summary: >-
+        Scanned AXIS-ENGINE (91,207 files, a real-time/XR rendering engine
+        matching A-eye's IRIS/RETINA/PUPIL whitepaper) with grep-only depth
+        per the huge-repo rule -- raw battery hit counts were in the
+        thousands per category, confirmed dominated by graphics-engine
+        vocabulary collisions (rendering pipeline, GPU memory/queue, ray
+        trace) rather than AI-ecosystem capability. Found and verified one
+        genuine AI subsystem: tools/ai/ + tools/oracles/, a CI-gated
+        LLM-judge harness for a book-to-game content pipeline -- declarative
+        model routing (model_router.py), cross-family 2-judge quorum voting
+        with tiebreak/escalation (judge_quorum.py), and an 8-oracle
+        fidelity-floor enforcement chokepoint (fidelity_floor.py), all wired
+        as numbered CI gates (QGATE_3/6/7) with embedded self-tests run via
+        run_all_gates.py. Graded OBS_PROMPTFOO bench. Verified and explicitly
+        did NOT credit: ml_models.rs (metadata-only ML registry, zero
+        predict/infer/train methods), axis_book_to_game.py's pipeline stages
+        (deterministic/procedural, not an autonomous agent), and
+        model_router.py's vendor model references (anthropic/openai/xai
+        pinned in a routing table, but the tools/ai/clients/<family>.py it
+        cites does not exist on disk -- unwired scaffolding, so correctly
+        NOT recorded as vendor_in_use, which would have overclaimed a
+        non-live dependence). AXIS-X-Y-Z reconfirmed byte-identical
+        (diff -rq, zero output) -- not independently scanned. axis-seo (20
+        files, full read) is AI-crawler-aware SEO tooling with none of the
+        89 target capabilities -- absent. ROOT-CAUSED a recurring YAML-escape
+        corruption bug that had resurfaced across CAND-SCAN-01 through -04:
+        apply-scripts were passing previously-read backslash-bearing text as
+        the REPLACEMENT argument to re.sub(), which silently re-interprets
+        backslash sequences as backreference syntax and halves the escaping
+        on every pass. Fixed by rephrasing the one affected matrix fragment
+        without a literal backslash (eliminating the landmine rather than
+        chasing it again) and documented the root cause + correct pattern
+        (lambda replacement) in SONNET5_ECOSYSTEM_SCAN_STRATEGY.md. Overall
+        floor rose 4.8% -> 5.7%, repos scanned 9 -> 12.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, SONNET5_ECOSYSTEM_SCAN_STRATEGY.md, evidence/AXIS-ENGINE.scan.yaml, evidence/AXIS-X-Y-Z.scan.yaml, evidence/axis-seo.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-03 (Sonnet 5, continued same conversation as Session 0/CAND-SCAN-02)"
+      summary: >-
+        Scanned no-fate-payment-engine (4997 files, AI-heaviest repo) and
+        paid-docs (16 files, docs-only). MCP_MCP_SDK strengthened with a
+        second independent hand-rolled MCP server (Go, dual HTTP+SSE
+        transport, go-backend/internal/agent/mcp.go) plus a third MCP
+        surface (paid-work-router-mcp TS package) — stays peer, now 3
+        implementations across 2 repos. SEC_NEMO_GUARDRAILS newly graded
+        partial: AgentPolicy is a tested, production-wired deny-by-default
+        tool-use rail system gating every AI-agent MCP tool call
+        (allow-list, spend caps, provider restrictions); missing_for_peer
+        notes it covers tool-call authorization only, not topic/jailbreak/
+        content-safety rails. LLM_ANTHROPIC_CLAUDE vendor_in_use recorded:
+        the TF certify-or-refuse engine's deep-audit (Opus) and
+        conversational (Sonnet) layers call the real Anthropic Messages
+        API — genuine AI usage, but dependence, never credited toward the
+        grade per doctrine (a stale "powered by OpenAI" docstring nearby
+        was checked and found unbacked by code, so NOT recorded).
+        TF certification/classification/scoring engines verified
+        deterministic (threshold/lookup-based, not LLM-driven) — correctly
+        left uncredited; radar_ml_pipeline.go verified real in-house ML but
+        for fraud-risk not language, off-target; embed_handler.go confirmed
+        a false positive (checkout-widget iframe, not text embeddings).
+        GOTCHA (recurring): the CAND-SCAN-01-era MCP search_expressions
+        text still had the single-backslash `\.well-known` YAML escape bug
+        in several rows despite an earlier fix — swept and fixed all
+        remaining occurrences this session; the mcp battery used by
+        scan-apply scripts since CAND-SCAN-02 no longer includes that
+        pattern, so it should not recur. Also fixed a duplicate-YAML-key
+        bug in this file's own change_log (SESSION-0/CAND-SCAN-02 entries
+        had been merged into one malformed list item by a prior edit).
+        Overall floor rose 4.4% -> 4.8%, repos scanned 7 -> 9.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/no-fate-payment-engine.scan.yaml, evidence/paid-docs.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "CAND-SCAN-02 (Sonnet 5, continued same conversation as Session 0)"
+      summary: >-
+        Scanned AXIS-Foundry (1860 files), A-eye (3 files), axis-launch (3
+        files). AXIS-Foundry surfaced the first real peer evidence: a
+        hand-rolled JSON-RPC 2.0 MCP server (no SDK import, tested,
+        production-wired via api_server.py + cli.py) graded peer for
+        MCP_MCP_SDK; its registry-manifest builder (server.json + drift-guard
+        test + /.well-known/mcp.json) graded peer for MCP_MCP_REGISTRY;
+        dataclass-based tool registration graded bench for MCP_FASTMCP; the
+        typed-action-schema AvatarAgent graded bench for AGT_PYDANTIC_AI;
+        the plan/execute/replan loop + real human-in-the-loop review
+        workflow graded partial for AGE_LANGGRAPH (missing: graph structure,
+        cross-process checkpointing). A-eye (rendering-IP whitepaper) and
+        axis-launch (submission intake) contributed no evidence. All other
+        AXIS-Foundry categories verified absent on real code (not just
+        grep noise) — xAI Grok / TRELLIS.2-Modal / RunPod recorded as
+        vendor_in_use, never credited toward grade. GOTCHA: gov_lint.py G4
+        was checking evidence file paths against /home/user/<path> instead
+        of /home/user/<repo>/<path>, using each evidence entry's own `repo`
+        field — fixed and reverified. Overall floor rose 0.0% -> 4.4%,
+        7/31 repos scanned.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, tools/gov_lint.py, evidence/AXIS-Foundry.scan.yaml, evidence/A-eye.scan.yaml, evidence/axis-launch.scan.yaml]
+      commit: "(prior commit)"
+    - date: "2026-08-16"
+      session_id: "SESSION-0 (Fable 5, plan-approved bootstrap + CAND-SCAN-01 pilot)"
+      summary: >-
+        SCAFFOLD: built the full control plane (targets taxonomy 89 slots,
+        matrix 89 rows, loop files, tools: rollup/gov_lint/renderer; v0
+        all-unaudited map rendered, byte-determinism verified, gov_lint G1-G11
+        PASS). PILOT: executed CAND-SCAN-01 (lastmanupinc-hub, .github,
+        Remedial-Action, axis-launch-community — 4 files total across 4 repos,
+        two empty). All 11 batteries + dependence battery: zero capability
+        code hits; prose-only README mentions of other repos recorded as
+        non-evidence. All 89 rows graded absent with search_expressions;
+        overall floor 0.0% (expected and correct under peer-independence
+        doctrine). GOTCHA: regex containing \. must be double-escaped when
+        embedded in double-quoted YAML scalars (MCP battery, fixed via \\.).
+        NOTE: dedicated-repo creation blocked (token 403); control plane
+        hosted in profile repo ai-ecosystem-map/ — migration is a plain copy.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/lastmanupinc-hub.scan.yaml, evidence/.github.scan.yaml, evidence/Remedial-Action.scan.yaml, evidence/axis-launch-community.scan.yaml]
+      commit: "(prior commit)"

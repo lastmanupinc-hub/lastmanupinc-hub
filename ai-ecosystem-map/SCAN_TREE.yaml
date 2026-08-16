@@ -1,0 +1,86 @@
+###############################################################################
+# SCAN_TREE.yaml — batch backlog for the repo-major scan loop
+# One candidate per session. All 31 repos covered exactly once.
+# AXIS-X-Y-Z is folded into CAND-SCAN-04 as a `diff -rq` mirror-verify of
+# AXIS-ENGINE (byte-identical mirrors, verified 2026-08-16).
+###############################################################################
+meta:
+  created: "2026-08-16"
+  repos_total: 31
+  candidate_count: 12
+  repo_root: /home/user
+
+exit_criteria:
+  - "every SCAN candidate status == done"
+  - "zero matrix rows graded unaudited"
+  - "every scanned repo appears in evidence/<repo>.scan.yaml (or a recorded mirror-verify note)"
+  - "CAND-CONSOLIDATE-12 spot-check complete: >=12 non-absent rows re-verified, ALL peer/peer_plus rows mandatorily included"
+  - "final rollup + render committed; artifact republished"
+
+candidates:
+  - id: CAND-SCAN-01
+    repos: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
+    size_note: "tiny pilot (4 files across 4 repos, two empty) — proved the loop end-to-end"
+    status: done
+    done: {date: "2026-08-16", session_id: "SESSION-0", result: "0 capability hits; 89 rows -> absent for this coverage"}
+  - id: CAND-SCAN-02
+    repos: [AXIS-Foundry, A-eye, axis-launch]
+    size_note: "~1,974 files; governance-rich anchor (sovereign engine, MCP server, x402)"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-02", result: "5 rows upgraded (2 peer, 2 bench, 1 partial); first non-zero capability floor"}
+  - id: CAND-SCAN-03
+    repos: [no-fate-payment-engine, paid-docs]
+    size_note: "~5,097 files; AI-heaviest repo (PAI'D platform + TF AI engine)"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-03", result: "MCP_MCP_SDK strengthened (3rd+4th evidence entries), SEC_NEMO_GUARDRAILS newly partial, 1 vendor_in_use recorded (Anthropic Claude)"}
+  - id: CAND-SCAN-04
+    repos: [AXIS-ENGINE, axis-seo]
+    size_note: >
+      ~91,315 files — biggest batch; grep-only depth. AXIS-X-Y-Z covered here
+      via `diff -rq /home/user/AXIS-ENGINE /home/user/AXIS-X-Y-Z` mirror check;
+      record the diff result in evidence/AXIS-X-Y-Z.scan.yaml as a mirror note.
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-04", result: "OBS_PROMPTFOO newly bench (CI-gated LLM-judge harness); mirror re-verified zero-diff; axis-seo confirmed absent"}
+  - id: CAND-SCAN-05
+    repos: [AXIS-mars, pmd-customizer-build, profitforge]
+    size_note: "~5,105 files"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-05", result: "no grade upgrades; 3 well-documented near-misses (game-engine ML, internal SaaS automation, aspirational-only agent marketplace)"}
+  - id: CAND-SCAN-06
+    repos: [AXIS-odyssey, AXIS-Gold, assetforge]
+    size_note: "~3,702 files"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-06", result: "MCP_MCP_SDK/MCP_MCP_REGISTRY strengthened (4th implementation), 1 new vendor_in_use (Hugging Face); no other grade changes"}
+  - id: CAND-SCAN-07
+    repos: [PMD-MASTER, AXIS-NRPG, axis-toolbox-examples]
+    size_note: "~3,236 files"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-07", result: "no grade changes; PMD-MASTER's '16 AI subsystems' verified deterministic/template-driven, not real ML"}
+  - id: CAND-SCAN-08
+    repos: [AXIS-PAI, AXIS-chlover, no-fate-contract]
+    size_note: "~2,650 files"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-08", result: "MCP_MCP_SDK strengthened (5th impl), 1 new vendor_in_use (2nd Anthropic Claude record)"}
+  - id: CAND-SCAN-09
+    repos: [guild-hall]
+    size_note: "~1,823 files but 468 top-level entries — breadth alone fills a session"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-09", result: "fully absent; shares XR-engine lineage with AXIS-ENGINE/AXIS-X-Y-Z/AXIS-mars, no grade changes"}
+  - id: CAND-SCAN-10
+    repos: [trust-fabric, AXIS-iliad]
+    size_note: "~2,609 files; includes ecosystem.registry.yaml canonical home"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-10", result: "4 grade upgrades (LLM_OLLAMA peer, VDB_PGVECTOR peer, EMB_SENTENCE_TRANSFORMERS bench, RAG_HAYSTACK partial) + MCP_MCP_SDK strengthened; floor 5.7% -> 9.2%, the largest jump in the scan"}
+  - id: CAND-SCAN-11
+    repos: [AXIS-Scalpel, medical-robot, Diamond-Grid, axis-launch-platform]
+    size_note: "~2,195 files"
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-SCAN-11", result: "fully absent across all 4; ALL 31/31 repos now scanned, floor 9.2%"}
+  - id: CAND-CONSOLIDATE-12
+    repos: []
+    size_note: >
+      Verification pass, no new scanning: re-open cited files for >=12 sampled
+      non-absent rows (ALL peer/peer_plus rows mandatory), demote anything
+      unsupported, final rollup + render, republish artifact, close the loop.
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-CONSOLIDATE-12", result: "all 11 non-absent rows (30 file citations) re-verified fresh, 0 demotions, loop closed at 9.2% overall floor"}

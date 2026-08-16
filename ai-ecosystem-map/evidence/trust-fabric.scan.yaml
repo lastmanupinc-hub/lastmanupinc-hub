@@ -1,0 +1,33 @@
+repo: trust-fabric
+scanned: "2026-08-16"
+session: CAND-SCAN-10
+purpose: >
+  The standalone Trust Fabric certification service (go-backend/cmd/
+  trust-fabric-api/main.go), the umbrella brand referenced throughout the
+  portfolio's governance files. Contains its own trustfabric/certification
+  package (a fork/variant of no-fate-payment-engine's copy -- confirmed
+  via diff, files differ). 1,342 files.
+files_read: 8
+findings: {}
+not_credited_adjacent_findings: >
+  go-backend/internal/trustfabric/executionlane/engine.go is a real
+  in-memory job-dispatch state machine for TF's "3 doctrine execution
+  engines" (anthropic_vscode_operator, tf_opus_patch_worker,
+  external_coding_engine) -- tracking job state transitions, artifact
+  returns, delta audits, and stamp eligibility for work dispatched to
+  external AI coding agents. But Dispatch() only advances in-memory state
+  (map[string]*ExecutionJob guarded by a mutex, zero DB persistence) --
+  it does not itself call any model API, has no crash-durability, and is
+  a thin audit-trail/bookkeeping layer around agent work that happens
+  OUTSIDE this code. Not credited toward AGE_LANGGRAPH (no real
+  orchestration graph) or AUT_TEMPORAL (no durability guarantee). The
+  "tf_opus_patch_worker" engine-type name is a real signal of Claude Opus
+  dependence in TF's actual production doctrine, though no direct API-call
+  code was found in this file (the calling code presumably lives in
+  whatever system triggers "Dispatch") -- recorded as vendor_in_use on
+  LLM_ANTHROPIC_CLAUDE with that caveat noted.
+empty_batteries:
+  llm_rag_embedding_mcp_vectordb: ["checked directly (not just battery greps) for local LLM/embedding/vector-store code parallel to AXIS-iliad's -- none found; TF's AI-adjacent surface is entirely the executionlane bookkeeping layer above plus the certification/classification/scoring engines already assessed as deterministic in CAND-SCAN-03"]
+  all_11: ["all 11 category batteries run against the 1,342-file tree"]
+vendor_hits:
+  - {vendor: anthropic_claude_opus, files: ["go-backend/internal/trustfabric/executionlane/engine.go:75 (EngineOpusPatchWorker = \"tf_opus_patch_worker\")"], note: "a named doctrine engine type implying Claude Opus dependence in TF's production dispatch model; the actual API-call code was not located in this file (likely lives in the caller triggering Dispatch)"}

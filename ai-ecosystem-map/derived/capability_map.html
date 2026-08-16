@@ -1,0 +1,245 @@
+<title>AI Ecosystem Capability Map</title>
+<style>
+:root { color-scheme: light dark; }
+body { background:#f9f9f7; margin:0; }
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) body { background:#0d0d0d; }
+}
+:root[data-theme="dark"] body { background:#0d0d0d; }
+.map-root {
+  --surface-1:#fcfcfb; --page:#f9f9f7; --ink-1:#0b0b0b; --ink-2:#52514e;
+  --muted:#898781; --grid:#e1e0d9; --border:rgba(11,11,11,0.10);
+  --good:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  --bench:#2a78d6; --hub:#4a3aa7;
+  --good-wash:rgba(12,163,12,0.12); --bench-wash:rgba(42,120,214,0.12);
+  --warn-wash:rgba(250,178,25,0.16); --serious-wash:rgba(236,131,90,0.14);
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page); color: var(--ink-1);
+  margin: 0 auto; max-width: 1180px; padding: 28px 24px 48px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .map-root {
+    color-scheme: dark;
+    --surface-1:#1a1a19; --page:#0d0d0d; --ink-1:#ffffff; --ink-2:#c3c2b7;
+    --muted:#898781; --grid:#2c2c2a; --border:rgba(255,255,255,0.10);
+    --bench:#3987e5; --hub:#9085e9;
+  }
+}
+:root[data-theme="dark"] .map-root {
+  color-scheme: dark;
+  --surface-1:#1a1a19; --page:#0d0d0d; --ink-1:#ffffff; --ink-2:#c3c2b7;
+  --muted:#898781; --grid:#2c2c2a; --border:rgba(255,255,255,0.10);
+  --bench:#3987e5; --hub:#9085e9;
+}
+.map-root h1 { font-size: 26px; margin: 0 0 4px; }
+.map-root .sub { color: var(--ink-2); margin: 0 0 20px; font-size: 14px; max-width: 72ch; }
+.tiles { display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 26px; }
+.tile { background: var(--surface-1); border:1px solid var(--border); border-radius:10px;
+        padding:12px 18px; min-width:150px; }
+.tile .v { font-size: 30px; font-weight:650; }
+.tile .l { font-size: 12px; color: var(--ink-2); margin-top:2px; }
+.cascade { position:relative; }
+.spine { position:absolute; left:34px; top:0; bottom:0; width:2px; background:var(--grid); }
+.crow { display:flex; align-items:flex-start; gap:14px; margin:0 0 18px; position:relative; }
+.bubble { flex:0 0 148px; margin-left: var(--indent, 0px); background:var(--surface-1);
+  border:2px solid var(--hub); border-radius:999px; padding:10px 6px; text-align:center; }
+.bubble .cname { font-weight:650; font-size:13px; }
+.bubble .cpct { font-size:19px; font-weight:700; }
+.bubble .cmeta { font-size:11px; color:var(--muted); }
+.chips { display:flex; flex-wrap:wrap; gap:6px; padding-top:4px; }
+.chip { display:inline-flex; align-items:center; gap:6px; border-radius:8px;
+  padding:5px 9px; font-size:12.5px; background:var(--surface-1);
+  border:1.5px solid var(--grid); color:var(--ink-1); }
+.chip .g { font-weight:700; font-size:11px; }
+.chip.peer      { background:var(--good); border-color:var(--good); color:#fff; }
+.chip.peer_plus { background:var(--good); border-color:var(--ink-1); color:#fff;
+                  box-shadow:0 0 0 2px var(--good); }
+.chip.bench     { background:var(--bench-wash); border-color:var(--bench); }
+.chip.bench .g  { color:var(--bench); }
+.chip.partial   { background:var(--warn-wash); border-color:var(--warning); }
+.chip.scaffold  { background:var(--serious-wash); border-color:var(--serious); }
+.chip.absent    { color:var(--ink-2); }
+.chip.absent .g { color:var(--critical); }
+.chip.unaudited { border-style:dashed; color:var(--muted);
+  background:repeating-linear-gradient(45deg, transparent 0 6px, var(--grid) 6px 8px); }
+.chip .dep { width:7px; height:7px; border-radius:50%; background:var(--warning);
+  display:inline-block; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 18px; margin:26px 0 8px;
+  font-size:12.5px; color:var(--ink-2); }
+.legend .chip { pointer-events:none; }
+.map-root table { border-collapse:collapse; width:100%; margin-top:18px;
+  background:var(--surface-1); font-size:13px; }
+.map-root th, .map-root td { border:1px solid var(--grid); padding:7px 10px; text-align:left; }
+.map-root th { color:var(--ink-2); font-weight:600; }
+.map-root td.n { text-align:right; font-variant-numeric: tabular-nums; }
+.foot { margin-top:22px; font-size:12px; color:var(--muted); }
+</style>
+<div class="map-root">
+<h1>AI Ecosystem Capability Map</h1>
+<p class="sub">The lastmanupinc-hub portfolio graded against the 89 targets of "The Modern AI Ecosystem — Tools" under the <b>peer-independence doctrine</b>: the ability to <i>never need</i> each vendor, not the ability to use it. Percentages are conservative floors — unaudited and absent both count 0, so numbers only rise as file evidence lands.</p>
+<div class="tiles">
+<div class="tile"><div class="v">9.2%</div><div class="l">overall capability floor</div></div>
+<div class="tile"><div class="v">89/89</div><div class="l">slots audited</div></div>
+<div class="tile"><div class="v">31/31</div><div class="l">repos scanned</div></div>
+</div>
+<div class="cascade"><div class="spine"></div>
+<div class="crow" style="--indent:0px">
+<div class="bubble"><div class="cname">LLM</div><div class="cpct">11.1%</div><div class="cmeta">9/9 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="LLM_OPENAI_GPT — absent">OpenAI GPT<span class="g">✕</span></span>
+<span class="chip absent" title="LLM_ANTHROPIC_CLAUDE — absent">Anthropic Claude<span class="g">✕</span><span class="dep" title="vendor currently in use (dependence)"></span></span>
+<span class="chip absent" title="LLM_GOOGLE_GEMINI — absent">Google Gemini<span class="g">✕</span></span>
+<span class="chip absent" title="LLM_META_LLAMA — absent">Meta Llama<span class="g">✕</span></span>
+<span class="chip absent" title="LLM_MISTRAL_AI — absent">Mistral AI<span class="g">✕</span></span>
+<span class="chip absent" title="LLM_COHERE — absent">Cohere<span class="g">✕</span></span>
+<span class="chip absent" title="LLM_HUGGING_FACE — absent">Hugging Face<span class="g">✕</span><span class="dep" title="vendor currently in use (dependence)"></span></span>
+<span class="chip peer" title="LLM_OLLAMA — peer">Ollama<span class="g">✓</span></span>
+<span class="chip absent" title="LLM_VLLM — absent">vLLM<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:6px">
+<div class="bubble"><div class="cname">Agentic AI</div><div class="cpct">5.0%</div><div class="cmeta">8/8 audited</div></div>
+<div class="chips">
+<span class="chip partial" title="AGE_LANGGRAPH — partial">LangGraph<span class="g">◐</span></span>
+<span class="chip absent" title="AGE_CREWAI — absent">CrewAI<span class="g">✕</span></span>
+<span class="chip absent" title="AGE_MICROSOFT_AUTOGEN — absent">Microsoft AutoGen<span class="g">✕</span></span>
+<span class="chip absent" title="AGE_MS_AGENT_FRAMEWORK — absent">Microsoft Agent Framework<span class="g">✕</span></span>
+<span class="chip absent" title="AGE_LLAMAINDEX_WORKFLOWS — absent">LlamaIndex Workflows<span class="g">✕</span></span>
+<span class="chip absent" title="AGE_AWS_STRANDS_AGENTS — absent">AWS Strands Agents<span class="g">✕</span></span>
+<span class="chip absent" title="AGE_CAMEL — absent">CAMEL<span class="g">✕</span></span>
+<span class="chip absent" title="AGE_AGNO — absent">Agno<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:11px">
+<div class="bubble"><div class="cname">RAG</div><div class="cpct">5.0%</div><div class="cmeta">8/8 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="RAG_LANGCHAIN — absent">LangChain<span class="g">✕</span></span>
+<span class="chip absent" title="RAG_LLAMAINDEX — absent">LlamaIndex<span class="g">✕</span></span>
+<span class="chip partial" title="RAG_HAYSTACK — partial">Haystack<span class="g">◐</span></span>
+<span class="chip absent" title="RAG_DSPY — absent">DSPy<span class="g">✕</span></span>
+<span class="chip absent" title="RAG_RAGFLOW — absent">RAGFlow<span class="g">✕</span></span>
+<span class="chip absent" title="RAG_GRAPHRAG — absent">GraphRAG<span class="g">✕</span></span>
+<span class="chip absent" title="RAG_UNSTRUCTURED — absent">Unstructured<span class="g">✕</span></span>
+<span class="chip absent" title="RAG_EMBEDCHAIN — absent">EmbedChain<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:17px">
+<div class="bubble"><div class="cname">Embedding</div><div class="cpct">10.7%</div><div class="cmeta">7/7 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="EMB_OPENAI_EMBEDDINGS — absent">OpenAI Embeddings<span class="g">✕</span><span class="dep" title="vendor currently in use (dependence)"></span></span>
+<span class="chip absent" title="EMB_COHERE_EMBED — absent">Cohere Embed<span class="g">✕</span></span>
+<span class="chip absent" title="EMB_VOYAGE_AI — absent">Voyage AI<span class="g">✕</span></span>
+<span class="chip bench" title="EMB_SENTENCE_TRANSFORMERS — bench">Sentence Transformers<span class="g">●</span></span>
+<span class="chip absent" title="EMB_BGE — absent">BGE<span class="g">✕</span></span>
+<span class="chip absent" title="EMB_VERTEX_EMBEDDINGS — absent">Google Vertex AI Embeddings<span class="g">✕</span></span>
+<span class="chip absent" title="EMB_AZURE_OPENAI_EMBEDDINGS — absent">Azure OpenAI Embeddings<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:22px">
+<div class="bubble"><div class="cname">MCP</div><div class="cpct">34.4%</div><div class="cmeta">8/8 audited</div></div>
+<div class="chips">
+<span class="chip peer" title="MCP_MCP_SDK — peer">MCP SDK<span class="g">✓</span></span>
+<span class="chip bench" title="MCP_FASTMCP — bench">FastMCP<span class="g">●</span></span>
+<span class="chip peer" title="MCP_MCP_REGISTRY — peer">MCP Registry<span class="g">✓</span></span>
+<span class="chip absent" title="MCP_GITHUB_MCP_SERVER — absent">GitHub MCP Server<span class="g">✕</span></span>
+<span class="chip absent" title="MCP_SLACK_MCP_SERVER — absent">Slack MCP Server<span class="g">✕</span></span>
+<span class="chip absent" title="MCP_POSTGRES_MCP_SERVER — absent">PostgreSQL MCP Server<span class="g">✕</span></span>
+<span class="chip absent" title="MCP_GDRIVE_MCP_SERVER — absent">Google Drive MCP Server<span class="g">✕</span></span>
+<span class="chip absent" title="MCP_FILESYSTEM_MCP_SERVER — absent">Filesystem MCP Server<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:28px">
+<div class="bubble"><div class="cname">AI Security</div><div class="cpct">5.0%</div><div class="cmeta">8/8 audited</div></div>
+<div class="chips">
+<span class="chip partial" title="SEC_NEMO_GUARDRAILS — partial">NVIDIA NeMo Guardrails<span class="g">◐</span></span>
+<span class="chip absent" title="SEC_GUARDRAILS_AI — absent">Guardrails AI<span class="g">✕</span></span>
+<span class="chip absent" title="SEC_PRESIDIO — absent">Microsoft Presidio<span class="g">✕</span></span>
+<span class="chip absent" title="SEC_LAKERA_GUARD — absent">Lakera Guard<span class="g">✕</span></span>
+<span class="chip absent" title="SEC_PROMPT_SECURITY — absent">Prompt Security<span class="g">✕</span></span>
+<span class="chip absent" title="SEC_PROTECT_AI — absent">Protect AI<span class="g">✕</span></span>
+<span class="chip absent" title="SEC_AZURE_CONTENT_SAFETY — absent">Azure AI Content Safety<span class="g">✕</span></span>
+<span class="chip absent" title="SEC_BEDROCK_GUARDRAILS — absent">AWS Bedrock Guardrails<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:34px">
+<div class="bubble"><div class="cname">Observability</div><div class="cpct">9.4%</div><div class="cmeta">8/8 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="OBS_LANGSMITH — absent">LangSmith<span class="g">✕</span></span>
+<span class="chip absent" title="OBS_LANGFUSE — absent">Langfuse<span class="g">✕</span></span>
+<span class="chip absent" title="OBS_ARIZE_PHOENIX — absent">Arize Phoenix<span class="g">✕</span></span>
+<span class="chip absent" title="OBS_WANDB_WEAVE — absent">W&amp;B Weave<span class="g">✕</span></span>
+<span class="chip absent" title="OBS_TRULENS — absent">TruLens<span class="g">✕</span></span>
+<span class="chip absent" title="OBS_RAGAS — absent">Ragas<span class="g">✕</span></span>
+<span class="chip bench" title="OBS_PROMPTFOO — bench">Promptfoo<span class="g">●</span></span>
+<span class="chip absent" title="OBS_HELICONE — absent">Helicone<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:39px">
+<div class="bubble"><div class="cname">Memory</div><div class="cpct">0.0%</div><div class="cmeta">8/8 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="MEM_MEM0 — absent">Mem0<span class="g">✕</span></span>
+<span class="chip absent" title="MEM_ZEP — absent">Zep<span class="g">✕</span></span>
+<span class="chip absent" title="MEM_LETTA — absent">Letta<span class="g">✕</span></span>
+<span class="chip absent" title="MEM_LANGGRAPH_MEMORY — absent">LangGraph Memory<span class="g">✕</span></span>
+<span class="chip absent" title="MEM_REDIS_MEMORY — absent">Redis<span class="g">✕</span></span>
+<span class="chip absent" title="MEM_POSTGRES_MEMORY — absent">PostgreSQL<span class="g">✕</span></span>
+<span class="chip absent" title="MEM_NEO4J — absent">Neo4j<span class="g">✕</span></span>
+<span class="chip absent" title="MEM_CHROMA_MEMORY — absent">Chroma<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:45px">
+<div class="bubble"><div class="cname">AI Agent</div><div class="cpct">10.7%</div><div class="cmeta">7/7 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="AGT_OPENAI_AGENTS_SDK — absent">OpenAI Agents SDK<span class="g">✕</span></span>
+<span class="chip absent" title="AGT_LANGCHAIN_AGENTS — absent">LangChain Agents<span class="g">✕</span></span>
+<span class="chip bench" title="AGT_PYDANTIC_AI — bench">PydanticAI<span class="g">●</span></span>
+<span class="chip absent" title="AGT_SEMANTIC_KERNEL — absent">Semantic Kernel<span class="g">✕</span></span>
+<span class="chip absent" title="AGT_GOOGLE_ADK — absent">Google ADK<span class="g">✕</span></span>
+<span class="chip absent" title="AGT_BEDROCK_AGENTS — absent">AWS Bedrock Agents<span class="g">✕</span></span>
+<span class="chip absent" title="AGT_AZURE_FOUNDRY_AGENT — absent">Azure AI Foundry Agent Service<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:50px">
+<div class="bubble"><div class="cname">Automation</div><div class="cpct">0.0%</div><div class="cmeta">9/9 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="AUT_N8N — absent">n8n<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_ZAPIER — absent">Zapier<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_MAKE — absent">Make<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_POWER_AUTOMATE — absent">MS Power Automate<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_TEMPORAL — absent">Temporal<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_AIRFLOW — absent">Apache Airflow<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_PREFECT — absent">Prefect<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_KESTRA — absent">Kestra<span class="g">✕</span></span>
+<span class="chip absent" title="AUT_PIPEDREAM — absent">Pipedream<span class="g">✕</span></span>
+</div></div>
+<div class="crow" style="--indent:56px">
+<div class="bubble"><div class="cname">Vector Database</div><div class="cpct">11.1%</div><div class="cmeta">9/9 audited</div></div>
+<div class="chips">
+<span class="chip absent" title="VDB_PINECONE — absent">Pinecone<span class="g">✕</span></span>
+<span class="chip absent" title="VDB_WEAVIATE — absent">Weaviate<span class="g">✕</span></span>
+<span class="chip absent" title="VDB_QDRANT — absent">Qdrant<span class="g">✕</span></span>
+<span class="chip absent" title="VDB_MILVUS — absent">Milvus<span class="g">✕</span></span>
+<span class="chip absent" title="VDB_CHROMA — absent">Chroma<span class="g">✕</span></span>
+<span class="chip peer" title="VDB_PGVECTOR — peer">pgvector<span class="g">✓</span></span>
+<span class="chip absent" title="VDB_ELASTICSEARCH — absent">Elasticsearch<span class="g">✕</span></span>
+<span class="chip absent" title="VDB_REDIS_VECTOR — absent">Redis<span class="g">✕</span></span>
+<span class="chip absent" title="VDB_MONGODB_ATLAS_VECTOR — absent">MongoDB Atlas Vector Search<span class="g">✕</span></span>
+</div></div>
+</div>
+<div class="legend">
+<span><span class="chip peer">peer<span class="g">✓</span></span> Full in-house peer — vendor never needed (evidence-backed)</span>
+<span><span class="chip peer_plus">peer+plus<span class="g">✓+</span></span> Exceeds the vendor on at least one axis</span>
+<span><span class="chip bench">bench<span class="g">●</span></span> Working in-house implementation, equivalence not yet proven</span>
+<span><span class="chip partial">partial<span class="g">◐</span></span> Real code covers part of the capability</span>
+<span><span class="chip scaffold">scaffold<span class="g">○</span></span> Hints/stubs/design only — no working implementation read</span>
+<span><span class="chip absent">absent<span class="g">✕</span></span> Searched, not found (search expressions recorded)</span>
+<span><span class="chip unaudited">unaudited<span class="g">?</span></span> Not yet scanned — counts as 0 until evidence lands</span>
+<span><span class="chip"><span class="dep"></span>dot</span> vendor in use today (dependence marker)</span>
+</div>
+<table><thead><tr><th>Category</th><th>Floor %</th><th>Audited</th><th>peer</th><th>peer_plus</th><th>bench</th><th>partial</th><th>scaffold</th><th>absent</th><th>unaudited</th></tr></thead><tbody>
+<tr><td>LLM</td><td class='n'>11.1</td><td class='n'>9/9</td><td class='n'>1</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td><td class='n'>0</td></tr>
+<tr><td>Agentic AI</td><td class='n'>5.0</td><td class='n'>8/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>1</td><td class='n'>0</td><td class='n'>7</td><td class='n'>0</td></tr>
+<tr><td>RAG</td><td class='n'>5.0</td><td class='n'>8/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>1</td><td class='n'>0</td><td class='n'>7</td><td class='n'>0</td></tr>
+<tr><td>Embedding</td><td class='n'>10.7</td><td class='n'>7/7</td><td class='n'>0</td><td class='n'>0</td><td class='n'>1</td><td class='n'>0</td><td class='n'>0</td><td class='n'>6</td><td class='n'>0</td></tr>
+<tr><td>MCP</td><td class='n'>34.4</td><td class='n'>8/8</td><td class='n'>2</td><td class='n'>0</td><td class='n'>1</td><td class='n'>0</td><td class='n'>0</td><td class='n'>5</td><td class='n'>0</td></tr>
+<tr><td>AI Security</td><td class='n'>5.0</td><td class='n'>8/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>1</td><td class='n'>0</td><td class='n'>7</td><td class='n'>0</td></tr>
+<tr><td>Observability</td><td class='n'>9.4</td><td class='n'>8/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>1</td><td class='n'>0</td><td class='n'>0</td><td class='n'>7</td><td class='n'>0</td></tr>
+<tr><td>Memory</td><td class='n'>0.0</td><td class='n'>8/8</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td><td class='n'>0</td></tr>
+<tr><td>AI Agent</td><td class='n'>10.7</td><td class='n'>7/7</td><td class='n'>0</td><td class='n'>0</td><td class='n'>1</td><td class='n'>0</td><td class='n'>0</td><td class='n'>6</td><td class='n'>0</td></tr>
+<tr><td>Automation</td><td class='n'>0.0</td><td class='n'>9/9</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>9</td><td class='n'>0</td></tr>
+<tr><td>Vector Database</td><td class='n'>11.1</td><td class='n'>9/9</td><td class='n'>1</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>0</td><td class='n'>8</td><td class='n'>0</td></tr>
+</tbody></table>
+<p class="foot">Generated by tools/build_capability_map.py from AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml (last_updated 2026-08-16) via derived/rollup.json. Doctrine + taxonomy: ECOSYSTEM_TARGETS.yaml. Regenerate: <code>python3 tools/rollup.py --write &amp;&amp; python3 tools/build_capability_map.py</code></p>
+</div>

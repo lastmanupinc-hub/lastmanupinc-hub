@@ -111,7 +111,9 @@ def main():
                 # /home/user/AXIS-Foundry/engine/foo.py
                 repo = e.get("repo")
                 for f in (e.get("files") or []):
-                    clean = re.sub(r":\d+(-\d+)?$", "", f)
+                    # Strip a trailing line-ref suffix: ":123", ":123-456", or
+                    # a comma-separated mix of either, e.g. ":238,244-245".
+                    clean = re.sub(r":\d+(?:[,-]\d+)*$", "", f)
                     path = os.path.join(REPO_ROOT, repo, clean) if repo else os.path.join(REPO_ROOT, clean)
                     if not os.path.exists(path):
                         err("G4", "%s cites missing path %s (repo=%s)" % (rid, f, repo))

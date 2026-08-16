@@ -301,7 +301,7 @@
           "evidence_count": 0,
           "grade": "absent",
           "label": "Hugging Face",
-          "vendor_in_use_count": 0
+          "vendor_in_use_count": 1
         },
         "LLM_META_LLAMA": {
           "evidence_count": 0,
@@ -366,13 +366,13 @@
           "vendor_in_use_count": 0
         },
         "MCP_MCP_REGISTRY": {
-          "evidence_count": 1,
+          "evidence_count": 2,
           "grade": "peer",
           "label": "MCP Registry",
           "vendor_in_use_count": 0
         },
         "MCP_MCP_SDK": {
-          "evidence_count": 3,
+          "evidence_count": 4,
           "grade": "peer",
           "label": "MCP SDK",
           "vendor_in_use_count": 0
@@ -633,7 +633,7 @@
     "unaudited": 0
   },
   "coverage": {
-    "repos_scanned": 15,
+    "repos_scanned": 18,
     "repos_total": 31,
     "slots_audited": 89,
     "slots_total": 89

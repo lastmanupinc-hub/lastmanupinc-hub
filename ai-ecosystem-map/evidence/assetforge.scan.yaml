@@ -1,0 +1,28 @@
+repo: assetforge
+scanned: "2026-08-16"
+session: CAND-SCAN-06
+purpose: >
+  "AssetForge AI" -- a self-hosted 3D/image asset generation toolkit
+  wrapping open-source generative models (TRELLIS, FLUX.1-schnell, SDXL,
+  Stable Diffusion 3.5) hosted on free Hugging Face Spaces or a local GPU
+  backend, for mesh/texture/animation/denoise/upscale workflows. 30 files.
+files_read: 2 (README + requirements.txt; small enough for full context but
+  this is the AI-generation-toolkit domain already assessed in AXIS-Foundry/
+  AXIS-mars -- off-target for the language/agent/RAG/MCP/vector-DB taxonomy)
+findings: {}
+not_credited_adjacent_findings: >
+  Real, honestly-documented generative-AI usage (image/3D model calls via
+  Hugging Face Spaces, with explicit availability caveats and fail-loud
+  error handling) -- but this is computer-vision/3D-asset generation, not
+  a language model, embedding, agent framework, RAG pipeline, MCP surface,
+  or vector database. Off-target for all 89 slots, same category of finding
+  as AXIS-Foundry's (CAND-SCAN-02) and AXIS-mars's (CAND-SCAN-05) generative
+  3D/image work. Hugging Face usage IS real (unlike AXIS-ENGINE's unwired
+  vendor references) -- recorded as vendor_in_use on LLM_HUGGING_FACE, since
+  that is the closest-named target slot, while making clear this is
+  *consuming* HF-hosted models (dependence), not providing an in-house model
+  hub (the actual LLM_HUGGING_FACE peer bar).
+empty_batteries:
+  all_11: ["all 11 category batteries: 0 hits mapping to the 89-slot taxonomy -- confirmed off-target generative-AI domain (3D/image assets, not language/agent ecosystem)"]
+vendor_hits:
+  - {vendor: hugging_face, files: ["README.md (Modality status table: TRELLIS, FLUX.1-schnell, SDXL, SD3.5 via HF Spaces)"], note: "consumes hosted open-source generative models via Hugging Face Spaces -- dependence on HF as an inference host, not an in-house model hub (the LLM_HUGGING_FACE peer bar)"}

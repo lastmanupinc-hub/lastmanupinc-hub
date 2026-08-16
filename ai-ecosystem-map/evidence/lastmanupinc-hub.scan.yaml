@@ -1,0 +1,24 @@
+repo: lastmanupinc-hub
+scanned: "2026-08-16"
+session: CAND-SCAN-01
+purpose: "GitHub profile/landing repo for the org — README.md + .gitignore only (control plane ai-ecosystem-map/ lives here on the work branch and is excluded from scanning)."
+files_scanned: 2
+findings: {}
+prose_hits_note: >
+  Battery hits at README.md:15 (MCP), :19 (ai_agent), :20 (automation) are
+  prose descriptions of OTHER repos (AXIS-iliad, no-fate-contract,
+  axis-toolbox-examples), which are graded in their own batches. No code in
+  this repo; not capability evidence.
+empty_batteries:
+  llm: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer'"]
+  agentic_ai: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm'"]
+  rag: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding'"]
+  embedding: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity'"]
+  mcp: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' (prose-only hits)"]
+  ai_security: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate'"]
+  observability: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log'"]
+  memory: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph'"]
+  ai_agent: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' (prose-only hits)"]
+  automation: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' (prose-only hits)"]
+  vector_database: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index'"]
+vendor_hits: []

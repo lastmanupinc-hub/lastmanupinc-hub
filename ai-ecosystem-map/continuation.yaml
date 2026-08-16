@@ -20,9 +20,9 @@ project_continuation:
     policy_source: begin.yaml#autonomous_loop_bootstrap
     backlog_source: SCAN_TREE.yaml
     last_updated: "2026-08-16"
-    last_completed_candidate_id: null   # set by Session 0 after the pilot scan
-    next_candidate_id: CAND-SCAN-01     # pilot batch: lastmanupinc-hub, .github, Remedial-Action, axis-launch-community
-    completed_candidate_ids: []
+    last_completed_candidate_id: CAND-SCAN-01   # pilot batch (Session 0): 4 doc-only/empty repos, 0 capability hits, all 89 rows unaudited -> absent for this coverage; loop mechanics proven end-to-end (batteries -> shards -> matrix -> rollup -> lint -> render)
+    next_candidate_id: CAND-SCAN-02             # AXIS-Foundry, A-eye, axis-launch — governance-rich anchor; expect first real evidence (sovereign engine, in-house MCP server, x402 gateway)
+    completed_candidate_ids: [CAND-SCAN-01]
 
   scan_phase:
     active: true
@@ -36,4 +36,22 @@ project_continuation:
       advances next_candidate_id before ending.
 
   # Newest-first. {date, session_id, summary, files_changed, commit}
-  change_log: []
+  change_log:
+    - date: "2026-08-16"
+      session_id: "SESSION-0 (Fable 5, plan-approved bootstrap + CAND-SCAN-01 pilot)"
+      summary: >-
+        SCAFFOLD: built the full control plane (targets taxonomy 89 slots,
+        matrix 89 rows, loop files, tools: rollup/gov_lint/renderer; v0
+        all-unaudited map rendered, byte-determinism verified, gov_lint G1-G11
+        PASS). PILOT: executed CAND-SCAN-01 (lastmanupinc-hub, .github,
+        Remedial-Action, axis-launch-community — 4 files total across 4 repos,
+        two empty). All 11 batteries + dependence battery: zero capability
+        code hits; prose-only README mentions of other repos recorded as
+        non-evidence. All 89 rows graded absent with search_expressions;
+        overall floor 0.0% (expected and correct under peer-independence
+        doctrine). GOTCHA: regex containing \. must be double-escaped when
+        embedded in double-quoted YAML scalars (MCP battery, fixed via \\.).
+        NOTE: dedicated-repo creation blocked (token 403); control plane
+        hosted in profile repo ai-ecosystem-map/ — migration is a plain copy.
+      files_changed: [AI_ECOSYSTEM_CAPABILITY_MATRIX.yaml, SCAN_TREE.yaml, continuation.yaml, derived/rollup.json, derived/capability_map.html, evidence/lastmanupinc-hub.scan.yaml, evidence/.github.scan.yaml, evidence/Remedial-Action.scan.yaml, evidence/axis-launch-community.scan.yaml]
+      commit: "(this commit)"

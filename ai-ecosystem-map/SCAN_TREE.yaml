@@ -20,8 +20,9 @@ exit_criteria:
 candidates:
   - id: CAND-SCAN-01
     repos: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
-    size_note: "tiny pilot (~111 files) — proves the loop end-to-end"
-    status: pending
+    size_note: "tiny pilot (4 files across 4 repos, two empty) — proved the loop end-to-end"
+    status: done
+    done: {date: "2026-08-16", session_id: "SESSION-0", result: "0 capability hits; 89 rows -> absent for this coverage"}
   - id: CAND-SCAN-02
     repos: [AXIS-Foundry, A-eye, axis-launch]
     size_note: "~1,974 files; governance-rich anchor (sovereign engine, MCP server, x402)"

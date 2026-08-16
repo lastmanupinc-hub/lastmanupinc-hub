@@ -44,1079 +44,1086 @@ rows:
     category: llm
     slot: openai_gpt
     slot_label: "OpenAI GPT"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_ANTHROPIC_CLAUDE:
     category: llm
     slot: anthropic_claude
     slot_label: "Anthropic Claude"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_GOOGLE_GEMINI:
     category: llm
     slot: google_gemini
     slot_label: "Google Gemini"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_META_LLAMA:
     category: llm
     slot: meta_llama
     slot_label: "Meta Llama"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_MISTRAL_AI:
     category: llm
     slot: mistral_ai
     slot_label: "Mistral AI"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_COHERE:
     category: llm
     slot: cohere
     slot_label: "Cohere"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_HUGGING_FACE:
     category: llm
     slot: hugging_face
     slot_label: "Hugging Face"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_OLLAMA:
     category: llm
     slot: ollama
     slot_label: "Ollama"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   LLM_VLLM:
     category: llm
     slot: vllm
     slot_label: "vLLM"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'language.?model|inference|tokenizer|logits|sampling|completion|transformer' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_LANGGRAPH:
     category: agentic_ai
     slot: langgraph
     slot_label: "LangGraph"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_CREWAI:
     category: agentic_ai
     slot: crewai
     slot_label: "CrewAI"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_MICROSOFT_AUTOGEN:
     category: agentic_ai
     slot: microsoft_autogen
     slot_label: "Microsoft AutoGen"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_MS_AGENT_FRAMEWORK:
     category: agentic_ai
     slot: ms_agent_framework
     slot_label: "Microsoft Agent Framework"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_LLAMAINDEX_WORKFLOWS:
     category: agentic_ai
     slot: llamaindex_workflows
     slot_label: "LlamaIndex Workflows"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_AWS_STRANDS_AGENTS:
     category: agentic_ai
     slot: aws_strands_agents
     slot_label: "AWS Strands Agents"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_CAMEL:
     category: agentic_ai
     slot: camel
     slot_label: "CAMEL"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGE_AGNO:
     category: agentic_ai
     slot: agno
     slot_label: "Agno"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'multi.?agent|orchestrat|agent.?loop|task.?graph|planner|delegat|handoff|swarm' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_LANGCHAIN:
     category: rag
     slot: langchain
     slot_label: "LangChain"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_LLAMAINDEX:
     category: rag
     slot: llamaindex
     slot_label: "LlamaIndex"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_HAYSTACK:
     category: rag
     slot: haystack
     slot_label: "Haystack"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_DSPY:
     category: rag
     slot: dspy
     slot_label: "DSPy"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_RAGFLOW:
     category: rag
     slot: ragflow
     slot_label: "RAGFlow"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_GRAPHRAG:
     category: rag
     slot: graphrag
     slot_label: "GraphRAG"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_UNSTRUCTURED:
     category: rag
     slot: unstructured
     slot_label: "Unstructured"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   RAG_EMBEDCHAIN:
     category: rag
     slot: embedchain
     slot_label: "EmbedChain"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'retriev|chunk|rerank|knowledge.?base|corpus|citation|grounding' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   EMB_OPENAI_EMBEDDINGS:
     category: embedding
     slot: openai_embeddings
     slot_label: "OpenAI Embeddings"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   EMB_COHERE_EMBED:
     category: embedding
     slot: cohere_embed
     slot_label: "Cohere Embed"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   EMB_VOYAGE_AI:
     category: embedding
     slot: voyage_ai
     slot_label: "Voyage AI"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   EMB_SENTENCE_TRANSFORMERS:
     category: embedding
     slot: sentence_transformers
     slot_label: "Sentence Transformers"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   EMB_BGE:
     category: embedding
     slot: bge
     slot_label: "BGE"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   EMB_VERTEX_EMBEDDINGS:
     category: embedding
     slot: vertex_embeddings
     slot_label: "Google Vertex AI Embeddings"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   EMB_AZURE_OPENAI_EMBEDDINGS:
     category: embedding
     slot: azure_openai_embeddings
     slot_label: "Azure OpenAI Embeddings"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'embedding|cosine|vector_dim|semantic.?search|nearest.?neighbor|similarity' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_MCP_SDK:
     category: mcp
     slot: mcp_sdk
     slot_label: "MCP SDK"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_FASTMCP:
     category: mcp
     slot: fastmcp
     slot_label: "FastMCP"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_MCP_REGISTRY:
     category: mcp
     slot: mcp_registry
     slot_label: "MCP Registry"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_GITHUB_MCP_SERVER:
     category: mcp
     slot: github_mcp_server
     slot_label: "GitHub MCP Server"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_SLACK_MCP_SERVER:
     category: mcp
     slot: slack_mcp_server
     slot_label: "Slack MCP Server"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_POSTGRES_MCP_SERVER:
     category: mcp
     slot: postgres_mcp_server
     slot_label: "PostgreSQL MCP Server"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_GDRIVE_MCP_SERVER:
     category: mcp
     slot: gdrive_mcp_server
     slot_label: "Google Drive MCP Server"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MCP_FILESYSTEM_MCP_SERVER:
     category: mcp
     slot: filesystem_mcp_server
     slot_label: "Filesystem MCP Server"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'mcp|jsonrpc|tools/call|tool_registry|server.?manifest|\\.well-known' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_NEMO_GUARDRAILS:
     category: ai_security
     slot: nemo_guardrails
     slot_label: "NVIDIA NeMo Guardrails"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_GUARDRAILS_AI:
     category: ai_security
     slot: guardrails_ai
     slot_label: "Guardrails AI"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_PRESIDIO:
     category: ai_security
     slot: presidio
     slot_label: "Microsoft Presidio"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_LAKERA_GUARD:
     category: ai_security
     slot: lakera_guard
     slot_label: "Lakera Guard"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_PROMPT_SECURITY:
     category: ai_security
     slot: prompt_security
     slot_label: "Prompt Security"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_PROTECT_AI:
     category: ai_security
     slot: protect_ai
     slot_label: "Protect AI"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_AZURE_CONTENT_SAFETY:
     category: ai_security
     slot: azure_content_safety
     slot_label: "Azure AI Content Safety"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   SEC_BEDROCK_GUARDRAILS:
     category: ai_security
     slot: bedrock_guardrails
     slot_label: "AWS Bedrock Guardrails"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'guardrail|prompt.?injection|pii|redact|content.?safety|refusal|sanitiz|admission.?gate' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_LANGSMITH:
     category: observability
     slot: langsmith
     slot_label: "LangSmith"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_LANGFUSE:
     category: observability
     slot: langfuse
     slot_label: "Langfuse"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_ARIZE_PHOENIX:
     category: observability
     slot: arize_phoenix
     slot_label: "Arize Phoenix"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_WANDB_WEAVE:
     category: observability
     slot: wandb_weave
     slot_label: "W&B Weave"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_TRULENS:
     category: observability
     slot: trulens
     slot_label: "TruLens"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_RAGAS:
     category: observability
     slot: ragas
     slot_label: "Ragas"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_PROMPTFOO:
     category: observability
     slot: promptfoo
     slot_label: "Promptfoo"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   OBS_HELICONE:
     category: observability
     slot: helicone
     slot_label: "Helicone"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'trace|telemetry|eval.?harness|scorecard|prompt.?log|observab|audit.?log' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_MEM0:
     category: memory
     slot: mem0
     slot_label: "Mem0"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_ZEP:
     category: memory
     slot: zep
     slot_label: "Zep"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_LETTA:
     category: memory
     slot: letta
     slot_label: "Letta"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_LANGGRAPH_MEMORY:
     category: memory
     slot: langgraph_memory
     slot_label: "LangGraph Memory"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_REDIS_MEMORY:
     category: memory
     slot: redis_memory
     slot_label: "Redis"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_POSTGRES_MEMORY:
     category: memory
     slot: postgres_memory
     slot_label: "PostgreSQL"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_NEO4J:
     category: memory
     slot: neo4j
     slot_label: "Neo4j"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   MEM_CHROMA_MEMORY:
     category: memory
     slot: chroma_memory
     slot_label: "Chroma"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'memory|session.?state|persist|ledger|recall|knowledge.?graph' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGT_OPENAI_AGENTS_SDK:
     category: ai_agent
     slot: openai_agents_sdk
     slot_label: "OpenAI Agents SDK"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGT_LANGCHAIN_AGENTS:
     category: ai_agent
     slot: langchain_agents
     slot_label: "LangChain Agents"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGT_PYDANTIC_AI:
     category: ai_agent
     slot: pydantic_ai
     slot_label: "PydanticAI"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGT_SEMANTIC_KERNEL:
     category: ai_agent
     slot: semantic_kernel
     slot_label: "Semantic Kernel"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGT_GOOGLE_ADK:
     category: ai_agent
     slot: google_adk
     slot_label: "Google ADK"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGT_BEDROCK_AGENTS:
     category: ai_agent
     slot: bedrock_agents
     slot_label: "AWS Bedrock Agents"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AGT_AZURE_FOUNDRY_AGENT:
     category: ai_agent
     slot: azure_foundry_agent
     slot_label: "Azure AI Foundry Agent Service"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'agent.?framework|tool_use|function.?call|agent.?runtime|autonomous' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_N8N:
     category: automation
     slot: n8n
     slot_label: "n8n"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_ZAPIER:
     category: automation
     slot: zapier
     slot_label: "Zapier"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_MAKE:
     category: automation
     slot: make
     slot_label: "Make"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_POWER_AUTOMATE:
     category: automation
     slot: power_automate
     slot_label: "MS Power Automate"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_TEMPORAL:
     category: automation
     slot: temporal
     slot_label: "Temporal"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_AIRFLOW:
     category: automation
     slot: airflow
     slot_label: "Apache Airflow"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_PREFECT:
     category: automation
     slot: prefect
     slot_label: "Prefect"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_KESTRA:
     category: automation
     slot: kestra
     slot_label: "Kestra"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   AUT_PIPEDREAM:
     category: automation
     slot: pipedream
     slot_label: "Pipedream"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'workflow|scheduler|cron|pipeline|orchestration|trigger|dag|queue|retry' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_PINECONE:
     category: vector_database
     slot: pinecone
     slot_label: "Pinecone"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_WEAVIATE:
     category: vector_database
     slot: weaviate
     slot_label: "Weaviate"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_QDRANT:
     category: vector_database
     slot: qdrant
     slot_label: "Qdrant"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_MILVUS:
     category: vector_database
     slot: milvus
     slot_label: "Milvus"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_CHROMA:
     category: vector_database
     slot: chroma
     slot_label: "Chroma"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_PGVECTOR:
     category: vector_database
     slot: pgvector
     slot_label: "pgvector"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_ELASTICSEARCH:
     category: vector_database
     slot: elasticsearch
     slot_label: "Elasticsearch"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_REDIS_VECTOR:
     category: vector_database
     slot: redis_vector
     slot_label: "Redis"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
   VDB_MONGODB_ATLAS_VECTOR:
     category: vector_database
     slot: mongodb_atlas_vector
     slot_label: "MongoDB Atlas Vector Search"
-    grade: unaudited
+    grade: absent
     peer_evidence: []       # [{repo, files: ["path:line"], note, scan_ref}]
     vendor_in_use: []       # [{repo, files, note}] — dependence record, informational only
-    search_expressions: []  # literal greps that came up empty (required when absent)
-    repos_scanned: []
+    search_expressions: ["grep -rniE 'vector.?store|hnsw|ann.?index|ivf|knn|pgvector|faiss|similarity.?index' across CAND-SCAN-01 repos (lastmanupinc-hub, .github, Remedial-Action, axis-launch-community): 0 capability hits (prose-only or empty repos) — see evidence/*.scan.yaml"]
+    repos_scanned: [lastmanupinc-hub, .github, Remedial-Action, axis-launch-community]
     missing_for_peer: null
-    last_updated: null
+    last_updated: "2026-08-16"
 
 # Newest-first. Every grade change lands here with rows_touched.
-change_log: []
+change_log:
+  - date: "2026-08-16"
+    title: "CAND-SCAN-01 (pilot): scanned lastmanupinc-hub, .github, Remedial-Action, axis-launch-community — all 89 rows unaudited -> absent for this coverage"
+    changes:
+      - "Ran all 11 category batteries + dependence battery: 0 capability code hits (two repos are README-only, two are empty; the few prose hits describe OTHER repos and are not evidence)"
+      - "All 89 rows: grade unaudited -> absent with per-category search_expressions recorded; repos_scanned = the 4 pilot repos"
+      - "Honest floor stays 0.0% — expected under the peer-independence doctrine; evidence shards written for all 4 repos"
+    rows_touched: [ALL_89]
 
 # Numbers below are written ONLY by `python3 tools/rollup.py --write` and
 # verified by `python3 tools/rollup.py --check` (gov_lint fails on divergence).
 parity_100_criteria:
   audit_method: "python3 tools/rollup.py --check"
   last_run: "2026-08-16"
-  current_counts: {peer: 0, peer_plus: 0, bench: 0, partial: 0, scaffold: 0, absent: 0, unaudited: 89}
+  current_counts: {peer: 0, peer_plus: 0, bench: 0, partial: 0, scaffold: 0, absent: 89, unaudited: 0}
   current_percentages:
     agentic_ai: 0.0
     ai_agent: 0.0
@@ -1130,4 +1137,4 @@ parity_100_criteria:
     rag: 0.0
     vector_database: 0.0
   overall_percentage: 0.0
-  coverage: {repos_scanned: 0, repos_total: 31, slots_audited: 0, slots_total: 89}
+  coverage: {repos_scanned: 4, repos_total: 31, slots_audited: 89, slots_total: 89}

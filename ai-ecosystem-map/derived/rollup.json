@@ -1,55 +1,55 @@
 {
   "categories": {
     "agentic_ai": {
-      "audited": 0,
+      "audited": 8,
       "label": "Agentic AI",
       "pct": 0.0,
       "slots": {
         "AGE_AGNO": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Agno",
           "vendor_in_use_count": 0
         },
         "AGE_AWS_STRANDS_AGENTS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "AWS Strands Agents",
           "vendor_in_use_count": 0
         },
         "AGE_CAMEL": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "CAMEL",
           "vendor_in_use_count": 0
         },
         "AGE_CREWAI": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "CrewAI",
           "vendor_in_use_count": 0
         },
         "AGE_LANGGRAPH": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "LangGraph",
           "vendor_in_use_count": 0
         },
         "AGE_LLAMAINDEX_WORKFLOWS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "LlamaIndex Workflows",
           "vendor_in_use_count": 0
         },
         "AGE_MICROSOFT_AUTOGEN": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Microsoft AutoGen",
           "vendor_in_use_count": 0
         },
         "AGE_MS_AGENT_FRAMEWORK": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Microsoft Agent Framework",
           "vendor_in_use_count": 0
         }
@@ -57,49 +57,49 @@
       "total": 8
     },
     "ai_agent": {
-      "audited": 0,
+      "audited": 7,
       "label": "AI Agent",
       "pct": 0.0,
       "slots": {
         "AGT_AZURE_FOUNDRY_AGENT": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Azure AI Foundry Agent Service",
           "vendor_in_use_count": 0
         },
         "AGT_BEDROCK_AGENTS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "AWS Bedrock Agents",
           "vendor_in_use_count": 0
         },
         "AGT_GOOGLE_ADK": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Google ADK",
           "vendor_in_use_count": 0
         },
         "AGT_LANGCHAIN_AGENTS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "LangChain Agents",
           "vendor_in_use_count": 0
         },
         "AGT_OPENAI_AGENTS_SDK": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "OpenAI Agents SDK",
           "vendor_in_use_count": 0
         },
         "AGT_PYDANTIC_AI": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "PydanticAI",
           "vendor_in_use_count": 0
         },
         "AGT_SEMANTIC_KERNEL": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Semantic Kernel",
           "vendor_in_use_count": 0
         }
@@ -107,55 +107,55 @@
       "total": 7
     },
     "ai_security": {
-      "audited": 0,
+      "audited": 8,
       "label": "AI Security",
       "pct": 0.0,
       "slots": {
         "SEC_AZURE_CONTENT_SAFETY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Azure AI Content Safety",
           "vendor_in_use_count": 0
         },
         "SEC_BEDROCK_GUARDRAILS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "AWS Bedrock Guardrails",
           "vendor_in_use_count": 0
         },
         "SEC_GUARDRAILS_AI": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Guardrails AI",
           "vendor_in_use_count": 0
         },
         "SEC_LAKERA_GUARD": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Lakera Guard",
           "vendor_in_use_count": 0
         },
         "SEC_NEMO_GUARDRAILS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "NVIDIA NeMo Guardrails",
           "vendor_in_use_count": 0
         },
         "SEC_PRESIDIO": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Microsoft Presidio",
           "vendor_in_use_count": 0
         },
         "SEC_PROMPT_SECURITY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Prompt Security",
           "vendor_in_use_count": 0
         },
         "SEC_PROTECT_AI": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Protect AI",
           "vendor_in_use_count": 0
         }
@@ -163,61 +163,61 @@
       "total": 8
     },
     "automation": {
-      "audited": 0,
+      "audited": 9,
       "label": "Automation",
       "pct": 0.0,
       "slots": {
         "AUT_AIRFLOW": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Apache Airflow",
           "vendor_in_use_count": 0
         },
         "AUT_KESTRA": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Kestra",
           "vendor_in_use_count": 0
         },
         "AUT_MAKE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Make",
           "vendor_in_use_count": 0
         },
         "AUT_N8N": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "n8n",
           "vendor_in_use_count": 0
         },
         "AUT_PIPEDREAM": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Pipedream",
           "vendor_in_use_count": 0
         },
         "AUT_POWER_AUTOMATE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "MS Power Automate",
           "vendor_in_use_count": 0
         },
         "AUT_PREFECT": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Prefect",
           "vendor_in_use_count": 0
         },
         "AUT_TEMPORAL": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Temporal",
           "vendor_in_use_count": 0
         },
         "AUT_ZAPIER": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Zapier",
           "vendor_in_use_count": 0
         }
@@ -225,49 +225,49 @@
       "total": 9
     },
     "embedding": {
-      "audited": 0,
+      "audited": 7,
       "label": "Embedding",
       "pct": 0.0,
       "slots": {
         "EMB_AZURE_OPENAI_EMBEDDINGS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Azure OpenAI Embeddings",
           "vendor_in_use_count": 0
         },
         "EMB_BGE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "BGE",
           "vendor_in_use_count": 0
         },
         "EMB_COHERE_EMBED": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Cohere Embed",
           "vendor_in_use_count": 0
         },
         "EMB_OPENAI_EMBEDDINGS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "OpenAI Embeddings",
           "vendor_in_use_count": 0
         },
         "EMB_SENTENCE_TRANSFORMERS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Sentence Transformers",
           "vendor_in_use_count": 0
         },
         "EMB_VERTEX_EMBEDDINGS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Google Vertex AI Embeddings",
           "vendor_in_use_count": 0
         },
         "EMB_VOYAGE_AI": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Voyage AI",
           "vendor_in_use_count": 0
         }
@@ -275,61 +275,61 @@
       "total": 7
     },
     "llm": {
-      "audited": 0,
+      "audited": 9,
       "label": "LLM",
       "pct": 0.0,
       "slots": {
         "LLM_ANTHROPIC_CLAUDE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Anthropic Claude",
           "vendor_in_use_count": 0
         },
         "LLM_COHERE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Cohere",
           "vendor_in_use_count": 0
         },
         "LLM_GOOGLE_GEMINI": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Google Gemini",
           "vendor_in_use_count": 0
         },
         "LLM_HUGGING_FACE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Hugging Face",
           "vendor_in_use_count": 0
         },
         "LLM_META_LLAMA": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Meta Llama",
           "vendor_in_use_count": 0
         },
         "LLM_MISTRAL_AI": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Mistral AI",
           "vendor_in_use_count": 0
         },
         "LLM_OLLAMA": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Ollama",
           "vendor_in_use_count": 0
         },
         "LLM_OPENAI_GPT": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "OpenAI GPT",
           "vendor_in_use_count": 0
         },
         "LLM_VLLM": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "vLLM",
           "vendor_in_use_count": 0
         }
@@ -337,55 +337,55 @@
       "total": 9
     },
     "mcp": {
-      "audited": 0,
+      "audited": 8,
       "label": "MCP",
       "pct": 0.0,
       "slots": {
         "MCP_FASTMCP": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "FastMCP",
           "vendor_in_use_count": 0
         },
         "MCP_FILESYSTEM_MCP_SERVER": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Filesystem MCP Server",
           "vendor_in_use_count": 0
         },
         "MCP_GDRIVE_MCP_SERVER": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Google Drive MCP Server",
           "vendor_in_use_count": 0
         },
         "MCP_GITHUB_MCP_SERVER": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "GitHub MCP Server",
           "vendor_in_use_count": 0
         },
         "MCP_MCP_REGISTRY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "MCP Registry",
           "vendor_in_use_count": 0
         },
         "MCP_MCP_SDK": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "MCP SDK",
           "vendor_in_use_count": 0
         },
         "MCP_POSTGRES_MCP_SERVER": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "PostgreSQL MCP Server",
           "vendor_in_use_count": 0
         },
         "MCP_SLACK_MCP_SERVER": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Slack MCP Server",
           "vendor_in_use_count": 0
         }
@@ -393,55 +393,55 @@
       "total": 8
     },
     "memory": {
-      "audited": 0,
+      "audited": 8,
       "label": "Memory",
       "pct": 0.0,
       "slots": {
         "MEM_CHROMA_MEMORY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Chroma",
           "vendor_in_use_count": 0
         },
         "MEM_LANGGRAPH_MEMORY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "LangGraph Memory",
           "vendor_in_use_count": 0
         },
         "MEM_LETTA": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Letta",
           "vendor_in_use_count": 0
         },
         "MEM_MEM0": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Mem0",
           "vendor_in_use_count": 0
         },
         "MEM_NEO4J": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Neo4j",
           "vendor_in_use_count": 0
         },
         "MEM_POSTGRES_MEMORY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "PostgreSQL",
           "vendor_in_use_count": 0
         },
         "MEM_REDIS_MEMORY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Redis",
           "vendor_in_use_count": 0
         },
         "MEM_ZEP": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Zep",
           "vendor_in_use_count": 0
         }
@@ -449,55 +449,55 @@
       "total": 8
     },
     "observability": {
-      "audited": 0,
+      "audited": 8,
       "label": "Observability",
       "pct": 0.0,
       "slots": {
         "OBS_ARIZE_PHOENIX": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Arize Phoenix",
           "vendor_in_use_count": 0
         },
         "OBS_HELICONE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Helicone",
           "vendor_in_use_count": 0
         },
         "OBS_LANGFUSE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Langfuse",
           "vendor_in_use_count": 0
         },
         "OBS_LANGSMITH": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "LangSmith",
           "vendor_in_use_count": 0
         },
         "OBS_PROMPTFOO": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Promptfoo",
           "vendor_in_use_count": 0
         },
         "OBS_RAGAS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Ragas",
           "vendor_in_use_count": 0
         },
         "OBS_TRULENS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "TruLens",
           "vendor_in_use_count": 0
         },
         "OBS_WANDB_WEAVE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "W&B Weave",
           "vendor_in_use_count": 0
         }
@@ -505,55 +505,55 @@
       "total": 8
     },
     "rag": {
-      "audited": 0,
+      "audited": 8,
       "label": "RAG",
       "pct": 0.0,
       "slots": {
         "RAG_DSPY": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "DSPy",
           "vendor_in_use_count": 0
         },
         "RAG_EMBEDCHAIN": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "EmbedChain",
           "vendor_in_use_count": 0
         },
         "RAG_GRAPHRAG": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "GraphRAG",
           "vendor_in_use_count": 0
         },
         "RAG_HAYSTACK": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Haystack",
           "vendor_in_use_count": 0
         },
         "RAG_LANGCHAIN": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "LangChain",
           "vendor_in_use_count": 0
         },
         "RAG_LLAMAINDEX": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "LlamaIndex",
           "vendor_in_use_count": 0
         },
         "RAG_RAGFLOW": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "RAGFlow",
           "vendor_in_use_count": 0
         },
         "RAG_UNSTRUCTURED": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Unstructured",
           "vendor_in_use_count": 0
         }
@@ -561,61 +561,61 @@
       "total": 8
     },
     "vector_database": {
-      "audited": 0,
+      "audited": 9,
       "label": "Vector Database",
       "pct": 0.0,
       "slots": {
         "VDB_CHROMA": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Chroma",
           "vendor_in_use_count": 0
         },
         "VDB_ELASTICSEARCH": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Elasticsearch",
           "vendor_in_use_count": 0
         },
         "VDB_MILVUS": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Milvus",
           "vendor_in_use_count": 0
         },
         "VDB_MONGODB_ATLAS_VECTOR": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "MongoDB Atlas Vector Search",
           "vendor_in_use_count": 0
         },
         "VDB_PGVECTOR": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "pgvector",
           "vendor_in_use_count": 0
         },
         "VDB_PINECONE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Pinecone",
           "vendor_in_use_count": 0
         },
         "VDB_QDRANT": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Qdrant",
           "vendor_in_use_count": 0
         },
         "VDB_REDIS_VECTOR": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Redis",
           "vendor_in_use_count": 0
         },
         "VDB_WEAVIATE": {
           "evidence_count": 0,
-          "grade": "unaudited",
+          "grade": "absent",
           "label": "Weaviate",
           "vendor_in_use_count": 0
         }
@@ -624,18 +624,18 @@
     }
   },
   "counts": {
-    "absent": 0,
+    "absent": 89,
     "bench": 0,
     "partial": 0,
     "peer": 0,
     "peer_plus": 0,
     "scaffold": 0,
-    "unaudited": 89
+    "unaudited": 0
   },
   "coverage": {
-    "repos_scanned": 0,
+    "repos_scanned": 4,
     "repos_total": 31,
-    "slots_audited": 0,
+    "slots_audited": 89,
     "slots_total": 89
   },
   "overall_pct": 0.0,

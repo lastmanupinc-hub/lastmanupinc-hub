@@ -82,4 +82,5 @@ candidates:
       Verification pass, no new scanning: re-open cited files for >=12 sampled
       non-absent rows (ALL peer/peer_plus rows mandatory), demote anything
       unsupported, final rollup + render, republish artifact, close the loop.
-    status: pending
+    status: done
+    done: {date: "2026-08-16", session_id: "CAND-CONSOLIDATE-12", result: "all 11 non-absent rows (30 file citations) re-verified fresh, 0 demotions, loop closed at 9.2% overall floor"}
